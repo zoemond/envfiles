@@ -1,0 +1,58 @@
+# brewのinstall
+://brew.sh/index_ja.html
+# brew caskのinstall
+https://brew.sh/
+
+# chrome 
+brew cask install google-chrome
+
+# java 
+brew cask install java # pathも通ってた
+
+# eclipse
+brew cask install eclipse-ide
+/Applications/Eclipse.app/Contents/eclipse.iniの最後に
+-Dfile.encoding=UTF-8
+
+# php (xampp)
+brew search xampp
+Applications/XAMPP/xamppfiles/etc/php.iniにencodeing,charsetとtimezone,order,languageを変更
+
+# neovim
+brew install neovim/neovim/neovim
+
+~/.bash_profileに
+export XDG_CONFIG_HOME="$HOME/.config"
+alias vim=nvim
+
+# dein
+#まず
+$ mkdir ~/.cache/dein
+#とした後に
+$ cd ~/.cache/dein
+#で移動してその状態で
+$ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+$ sh ./installer.sh ~/.cache/dein
+#と打ってあげる(~/.cache/deinではなく、~/.vim配下にした)
+そして
+~/.config/nvim/init.vimに吐き出されたdein Scriptを貼り付け
+
+# denite
+deniteを使うためにpythonが必要。pythonを使うためにxcodeが必要。xcodeをインストール
+
+# npm 
+xcode-select install # OS update時、xcurnエラーが出る時、必要
+brew install nodebrew
+cd ~
+mkdir .nodebrew/src
+export PATH=$HOME/.nodebrew/current/bin:$PATH # ~/.bash_profile
+
+# alfred
+brew install gcc # nodebrewに必要
+# spot lite 検索バインド消す
+
+# slate
+brew cask install slate
+
+# iterm2
+brew cask install iterm2
