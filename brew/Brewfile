@@ -1,0 +1,21 @@
+tap 'caskroom/cask'
+
+cask 'appcleaner' 
+cask 'google-chrome' 
+cask 'iterm2'
+
+cask 'visual-studio-code' 
+brew 'neovim' 
+
+brew 'git' 
+brew 'tree' 
+brew 'rmtrash' 
+brew 'fzf' 
+
+cask 'alfred'
+
+brew 'chunkwm' 
+cask 'karabiner-elements' 
+
+cask 'docker' 
+
