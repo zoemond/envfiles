@@ -1,0 +1,122 @@
+#!/bin/bash
+
+#
+# NOTE: specify the absolutepath to the directory to use when
+#       loading a plugin. '~' expansion is supported.
+#
+
+# プラグインのディレクトリ
+# brewから入れた場合、/usr/local/Cellar/chunkwm/0.2.36/share/chunkwm/pluginsにあるのでそれを直接指定してもいい気がする。
+# chunkc core::plugin_dir  /usr/local/Cellar/chunkwm/0.2.36/share/chunkwm/plugins/usr/local/Cellar/chunkwm/0.2.36/share/chunkwm/plugins
+# 公式通り~/.chunkwm_pluginsを使いたい場合は事前に
+# cp /usr/local/Cellar/chunkwm/0.2.36/share/chunkwm/plugins/* .chunkwm_plugins/
+# 等で.soファイルをコピーする必要がある。
+chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
+
+#
+# NOTE: if enabled, chunkwm will monitor the specified plugin_dir
+#       and automatically reload any '.so' file that is changed.
+#
+# Pluginを開発しない限り多分使わない
+chunkc core::hotload 0
+
+# レイアウトモード
+# global_desktop_modeでデフォルトの表示モード
+# {index}_desktop_modeでSpaceによって表示モードを変更できる
+# 
+# - bsp: ウィンドウが分割されていくやつ
+# - monocle: ウィンドウが画面いっぱいに拡大され重なる
+# - float: 普段使っているようなウィンドウを自由に移動できるやつ
+					# bsp | monocle | float
+chunkc set global_desktop_mode           bsp 
+# chunkc set 5_desktop_mode                float
+
+# ウィンドウと画面端の距離を設定
+# gapはウィンドウとウィンドウの距離
+# {index}_desktop_offset_{position}でそのSpaceの値を決定できる
+chunkc set global_desktop_offset_top     0 # 狭くなるので
+chunkc set global_desktop_offset_bottom  0 # 狭くなるので
+chunkc set global_desktop_offset_left    0 # 狭くなるので
+chunkc set global_desktop_offset_right   0 # 狭くなるので
+chunkc set global_desktop_offset_gap     0 # 複数アプリ[ex):line + slack + itunes + finder]があるときに結局重なってしまう(なんで？)ので一応0
+
+# chunkc set 1_desktop_offset_top          190
+# chunkc set 1_desktop_offset_bottom       190
+# chunkc set 1_desktop_offset_left         190
+# chunkc set 1_desktop_offset_right        190
+# chunkc set 1_desktop_offset_gap          15
+
+# chunkc set desktop_padding_step_size     10.0
+# chunkc set desktop_gap_step_size         5.0
+
+# 新しいウィンドウを開くとき、現在フォーカスしているウィンドウの左に開くかどうか
+# true: 1
+# false: 0
+chunkc set bsp_spawn_left                0
+chunkc set bsp_optimal_ratio             1.618
+#  分割モード
+# - horizontal: 水平分割(-)
+# - vertical: 垂直分割(|)
+# - optimal: よしなに
+chunkc set bsp_split_mode                optimal
+# 分割されたときの比率
+chunkc set bsp_split_ratio               0.5
+
+chunkc set monitor_focus_cycle           0
+chunkc set window_focus_cycle            monitor
+
+# フォーカスの移動にマウスが追従するかどうか
+# <option>: off | intrinsic | all 
+chunkc set mouse_follows_focus           all
+
+chunkc set window_float_next             0
+
+# windowサイズをマウスで変更できないようにするか
+chunkc set window_region_locked          0
+
+#
+# NOTE: shell commands require escaped quotes
+#       to pass value containing a whitespace.
+#
+# chunkc set mouse_modifier              \"cmd shift\"
+chunkc set mouse_modifier                fn
+
+chunkc set preselect_border_color        0x00ffffff
+chunkc set preselect_border_width        5
+chunkc set preselect_border_radius       0
+
+#
+# NOTE: these settings require chwm-sa.
+#       (https://github.com/koekeishiya/chwm-sa)
+#
+
+chunkc set window_float_topmost          0
+chunkc set window_fade_inactive          0
+chunkc set window_fade_alpha             0.85
+chunkc set window_fade_duration          0.25
+chunkc set window_use_cgs_move           0
+
+#
+# NOTE: the following are config variables for the chunkwm-border plugin.
+#
+
+chunkc set focused_border_color          0x00ffffff
+chunkc set focused_border_width          5
+chunkc set focused_border_radius         5
+chunkc set focused_border_skip_floating  0
+
+#
+# NOTE: specify plugins to load when chunkwm starts.
+#       if chunkc plugin_dir is not set, the absolutepath is necessary.
+#
+
+chunkc core::load border.so
+chunkc core::load tiling.so
+# focus follows mouse
+# chunkc core::load ffm.so
+
+# 個別のウィンドウ表示設定
+# --ownerがアプリ名で--nameがタイトルバーの名前
+chunkc tiling::rule --owner Finder --name Copy --state float 
+chunkc tiling::rule --owner \"IntelliJ IDEA\" --name \"Default Preferences\" --state float
+chunkc tiling::rule --owner \"Karabiner-Elements\" --name \"Karabiner-Elements Preferences\" --state float
