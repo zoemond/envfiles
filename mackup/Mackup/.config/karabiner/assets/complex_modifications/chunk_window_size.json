@@ -1,0 +1,20 @@
+{
+  "title": "chunkwm size",
+  "rules": [
+    {
+      "description": "fn + shift + [option] + {h,j,k,l}",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": { "mandatory": ["fn"] }
+          },
+          "to": [
+              { "shell_command": "usr/local/bin/chunkc tiling::window --toggle native-fullscreen" } 
+          ]
+        }
+      ]
+    }
+  ]
+}

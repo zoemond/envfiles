@@ -1,0 +1,50 @@
+{
+  "title": "chunkwm focus",
+  "rules": [
+    {
+      "description": "fn + {h,j,k,l}",
+      "manipulators": [
+        {
+          "type": "basic",
+	  "from": {
+              "key_code": "h",
+              "modifiers": { "mandatory": [ "fn" ] }
+            },
+            "to": [
+              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus west" }
+            ] 
+        }, 
+        {
+          "type": "basic",
+	  "from": {
+              "key_code": "j",
+              "modifiers": { "mandatory": [ "fn" ] }
+            },
+            "to": [
+              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus south" }
+            ] 
+        },
+        {
+          "type": "basic",
+	  "from": {
+              "key_code": "k",
+              "modifiers": { "mandatory": [ "fn" ] }
+            },
+            "to": [
+              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus north" }
+            ] 
+        },
+        {
+          "type": "basic",
+	  "from": {
+              "key_code": "l",
+              "modifiers": { "mandatory": [ "fn" ] }
+            },
+            "to": [
+              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus east" }
+            ] 
+        }
+      ]
+    }
+  ]
+}
