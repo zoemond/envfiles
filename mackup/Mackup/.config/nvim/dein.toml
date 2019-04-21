@@ -1,0 +1,9 @@
+[[plugins]] 
+repo = 'tpope/vim-surround'
+
+[[plugins]] 
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]] 
+repo = 'Shougo/denite.nvim' 
+
