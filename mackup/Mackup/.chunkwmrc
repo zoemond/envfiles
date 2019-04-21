@@ -6,12 +6,11 @@
 #
 
 # プラグインのディレクトリ
-# brewから入れた場合、/usr/local/Cellar/chunkwm/0.2.36/share/chunkwm/pluginsにあるのでそれを直接指定してもいい気がする。
-# chunkc core::plugin_dir  /usr/local/Cellar/chunkwm/0.2.36/share/chunkwm/plugins/usr/local/Cellar/chunkwm/0.2.36/share/chunkwm/plugins
-# 公式通り~/.chunkwm_pluginsを使いたい場合は事前に
-# cp /usr/local/Cellar/chunkwm/0.2.36/share/chunkwm/plugins/* .chunkwm_plugins/
-# 等で.soファイルをコピーする必要がある。
-chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
+# brewから入れた場合、/usr/local/Cellar/chunkwm/0.4.8/share/chunkwm/pluginsにあるのでそれを直接指定する
+chunkc core::plugin_dir /usr/local/Cellar/chunkwm/0.4.8/share/chunkwm/plugins/
+
+chunkc core::log_file stdout
+chunkc core::log_level warn
 
 #
 # NOTE: if enabled, chunkwm will monitor the specified plugin_dir
@@ -113,7 +112,7 @@ chunkc set focused_border_skip_floating  0
 chunkc core::load border.so
 chunkc core::load tiling.so
 # focus follows mouse
-# chunkc core::load ffm.so
+## chunkc core::load ffm.so
 
 # 個別のウィンドウ表示設定
 # --ownerがアプリ名で--nameがタイトルバーの名前
