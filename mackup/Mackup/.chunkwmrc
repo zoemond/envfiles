@@ -7,7 +7,8 @@
 
 # プラグインのディレクトリ
 # brewから入れた場合、/usr/local/Cellar/chunkwm/0.4.8/share/chunkwm/pluginsにあるのでそれを直接指定する
-chunkc core::plugin_dir /usr/local/Cellar/chunkwm/0.4.8/share/chunkwm/plugins/
+#chunkc core::plugin_dir /usr/local/Cellar/chunkwm/0.4.8/share/chunkwm/plugins
+chunkc core::plugin_dir ~/.chunkwm_plugins
 
 chunkc core::log_file stdout
 chunkc core::log_level warn
@@ -57,7 +58,7 @@ chunkc set bsp_optimal_ratio             1.618
 # - horizontal: 水平分割(-)
 # - vertical: 垂直分割(|)
 # - optimal: よしなに
-chunkc set bsp_split_mode                optimal
+chunkc set bsp_split_mode                vertical
 # 分割されたときの比率
 chunkc set bsp_split_ratio               0.5
 

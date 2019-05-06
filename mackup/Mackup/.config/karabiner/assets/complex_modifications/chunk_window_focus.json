@@ -2,6 +2,7 @@
   "title": "chunkwm focus",
   "rules": [
     {
+
       "description": "fn + {h,j,k,l}",
       "manipulators": [
         {
@@ -42,6 +43,52 @@
             },
             "to": [
               { "shell_command": "/usr/local/bin/chunkc tiling::window --focus east" }
+            ] 
+        }
+      ]
+    },
+    {
+
+      "description": "fn + {n,p,tab}",
+      "manipulators": [
+        {
+          "type": "basic",
+	  "from": {
+              "key_code": "n",
+              "modifiers": { "mandatory": [ "fn" ] }
+            },
+            "to": [
+              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus next" }
+            ] 
+        }, 
+        {
+          "type": "basic",
+	  "from": {
+              "key_code": "p",
+              "modifiers": { "mandatory": [ "fn" ] }
+            },
+            "to": [
+              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus prev" }
+            ] 
+        },
+        {
+          "type": "basic",
+	  "from": {
+              "key_code": "tab",
+              "modifiers": { "mandatory": [ "fn" ] }
+            },
+            "to": [
+              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus next" }
+            ] 
+        },
+        {
+          "type": "basic",
+	  "from": {
+              "key_code": "tab",
+              "modifiers": { "mandatory": [ "fn", "shift" ] }
+            },
+            "to": [
+              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus prev" }
             ] 
         }
       ]

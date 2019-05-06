@@ -2,18 +2,57 @@
   "title": "chunkwm size",
   "rules": [
     {
-      "description": "fn + shift + [option] + {h,j,k,l}",
+      "description": "SIZE: fn + shift + {h,j,k,l}",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "h",
-            "modifiers": { "mandatory": ["fn"] }
+            "modifiers": { "mandatory": ["fn", "shift"] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west;/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east" 
+	      }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": { "mandatory": ["fn", "shift"] }
           },
           "to": [
-              { "shell_command": "usr/local/bin/chunkc tiling::window --toggle native-fullscreen" } 
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south;/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north"
+
+	      }
           ]
-        }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": { "mandatory": ["fn", "shift"] }
+          },
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north;/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south" 
+	      }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": { "mandatory": ["fn", "shift"] }
+          },
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east;/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west" 
+	      }
+          ]
+        } 
       ]
     }
   ]

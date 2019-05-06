@@ -11,8 +11,7 @@
                     "basic.simultaneous_threshold_milliseconds": 50,
                     "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000,
-                    "basic.to_if_held_down_threshold_milliseconds": 500,
-                    "mouse_motion_to_scroll.speed": 100
+                    "basic.to_if_held_down_threshold_milliseconds": 500
                 },
                 "rules": [
                     {
@@ -85,76 +84,6 @@
                         ]
                     },
                     {
-                        "description": "fn + {n,p,tab}",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --focus next"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "p",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --focus prev"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --focus next"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --focus prev"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "fn + shift + [option] + {h,j,k,l}",
                         "manipulators": [
                             {
@@ -169,7 +98,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west;/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east"
+                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west"
                                     }
                                 ],
                                 "type": "basic"
@@ -186,7 +115,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south;/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north"
+                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south"
                                     }
                                 ],
                                 "type": "basic"
@@ -203,7 +132,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north;/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south"
+                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north"
                                     }
                                 ],
                                 "type": "basic"
@@ -220,29 +149,25 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east;/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west"
+                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east"
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "SWAP: fn + option + {h,j,k,l}",
-                        "manipulators": [
+                            },
                             {
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
                                             "fn",
+                                            "shift",
                                             "option"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --swap west"
+                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west"
                                     }
                                 ],
                                 "type": "basic"
@@ -253,13 +178,14 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn",
+                                            "shift",
                                             "option"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --swap south"
+                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south"
                                     }
                                 ],
                                 "type": "basic"
@@ -270,13 +196,14 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn",
+                                            "shift",
                                             "option"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --swap north"
+                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north"
                                     }
                                 ],
                                 "type": "basic"
@@ -287,13 +214,14 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "fn",
+                                            "shift",
                                             "option"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --swap east"
+                                        "shell_command": "/usr/local/bin/chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east"
                                     }
                                 ],
                                 "type": "basic"
@@ -301,80 +229,7 @@
                         ]
                     },
                     {
-                        "description": "WARP: fn + command + {h,j,k,l}",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --warp west"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --warp south"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --warp north"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --warp east"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "MODE: fn + {b,f,m,}",
+                        "description": "fn + [option] + {h,j,k,l}",
                         "manipulators": [
                             {
                                 "from": {
@@ -387,7 +242,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --layout bsp"
+                                        "shell_command": "/usr/local/bin/chunkc set global_desktop_mode bsp"
                                     }
                                 ],
                                 "type": "basic"
@@ -403,44 +258,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --layout monocle"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "f",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --layout float"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "ROTATE: fn + {r}",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --rotate 90"
+                                        "shell_command": "/usr/local/bin/chunkc set global_desktop_mode monocle"
                                     }
                                 ],
                                 "type": "basic"

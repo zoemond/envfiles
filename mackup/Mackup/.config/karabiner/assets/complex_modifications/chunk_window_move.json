@@ -1,0 +1,142 @@
+{
+  "title": "chunkwm move",
+  "rules": [
+    {
+      "description": "SWAP: fn + option + {h,j,k,l}",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": { "mandatory": [ "fn", "option" ] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --swap west" 
+	      }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": { "mandatory": [ "fn", "option" ] }
+          },
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --swap south" 
+
+	      }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": { "mandatory": [ "fn", "option" ] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --swap north" 
+	      }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": { "mandatory": [ "fn", "option" ] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --swap east" 
+	      }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "WARP: fn + command + {h,j,k,l}",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": { "mandatory": [ "fn", "command" ] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --warp west" 
+	      }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": { "mandatory": [ "fn", "command" ] }
+          },
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --warp south" 
+
+	      }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": { "mandatory": [ "fn", "command" ] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --warp north" 
+	      }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": { "mandatory": [ "fn", "command" ] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --warp east" 
+	      }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "WARP: fn + command + {h,j,k,l}",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": { "mandatory": [ "fn", "option","command" ] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --send-to-desktop next"
+	      }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p",
+            "modifiers": { "mandatory": [ "fn", "option","command" ] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::window --send-to-desktop prev"
+	      }
+          ]
+        }
+      ]
+    }
+  ]
+}
