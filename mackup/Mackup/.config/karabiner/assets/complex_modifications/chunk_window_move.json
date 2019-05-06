@@ -108,35 +108,6 @@
           ]
         }
       ]
-    },
-    {
-      "description": "WARP: fn + command + {h,j,k,l}",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "n",
-            "modifiers": { "mandatory": [ "fn", "option","command" ] }
-          }, 
-          "to": [
-	      {
-                 "shell_command":"/usr/local/bin/chunkc tiling::window --send-to-desktop next"
-	      }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "p",
-            "modifiers": { "mandatory": [ "fn", "option","command" ] }
-          }, 
-          "to": [
-	      {
-                 "shell_command":"/usr/local/bin/chunkc tiling::window --send-to-desktop prev"
-	      }
-          ]
-        }
-      ]
     }
   ]
 }
