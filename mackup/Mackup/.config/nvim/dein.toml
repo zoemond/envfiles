@@ -7,3 +7,5 @@ repo = 'Shougo/deoplete.nvim'
 [[plugins]] 
 repo = 'Shougo/denite.nvim' 
 
+[[plugins]] 
+repo = 'Lokaltog/vim-easymotion' 
