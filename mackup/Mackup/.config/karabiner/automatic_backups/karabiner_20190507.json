@@ -501,49 +501,6 @@
                         ]
                     },
                     {
-                        "description": "DESKTOP: fn + control {n,w,}",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --create"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "CLOSE: fn + w",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::window --close"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "SEND: fn + option + command + {n,p,index,}",
                         "manipulators": [
                             {
@@ -747,11 +704,11 @@
                         ]
                     },
                     {
-                        "description": "FOCUS DESKTOP: fn + control + {index}",
+                        "description": "DESKTOP: fn + control {n,w,}",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "1",
+                                    "key_code": "n",
                                     "modifiers": {
                                         "mandatory": [
                                             "fn",
@@ -761,143 +718,28 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --focus 1"
+                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --create"
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "CLOSE: fn + w",
+                        "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "2",
+                                    "key_code": "w",
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn",
-                                            "control"
+                                            "fn"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --focus 2"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "3",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --focus 3"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "4",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --focus 4"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "5",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --focus 5"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "6",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --focus 6"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "7",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --focus 7"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "8",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --focus 8"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "9",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn",
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/local/bin/chunkc tiling::desktop --focus 9"
+                                        "shell_command": "/usr/local/bin/chunkc tiling::window --close"
                                     }
                                 ],
                                 "type": "basic"

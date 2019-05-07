@@ -120,3 +120,5 @@ chunkc core::load tiling.so
 chunkc tiling::rule --owner Finder --name Copy --state float 
 chunkc tiling::rule --owner \"IntelliJ IDEA\" --name \"Default Preferences\" --state float
 chunkc tiling::rule --owner \"Karabiner-Elements\" --name \"Karabiner-Elements Preferences\" --state float
+chunkc tiling::rule --owner iTerm2 --name \"Crash Reporter\" --state float
+

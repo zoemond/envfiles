@@ -1,9 +1,9 @@
 {
-  "title": "chunkwm focus",
+  "title": "chunkwm focus window",
   "rules": [
     {
 
-      "description": "fn + {h,j,k,l}",
+      "description": "FOCUS WINDOW: fn + {h,j,k,l}",
       "manipulators": [
         {
           "type": "basic",

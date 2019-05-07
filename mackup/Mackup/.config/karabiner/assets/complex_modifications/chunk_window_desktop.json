@@ -1,0 +1,22 @@
+{
+  "title": "chunkwm mode",
+  "rules": [
+    {
+      "description": "DESKTOP: fn + control {n,w,}",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": { "mandatory": [ "fn", "control"] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/chunkc tiling::desktop --create" 
+	      }
+          ]
+        }
+      ]
+    }
+  ]
+}

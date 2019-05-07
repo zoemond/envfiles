@@ -2,7 +2,7 @@
   "title": "chunkwm mode",
   "rules": [
     {
-      "description": "MODE: fn + {b,f,m,}",
+      "description": "CLOSE: fn + w",
       "manipulators": [
         {
           "type": "basic",
