@@ -1,0 +1,5 @@
+{
+    "vim.easymotion": true,
+    "editor.minimap.enabled": false,
+    "vim.leader": "Space"
+}
