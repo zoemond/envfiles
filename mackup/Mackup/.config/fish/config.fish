@@ -3,7 +3,7 @@ set -x LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 
 alias vi="nvim"
 alias rm="rmtrash"
-alias ls="ls -a"
+alias ls="ls -aG"
 alias ll="ls -l"
 
 set variable (dirname ( status --current-filename ))
