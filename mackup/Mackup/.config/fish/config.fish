@@ -1,10 +1,10 @@
 set PATH /Users/shinichikoki/Library/Android/sdk/platform-tools $PATH 
 set -x LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 
-alias vi="nvim"
-alias rm="rmtrash"
-alias ls="ls -aG"
-alias ll="ls -l"
+abbr vi "nvim"
+abbr rm "rmtrash"
+abbr ls "ls -aG"
+abbr ll "ls -l"
 
 set variable (dirname ( status --current-filename ))
 for f in (find $variable/myconf/* -type f -name '*.fish')
