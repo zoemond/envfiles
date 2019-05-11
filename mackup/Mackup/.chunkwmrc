@@ -6,8 +6,7 @@
 #
 
 # プラグインのディレクトリ
-# brewから入れた場合、/usr/local/Cellar/chunkwm/0.4.8/share/chunkwm/pluginsにあるのでそれを直接指定する
-#chunkc core::plugin_dir /usr/local/Cellar/chunkwm/0.4.8/share/chunkwm/plugins
+# brewから入れた場合、/usr/local/Cellar/chunkwm/0.4.8/share/chunkwm/pluginsにあるのでそれをコピーする
 chunkc core::plugin_dir ~/.chunkwm_plugins
 
 chunkc core::log_file stdout
