@@ -1,3 +1,2 @@
-source ~/envfiles/dotfiles/boot.sh
-
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
+export XDG_CONFIG_HOME=~/.config
+source $XDG_CONFIG_HOME/zsh/.zshrc 

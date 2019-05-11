@@ -3,11 +3,12 @@ tap 'caskroom/cask'
 cask 'appcleaner' 
 cask 'vivaldi' 
 cask 'iterm2'
-cask 'zsh'
 
 cask 'visual-studio-code' 
 brew 'neovim' 
 
+
+brew 'zsh'
 brew 'git' 
 brew 'tree' 
 brew 'rmtrash' 
