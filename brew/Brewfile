@@ -1,8 +1,9 @@
 tap 'caskroom/cask'
 
 cask 'appcleaner' 
-cask 'google-chrome' 
+cask 'vivaldi' 
 cask 'iterm2'
+cask 'zsh'
 
 cask 'visual-studio-code' 
 brew 'neovim' 
