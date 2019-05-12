@@ -3,9 +3,41 @@ repo = 'tpope/vim-surround'
 
 [[plugins]] 
 repo = 'Shougo/deoplete.nvim'
+hook_source = ''' 
+           " Use deoplete.
+           let g:deoplete#enable_at_startup = 1
+           '''
 
 [[plugins]] 
 repo = 'Shougo/denite.nvim' 
 
 [[plugins]] 
-repo = 'Lokaltog/vim-easymotion' 
+repo = 'easymotion/vim-easymotion' 
+hook_add = ''' 
+           " for easy motion
+           let mapleader = "\<Space>" 
+           map <Leader>j <Plug>(easymotion-j)
+           map <Leader>k <Plug>(easymotion-k)
+           
+           " <Leader>f{char} to move to {char}
+           map  <Leader>f <Plug>(easymotion-bd-f)
+           nmap <Leader>f <Plug>(easymotion-overwin-f)
+           
+           " s{char}{char} to move to {char}{char}
+           " nmap s <Plug>(easymotion-overwin-f2)
+           
+           " Move to word
+           map  <Leader>w <Plug>(easymotion-bd-w)
+           nmap <Leader>w <Plug>(easymotion-overwin-w)
+           
+           map  <Leader>b <Plug>(easymotion-bd-b)
+           map  <Leader>e <Plug>(easymotion-e) 
+           ''' 
+
+
+[[plugins]] 
+repo = 'haya14busa/vim-edgemotion'
+hook_add = ''' 
+           map <C-j> <Plug>(edgemotion-j)
+           map <C-k> <Plug>(edgemotion-k)
+           ''' 
