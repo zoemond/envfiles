@@ -13,6 +13,7 @@ brew 'git'
 brew 'tree' 
 brew 'rmtrash' 
 brew 'fzf' 
+brew 'the_silver_searcher' 
 
 cask 'alfred'
 
