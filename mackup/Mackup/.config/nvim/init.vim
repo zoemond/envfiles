@@ -29,6 +29,9 @@ filetype plugin indent on
 syntax enable
 "End dein Scripts------------------------- 
 
+set mouse=a
+colorscheme desert
+
 " for easy motion
 let mapleader = "\<Space>" 
 map <Leader>j <Plug>(easymotion-j)
