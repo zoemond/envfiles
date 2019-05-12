@@ -13,15 +13,12 @@ select-word-style default
 zstyle ':zle:*' word-chars ' /=;@:{}[]()<>,|.'
 zstyle ':zle:*' word-style unspecified 
 
-dir=$(cd $(dirname $0); pwd) 
-for zshfile_path in $(find $dir -type f -name '*.zsh')
+# 別ファイルの設定をsource
+dir=$(cd $(dirname $0); pwd)
+source $dir/plugin.zsh
+# findコマンドが"/"付きで実行されないので'/'をつける
+for zshfile_path in $(find $dir'/' -type f -name '*.zsh' -not -name 'plugin.zsh')
+# でもecho $zshfile_pathすると'/'は二重になる.why
 do
-    source "$zshfile_path"
-done
-
-# source $dir/alias.zsh
-# source $dir/git/alias.zsh
-# source $dir/prompt.zsh
-# source $dir/completion.zsh 
-# source $dir/color.zsh
-# source $dir/history.zsh
+    source $zshfile_path
+done 

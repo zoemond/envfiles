@@ -1,20 +1,40 @@
-# zplugが無ければインストール
-if [[ ! -d ~/.zplug ]];then
-  git clone https://github.com/zplug/zplug ~/.zplug
+# -----------------------------
+# ZPLUG
+# -----------------------------
+
+## defer: 読み込み順序を設定する
+# 例: "zsh-syntax-highlighting" は compinit の後に読み込まれる必要がある
+# zplug "zsh-users/zsh-syntax-highlighting", defer:2 
+# （2 以上は compinit 後に読み込まれるようになる）
+#####
+
+# zplugが無ければインストール 
+if [[ ! -d ~/.zplug ]];then 
+  echo 'zplug is not installed. install'
+  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
 fi
 
 # zplugを有効化する
-source ~/.zplug/init.zsh
+source ~/.zplug/init.zsh 
 
-# プラグインList
-# zplug "ユーザー名/リポジトリ名", タグ
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-autosuggestions" 
+
+zplug "zsh-users/zsh-syntax-highlighting", defer:2 
+
+zplug "zsh-users/zsh-history-substring-search" 
+if zplug check "zsh-users/zsh-history-substring-search"; then
+    bindkey '^P' history-substring-search-up
+    bindkey '^N' history-substring-search-down
+fi
+
 zplug "b4b4r07/enhancd", use:init.sh
-#zplug "junegunn/fzf-bin", as:command, from:gh-r, file:fzf
 
-# インストールしていないプラグインをインストール
+zplug "momo-lab/zsh-abbrev-alias" 
+
+
+# -----------------------------
+# インストールしていないプラグインをインストール 
+# -----------------------------
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
   if read -q; then
