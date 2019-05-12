@@ -41,3 +41,6 @@ hook_add = '''
            map <C-j> <Plug>(edgemotion-j)
            map <C-k> <Plug>(edgemotion-k)
            ''' 
+
+[[plugins]] 
+repo = 'cespare/vim-toml' 
