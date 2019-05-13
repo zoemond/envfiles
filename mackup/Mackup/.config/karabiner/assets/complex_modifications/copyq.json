@@ -1,0 +1,34 @@
+{
+  "title": "CopyQ",
+  "rules": [
+    {
+      "description": "control + command + { c, s }",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": { "mandatory": [ "control", "command" ] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/copyq toggle" 
+	      }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": { "mandatory": [ "control", "command" ] }
+          }, 
+          "to": [
+	      {
+                 "shell_command":"/usr/local/bin/copyq menu" 
+	      }
+          ]
+        }
+      ]
+    }
+  ]
+}
