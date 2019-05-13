@@ -3,46 +3,18 @@ repo = 'tpope/vim-surround'
 
 [[plugins]] 
 repo = 'Shougo/deoplete.nvim'
-hook_source = ''' 
-           " Use deoplete.
-           let g:deoplete#enable_at_startup = 1
-           '''
+hook_source = 'let g:deoplete#enable_at_startup = 1'
 
 [[plugins]] 
 repo = 'Shougo/denite.nvim' 
-hook_add = ''' 
-           source ~/.config/nvim/keymap/plugin/denite.vim
-           '''
+hook_add = 'source ~/.config/nvim/keymap/plugin/denite.vim'
 [[plugins]] 
 repo = 'easymotion/vim-easymotion' 
-hook_add = ''' 
-           " for easy motion
-           let mapleader = "\<Space>" 
-           map <Leader>j <Plug>(easymotion-j)
-           map <Leader>k <Plug>(easymotion-k)
-           
-           " <Leader>f{char} to move to {char}
-           map  <Leader>f <Plug>(easymotion-bd-f)
-           nmap <Leader>f <Plug>(easymotion-overwin-f)
-           
-           " s{char}{char} to move to {char}{char}
-           " nmap s <Plug>(easymotion-overwin-f2)
-           
-           " Move to word
-           map  <Leader>w <Plug>(easymotion-bd-w)
-           nmap <Leader>w <Plug>(easymotion-overwin-w)
-           
-           map  <Leader>b <Plug>(easymotion-bd-b)
-           map  <Leader>e <Plug>(easymotion-e) 
-           ''' 
-
+hook_add = 'source ~/.config/nvim/keymap/plugin/easymotion.vim' 
 
 [[plugins]] 
 repo = 'haya14busa/vim-edgemotion'
-hook_add = ''' 
-           map <C-j> <Plug>(edgemotion-j)
-           map <C-k> <Plug>(edgemotion-k)
-           ''' 
+hook_add = 'source ~/.config/nvim/keymap/plugin/edgemotion.vim' 
 
 [[plugins]] 
 repo = 'cespare/vim-toml' 
@@ -52,3 +24,6 @@ repo = 'Shougo/neomru.vim'
 [[plugins]] 
 repo = 'Shougo/neoyank.vim' 
 
+[[plugins]] 
+repo = 'Shougo/defx.nvim' 
+hook_add = 'source ~/.config/nvim/keymap/plugin/defx.vim'
