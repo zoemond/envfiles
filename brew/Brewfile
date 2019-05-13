@@ -3,6 +3,7 @@ tap 'caskroom/cask'
 cask 'appcleaner' 
 cask 'vivaldi' 
 cask 'iterm2'
+cask 'copyq'
 
 cask 'visual-studio-code' 
 brew 'neovim' 
