@@ -1,8 +1,8 @@
 bindkey -e
+export EDITOR='nvim'
 
 # Ctrl+Dでログアウトしてしまうことを防ぐ
-setopt IGNOREEOF
-
+setopt IGNOREEOF 
 
 # ビープ音を鳴らさないようにする
 setopt no_beep
