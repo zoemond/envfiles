@@ -1,3 +1,6 @@
+# brew で入れたautojumpを有効に
+source /usr/local/share/autojump/autojump.zsh
+  
 # rangerの多重起動を避ける 
 ranger() { [ -n "$RANGER_LEVEL" ] && exit || LESS="$LESS -+F -+X" command ranger "$@"; }
 [ -n "$RANGER_LEVEL" ] && PS1="(RANGER) $PS1" 
