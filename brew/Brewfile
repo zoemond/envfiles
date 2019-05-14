@@ -13,6 +13,7 @@ brew 'zsh'
 brew 'git' 
 brew 'tree' 
 brew 'rmtrash' 
+brew 'ranger' 
 brew 'fzf' 
 brew 'the_silver_searcher' 
 
