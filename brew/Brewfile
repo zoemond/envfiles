@@ -14,7 +14,7 @@ brew 'git'
 brew 'tree' 
 brew 'rmtrash' 
 brew 'ranger' 
-brew 'fzf' 
+brew 'fzy' 
 brew 'the_silver_searcher' 
 
 cask 'alfred'
