@@ -4,6 +4,7 @@ cask 'appcleaner'
 cask 'vivaldi' 
 cask 'iterm2'
 cask 'copyq'
+cask 'aquaskk'
 
 cask 'visual-studio-code' 
 brew 'neovim' 
