@@ -18,7 +18,7 @@ zstyle ':zle:*' word-style unspecified
 
 # 別ファイルの設定をsource
 dir=$(cd $(dirname $0); pwd)
-source $dir/plugin.zsh
+source $dir/plugin/install.zsh
 # findコマンドが"/"付きで実行されないので'/'をつける
 for zshfile_path in $(find $dir'/' -type f -name '*.zsh' -not -name 'plugin.zsh')
 # でもecho $zshfile_pathすると'/'は二重になる.why
