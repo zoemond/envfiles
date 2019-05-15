@@ -1,4 +1,7 @@
 .netrwhist
+**/*.pyo
+**/*.pyc
+**/*.pyd
 mackup/Mackup/.chunkwm_plugins
 mackup/Mackup/.config/karabiner/automatic_backups
 mackup/Mackup/.config/copyq/*.dat
