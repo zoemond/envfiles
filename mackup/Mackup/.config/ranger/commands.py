@@ -60,3 +60,20 @@ class my_edit(Command):
         # This is a generic tab-completion function that iterates through the
         # content of the current directory.
         return self._tab_directory_content()
+
+
+# fasd command with ranger
+#   ranger Wiki : https://github.com/ranger/ranger/wiki/Commands
+#   fasd : https://github.com/clvv/fasd
+class fasd(Command):
+    """
+    :fasd
+
+    Jump to directory using fasd
+    """
+    def execute(self):
+        import subprocess
+        arg = self.rest(1)
+        if arg:
+            directory = subprocess.check_output(["fasd", "-d"]+arg.split(), universal_newlines=True).strip()
+            self.fm.cd(directory) 
