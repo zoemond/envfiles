@@ -1,4 +1,7 @@
+export PATH=/usr/local/bin/:$PATH
+
 bindkey -e
+
 export EDITOR='nvim'
 
 # Ctrl+Dでログアウトしてしまうことを防ぐ
