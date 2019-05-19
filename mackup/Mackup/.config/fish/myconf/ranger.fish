@@ -1,24 +1,15 @@
-# ranger->サブシェル->rangerの多重起動を避ける
-function ranger
+# ranger->サブシェル->rangerの多重起動を避ける 
+function exit_if_nested_ranger
   if set -q -x RANGER_LEVEL
-    exit
-  else
-    command ranger $argv
+    exit 
   end
-end
+end 
 
 # rangerのサブシェルから起動された場合はpromptを変更する
 if set -q -x RANGER_LEVEL
   set -g _origin_prompt (fish_prompt)
   function fish_prompt
     echo "(RANGER)$_origin_prompt"
-  end
-end 
-
-# ranger->サブシェル->rangerの多重起動を避ける 
-function exit_if_nested_ranger
-  if set -q -x RANGER_LEVEL
-    exit 
   end
 end 
 
@@ -38,4 +29,4 @@ function ranger
        and test "$current_ranger_path" != $PWD 
          cd $current_ranger_path || return
     end
-end
+end 
