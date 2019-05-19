@@ -1,4 +1,5 @@
 
+set -x fish_prompt_pwd_dir_length 0
 function fish_right_prompt 
   if not set -q __fish_git_prompt_show_informative_status
     set -g __fish_git_prompt_show_informative_status 1
