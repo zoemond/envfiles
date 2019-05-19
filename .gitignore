@@ -2,6 +2,7 @@
 **/*.pyo
 **/*.pyc
 **/*.pyd
+mackup/Mackup/.config/copyq/copyq_geometry.ini
 mackup/Mackup/.chunkwm_plugins
 mackup/Mackup/.config/karabiner/automatic_backups
 mackup/Mackup/.config/copyq/*.dat
