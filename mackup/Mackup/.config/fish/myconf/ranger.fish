@@ -13,7 +13,6 @@ if set -q -x RANGER_LEVEL
   end
 end 
 
-
 # https://github.com/ranger/ranger/wiki/Integration-with-other-programs
 # > if you want to change the dir on demand after you exit ranger, by the following wrapper function.  
 function ranger
@@ -29,4 +28,9 @@ function ranger
        and test "$current_ranger_path" != $PWD 
          cd $current_ranger_path || return
     end
+end 
+
+
+function fish_user_key_bindings                                                  
+    bind \co 'ranger ; fish_prompt'                                           
 end 

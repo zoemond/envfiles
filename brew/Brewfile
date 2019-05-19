@@ -10,7 +10,7 @@ cask 'visual-studio-code'
 brew 'neovim' 
 
 
-brew 'zsh'
+brew 'fish'
 brew 'git' 
 brew 'tree' 
 brew 'rmtrash' 
