@@ -1,4 +1,7 @@
 export PATH=/usr/local/bin/:$PATH
+[[ -d ~/.rbenv  ]] && \
+  export PATH=${HOME}/.rbenv/bin:${PATH} && \
+  eval "$(rbenv init -)"
 
 bindkey -e
 
@@ -25,3 +28,5 @@ for zshfile_path in $(find $dir'/' -type f -name '*.zsh' -not -name 'plugin.zsh'
 do
     source $zshfile_path
 done 
+
+google-ime-skk &
