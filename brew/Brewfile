@@ -9,7 +9,6 @@ cask 'aquaskk'
 cask 'visual-studio-code' 
 brew 'neovim' 
 
-
 brew 'fish'
 brew 'git' 
 brew 'tree' 
@@ -21,8 +20,8 @@ brew 'the_silver_searcher'
 
 cask 'alfred'
 
+tap 'koekeishiya/formulae'
 brew 'chunkwm' 
 cask 'karabiner-elements' 
 
 cask 'docker' 
-

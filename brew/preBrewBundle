@@ -1,0 +1,2 @@
+# 少なくともchunkwmに必要だった
+xcode-select --install
