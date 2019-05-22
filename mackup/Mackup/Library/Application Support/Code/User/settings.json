@@ -1,16 +1,39 @@
 {
-    "vim.easymotion": true,
-    "editor.minimap.enabled": false,
-    "vim.leader": "Space",
-    "editor.detectIndentation": false,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["Space", "w"],                     // 検索するためのキーをfから変えたい場合は､ここを変更する
-            "after": ["leader", "leader", "w"]   
-        },
-        {
-            "before": ["Space", "b"],
-            "after": ["leader", "leader", "b"]   
-        },
-    ],
+  "vim.easymotion": true,
+  "editor.minimap.enabled": false,
+  "vim.leader": "Space",
+  "editor.detectIndentation": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["Space", "w"], // 検索するためのキーをfから変えたい場合は､ここを変更する
+      "after": ["leader", "leader", "w"]
+    },
+    {
+      "before": ["Space", "b"],
+      "after": ["leader", "leader", "b"]
+    },
+    {
+      "before": ["Space", "e"],
+      "after": ["leader", "leader", "e"]
+    },
+    {
+      "before": ["Space", "g", "e"],
+      "after": ["leader", "leader", "g", "e"]
+    }
+],
+"[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+},
+"prettier.tslintIntegration": true,
+"prettier.tabWidth": 4,
+"prettier.printWidth": 120,
+"prettier.proseWrap": "never",
+"[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"prettier.jsxBracketSameLine": true,
+"prettier.parser": "flow",
+"editor.formatOnSave": true,
+
 }
