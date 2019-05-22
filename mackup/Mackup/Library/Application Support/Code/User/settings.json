@@ -1,5 +1,16 @@
 {
     "vim.easymotion": true,
     "editor.minimap.enabled": false,
-    "vim.leader": "Space"
+    "vim.leader": "Space",
+    "editor.detectIndentation": false,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["Space", "w"],                     // 検索するためのキーをfから変えたい場合は､ここを変更する
+            "after": ["leader", "leader", "w"]   
+        },
+        {
+            "before": ["Space", "b"],
+            "after": ["leader", "leader", "b"]   
+        },
+    ],
 }
