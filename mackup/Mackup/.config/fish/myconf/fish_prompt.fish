@@ -20,8 +20,8 @@ function fish_prompt
   if not test $last_status -eq 0
     set_color -b red
   else
-    set_color black
-    set_color -b white
+    set_color "$myprompt_color_fg"
+    set_color -b "$myprompt_color_bg"
   end 
 
 
