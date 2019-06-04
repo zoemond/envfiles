@@ -24,6 +24,7 @@ function ranger
 
     # test (cat $tempfile) = ...すると、tempfileに中身が無いときエラーになる。どうしたらいいのか分からないので一時変数にした
     set current_ranger_path (cat -- "$tempfile")
+    echo "$current_ranger_path"
     if test -f "$tempfile" 
        and test "$current_ranger_path" != $PWD 
        and test "$current_ranger_path" != '' 
