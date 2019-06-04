@@ -26,8 +26,10 @@ function ranger
     set current_ranger_path (cat -- "$tempfile")
     if test -f "$tempfile" 
        and test "$current_ranger_path" != $PWD 
+       and test "$current_ranger_path" != '' 
          cd $current_ranger_path || return
-    end
+    end 
+    command rm -f -- "$tmpfile"
 end 
 
 
