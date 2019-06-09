@@ -1,4 +1,4 @@
-set PATH /Users/shinichikoki/Library/Android/sdk/platform-tools $PATH 
+set PATH ~/.local/bin ~/Library/Android/sdk/platform-tools $PATH 
 set -x LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 set -x EDITOR nvim
 
@@ -12,3 +12,4 @@ for f in (find $variable/myconf/* -type f -name '*.fish')
   . $f
 end
 
+set -g fish_user_paths "/usr/local/opt/maven@3.3/bin" $fish_user_paths
