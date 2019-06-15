@@ -39,5 +39,8 @@
     "Qiita",
     "redmine"
 ],
+"editor.formatOnSave": true,
+"editor.suggestSelection": "first",
+"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
 }
