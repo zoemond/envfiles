@@ -1,9 +1,15 @@
+## powerline segment 不採用理由
+#### iterm2だと三角が透明にならない
+#### 表示の違和感をなくすにはKeep background colors opaqueする方法があるが、
+#### backgound colorを設定しているところが透明にならないため利便性にかけると思った。
 
 # prompt_pwdをフルパスで表示
 set -x fish_prompt_pwd_dir_length 0
 
-function fish_right_prompt 
-  set -l prefix_git ' '
+function fish_prompt 
+  printf "\n"
+
+  set -l prefix_git ''
 
   set -g __fish_git_prompt_show_informative_status 1
   set -g __fish_git_prompt_showupstream "informative"
@@ -20,7 +26,21 @@ function fish_right_prompt
 
   # この辺みたりして設定する: https://github.com/ryanhugh/fish_config/blob/master/__fish_git_prompt.fi.backup#L459
   printf '%s[%s]%s%s%s' \
-         (set_color -b "$myprompt_color_bg" "$myprompt_color_fg") (prompt_pwd) \
 	 (set_color -b "$myprompt_color_bg_repo" "$myprompt_color_fg_repo") (__fish_git_prompt "$prefix_git%s") \
+         (set_color -b "$myprompt_color_bg" "$myprompt_color_fg") (prompt_pwd) \
 	 (set_color normal)
+
+  set -l last_status $status 
+
+  if not test $last_status -eq 0
+    set_color -b red
+  else
+    set_color "$myprompt_color_fg"
+    set_color -b "$myprompt_color_bg"
+  end 
+
+  printf "\n%s" (date +"%H:%M") 
+  set_color normal
+  printf " "
+
 end
