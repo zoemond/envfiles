@@ -4,7 +4,7 @@ cask 'appcleaner'
 cask 'vivaldi' 
 cask 'iterm2'
 cask 'copyq'
-cask 'aquaskk'
+cask 'google-japanese-ime'
 
 cask 'visual-studio-code' 
 brew 'neovim' 
@@ -28,3 +28,4 @@ cask 'karabiner-elements'
 cask 'docker' 
 
 cask 'mackup' 
+
