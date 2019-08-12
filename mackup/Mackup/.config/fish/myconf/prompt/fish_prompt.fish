@@ -9,11 +9,17 @@ set -x fish_prompt_pwd_dir_length 0
 function fish_prompt 
   printf "\n"
 
-  set -l prefix_git ''
+  set -l prefix_git ' '
+  set -l suffix_git ' '
 
   set -g __fish_git_prompt_show_informative_status 1
   set -g __fish_git_prompt_showupstream "informative"
   set -g __fish_git_prompt_showdirtystate "yes"
+
+  set -g ___fish_git_prompt_color_prefix      (set_color -b "$myprompt_color_bg_repo")
+  set -g ___fish_git_prompt_color_prefix_done (set_color -b "$myprompt_color_bg_repo")
+  set -g ___fish_git_prompt_color_suffix       (set_color -b "$myprompt_color_bg_repo")
+  set -g ___fish_git_prompt_color_suffix_done  (set_color -b "$myprompt_color_bg_repo")
 
   set -g __fish_git_prompt_color_branch -b "$myprompt_color_bg_repo" 
   set -g __fish_git_prompt_color_stagedstate -b "$myprompt_color_bg_staged" "$myprompt_color_fg_staged"
@@ -26,7 +32,7 @@ function fish_prompt
 
   # この辺みたりして設定する: https://github.com/fish-shell/fish-shell/blob/master/share/functions/fish_prompt.fish 
   printf '%s%s%s%s%s' \
-	 (set_color -b "$myprompt_color_bg_repo" "$myprompt_color_fg_repo") (fish_git_prompt "$prefix_git%s") \
+	 (set_color -b "$myprompt_color_bg_repo" "$myprompt_color_fg_repo") (fish_git_prompt "$prefix_git%s$suffix_git") \
          (set_color -b "$myprompt_color_bg_pwd" "$myprompt_color_fg_pwd") ' '(prompt_pwd)' ' \
 	 (set_color normal)
 
