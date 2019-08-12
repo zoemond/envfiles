@@ -27,7 +27,7 @@ function fish_prompt
   # この辺みたりして設定する: https://github.com/fish-shell/fish-shell/blob/master/share/functions/fish_prompt.fish 
   printf '%s%s%s%s%s' \
 	 (set_color -b "$myprompt_color_bg_repo" "$myprompt_color_fg_repo") (fish_git_prompt "$prefix_git%s") \
-         (set_color -b "$myprompt_color_bg" "$myprompt_color_fg") (prompt_pwd) \
+         (set_color -b "$myprompt_color_bg_pwd" "$myprompt_color_fg_pwd") ' '(prompt_pwd)' ' \
 	 (set_color normal)
 
   set -l last_status $status 
