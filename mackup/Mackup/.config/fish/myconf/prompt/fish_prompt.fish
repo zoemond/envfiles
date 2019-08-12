@@ -23,13 +23,11 @@ function fish_prompt
 
   printf "%s" (date +" %H:%M ") 
 
+  set_color normal
+
   # -----
   # git, pwd
-  # -----
-  set_color normal
-  set -l prefix_git ' '
-  set -l suffix_git ' '
-
+  # ----- 
   set -g __fish_git_prompt_show_informative_status 1
   set -g __fish_git_prompt_showupstream "informative"
   set -g __fish_git_prompt_showdirtystate "yes"
@@ -48,12 +46,17 @@ function fish_prompt
   set -g ___fish_git_prompt_char_stateseparator ''
   set -g ___fish_git_prompt_char_cleanstate ''
 
+  set -l prefix_git ' ' 
+  set -l suffix_git ' '
+
   # この辺みたりして設定する: https://github.com/fish-shell/fish-shell/blob/master/share/functions/fish_prompt.fish 
   printf '%s%s%s%s%s' \
 	 (set_color -b "$myprompt_color_bg_repo" "$myprompt_color_fg_repo") (fish_git_prompt "$prefix_git%s$suffix_git") \
          (set_color -b "$myprompt_color_bg_pwd" "$myprompt_color_fg_pwd") ' '(prompt_pwd)' ' \
 	 (set_color normal)
-
+  # -----
+  # stdin
+  # ----- 
   printf "\n» "
 
 end
