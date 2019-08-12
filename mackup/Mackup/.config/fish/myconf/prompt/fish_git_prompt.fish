@@ -481,7 +481,7 @@ function fish_git_prompt --description "Prompt function for Git"
         set format " (%s)"
     end
 
-    printf "%s$format%s" "$___fish_git_prompt_color_prefix" "$___fish_git_prompt_color_prefix_done$c$b$f$r$p$informative_status$___fish_git_prompt_color_suffix" "$___fish_git_prompt_color_suffix_done"
+    printf "%s$format%s" "$___fish_git_prompt_color_prefix" "$___fish_git_prompt_color_prefix_done$c$b$___fish_git_prompt_color_suffix" "$___fish_git_prompt_color_suffix_done$f$r$p$informative_status"
 end
 
 ### helper functions
