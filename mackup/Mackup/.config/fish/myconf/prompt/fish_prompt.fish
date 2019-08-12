@@ -9,6 +9,24 @@ set -x fish_prompt_pwd_dir_length 0
 function fish_prompt 
   printf "\n"
 
+  # -----
+  # status, time
+  # -----
+  set -l last_status $status 
+
+  if not test $last_status -eq 0
+    set_color -b red
+  else
+    set_color "$myprompt_color_fg"
+    set_color -b "$myprompt_color_bg"
+  end 
+
+  printf "%s" (date +" %H:%M ") 
+
+  # -----
+  # git, pwd
+  # -----
+  set_color normal
   set -l prefix_git ' '
   set -l suffix_git ' '
 
@@ -36,17 +54,6 @@ function fish_prompt
          (set_color -b "$myprompt_color_bg_pwd" "$myprompt_color_fg_pwd") ' '(prompt_pwd)' ' \
 	 (set_color normal)
 
-  set -l last_status $status 
-
-  if not test $last_status -eq 0
-    set_color -b red
-  else
-    set_color "$myprompt_color_fg"
-    set_color -b "$myprompt_color_bg"
-  end 
-
-  printf "\n%s" (date +"%H:%M") 
-  set_color normal
-  printf " "
+  printf "\n» "
 
 end
