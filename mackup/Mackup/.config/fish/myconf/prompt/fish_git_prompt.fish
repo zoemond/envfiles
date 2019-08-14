@@ -545,11 +545,11 @@ function __fish_git_prompt_informative_status
     set -l x (count $stagedFiles)
     set -l invalidstate (count (string match -r "U" -- $stagedFiles))
     set -l stagedstate (math $x - $invalidstate)
-    set -l untrackedfiles (command git ls-files --others --exclude-standard | count)
+    set -l untrackedfiles (command git ls-files --others --exclude-standard | wc -l | string trim)
     set -l stashstate 0
     set -l stashfile "$argv[1]/logs/refs/stash"
     if set -q __fish_git_prompt_showstashstate; and test -e "$stashfile"
-        set stashstate (count < $stashfile)
+	set stashstate (wc -l $stashfile | string match -r '\d+')
     end
 
     set -l info
