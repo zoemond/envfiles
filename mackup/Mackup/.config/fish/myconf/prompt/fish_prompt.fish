@@ -7,12 +7,12 @@
 set -x fish_prompt_pwd_dir_length 0
 
 function fish_prompt 
-  printf "\n"
-
   # -----
   # status, time
   # -----
   set -l last_status $status 
+
+  printf "\n"
 
   if not test $last_status -eq 0
     set_color -b red
@@ -21,7 +21,7 @@ function fish_prompt
     set_color -b "$myprompt_color_bg"
   end 
 
-  printf "%s" (date +" %H:%M ") 
+  printf "%s" (date +" %H:%M ")
 
   set_color normal
 
@@ -57,6 +57,7 @@ function fish_prompt
   # -----
   # stdin
   # ----- 
-  printf "\n» "
+  printf "\n"
+  printf "» "
 
 end
