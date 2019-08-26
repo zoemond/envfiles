@@ -6,19 +6,19 @@
       "manipulators": [ 
         {
           "type": "basic",
-          "from": { "key_code": "v" }, 
+          "from": {
+		  "key_code": "v",
+		  "modifiers": { "mandatory": [ "fn" ] }
+	  }, 
           "to": [
 	      { "shell_command":"/usr/local/bin/copyq toggle" }
-          ],
-	 "conditions": [
-		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
-	 ]
+          ]
         },
         {
           "type": "basic",
           "from": { "key_code": "m" }, 
-          "to": [ 
-		  { "shell_command":"/usr/local/bin/copyq menu" }
+          "to": [
+		  { "shell_command":"cat ~/.config/copyq/link_to_markdown.js | /usr/local/bin/copyq eval -" }
           ],
 	 "conditions": [
 		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
