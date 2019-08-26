@@ -29,4 +29,5 @@ function toCamel(beforeChar, currentChar){
 var cliped = str(read(0));
 var appended = reduceJoinChar(cliped, toCamel);
 
-print(appended);
+copy(appended);
+paste();

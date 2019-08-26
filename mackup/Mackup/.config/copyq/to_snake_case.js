@@ -43,4 +43,6 @@ function toSnake(beforeChar, currentChar) {
 var cliped = str(read(0));
 var appended = reduceJoinChar(cliped, toSnake);
 
-print(appended);
+copy(appended);
+paste();
+
