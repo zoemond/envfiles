@@ -2,8 +2,8 @@
   "title": "CopyQ",
   "rules": [
     {
-      "description": "control + command + { c, s }",
-      "manipulators": [
+      "description": "fn + c",
+      "manipulators": [ 
         {
           "type": "basic",
           "from": {
@@ -27,6 +27,57 @@
                  "shell_command":"/usr/local/bin/copyq menu" 
 	      }
           ]
+        },
+	{
+          "type": "basic",
+          "from": { "key_code": "c" }, 
+          "to": [
+	      { "shell_command":"cat ~/.config/copyq/toCamelCase.js | /usr/local/bin/copyq eval -" }
+          ],
+	 "conditions": [
+		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
+	 ]
+        },
+	{
+          "type": "basic",
+          "from": { "key_code": "k" }, 
+          "to": [
+	      { "shell_command":"cat ~/.config/copyq/to-kebab-case.js | /usr/local/bin/copyq eval -" }
+          ],
+	 "conditions": [
+		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
+	 ]
+        },
+	{
+          "type": "basic",
+          "from": { "key_code": "s" }, 
+          "to": [
+	      { "shell_command":"cat ~/.config/copyq/to_snake_case.js | /usr/local/bin/copyq eval -" }
+          ],
+	 "conditions": [
+		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
+	 ]
+        },
+	{
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": { "mandatory": [ "fn" ] }
+          }, 
+          "to": [
+		  { "set_variable": { "name": "copyq_mode", "value": 1 } }
+          ],
+	  "conditions": [
+		 { "type": "variable_if", "name": "copyq_mode", "value": 0 }
+	  ],
+	  "to_delayed_action": {
+		  "to_if_invoked": [
+			  { "set_variable": { "name": "copyq_mode", "value": 0 } }
+		  ],
+		  "to_if_canceled": [
+			  { "set_variable": { "name": "copyq_mode", "value": 0 } }
+		  ]
+	  }
         }
       ]
     }
