@@ -6,27 +6,23 @@
       "manipulators": [ 
         {
           "type": "basic",
-          "from": {
-            "key_code": "c",
-            "modifiers": { "mandatory": [ "control", "command" ] }
-          }, 
+          "from": { "key_code": "v" }, 
           "to": [
-	      {
-                 "shell_command":"/usr/local/bin/copyq toggle" 
-	      }
-          ]
+	      { "shell_command":"/usr/local/bin/copyq toggle" }
+          ],
+	 "conditions": [
+		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
+	 ]
         },
         {
           "type": "basic",
-          "from": {
-            "key_code": "m",
-            "modifiers": { "mandatory": [ "control", "command" ] }
-          }, 
-          "to": [
-	      {
-                 "shell_command":"/usr/local/bin/copyq menu" 
-	      }
-          ]
+          "from": { "key_code": "m" }, 
+          "to": [ 
+		  { "shell_command":"/usr/local/bin/copyq menu" }
+          ],
+	 "conditions": [
+		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
+	 ]
         },
 	{
           "type": "basic",
