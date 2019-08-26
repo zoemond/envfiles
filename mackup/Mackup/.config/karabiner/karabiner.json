@@ -908,15 +908,13 @@
                         "description": "fn + c",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "name": "copyq_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
                                 "from": {
-                                    "key_code": "v"
+                                    "key_code": "v",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ]
+                                    }
                                 },
                                 "to": [
                                     {
@@ -938,7 +936,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/usr/local/bin/copyq menu"
+                                        "shell_command": "cat ~/.config/copyq/link_to_markdown.js | /usr/local/bin/copyq eval -"
                                     }
                                 ],
                                 "type": "basic"
