@@ -497,11 +497,11 @@ u	う
 va	ヴぁ
 vd	ヴぇん
 ve	ヴぇ
-vh	ヴう
+vh	←
 vi	ヴぃ
-vj	ヴん
-vk	ヴぃん
-vl	ヴぉん
+vj	↓
+vk	↑
+vl	→
 vn	ヴぁん
 vo	ヴぉ
 vp	ヴぉー
