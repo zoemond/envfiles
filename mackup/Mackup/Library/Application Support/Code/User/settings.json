@@ -42,5 +42,7 @@
 "editor.formatOnSave": true,
 "editor.suggestSelection": "first",
 "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+"trailing-spaces.trimOnSave": true,
+"files.insertFinalNewline": true,
 
 }
