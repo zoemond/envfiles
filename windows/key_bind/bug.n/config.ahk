@@ -412,8 +412,8 @@ Config_UI_saveSession() {
 
 ;; Key definitions
 ;; Window management
-#Down::View_activateWindow(0, +1)
-#Up::View_activateWindow(0, -1)
+#n::View_activateWindow(0, +1)
+#p::View_activateWindow(0, -1)
 #+Down::View_shuffleWindow(0, +1)
 #+Up::View_shuffleWindow(0, -1)
 #+Enter::View_shuffleWindow(1)
