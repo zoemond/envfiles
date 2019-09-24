@@ -417,7 +417,7 @@ Config_UI_saveSession() {
 #+Down::View_shuffleWindow(0, +1)
 #+Up::View_shuffleWindow(0, -1)
 #+Enter::View_shuffleWindow(1)
-#c::Manager_closeWindow()
+#q::Manager_closeWindow()
 #+d::Window_toggleDecor()
 #+f::View_toggleFloatingWindow()
 #+m::Manager_moveWindow()

@@ -1,6 +1,6 @@
 
-muhenkan := vk1Dsc07B
-
+#+r::Reload 
+muhenkan := vk1Dsc07B 
 Capslock::Ctrl
 Alt::Ctrl
 Ctrl::Alt 
@@ -20,3 +20,13 @@ Return
 ;backspaceの隣のキー → 半角・全角キー
 SC07D::Send, {SC029}
 +SC07D::Send, +{SC029}
+
+
+Capslock & p::Send, {Up}
+Capslock & n::Send, {Down}
+Capslock & b::Send, {Left}
+Capslock & f::Send, {Right}
+Capslock & a::Send, {Home}
+Capslock & e::Send, {End}
+Capslock & w::Send, ^{BS}
+
