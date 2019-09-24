@@ -1,4 +1,3 @@
-
 #+r::Reload 
 muhenkan := vk1Dsc07B 
 Capslock::Ctrl
@@ -28,5 +27,26 @@ Capslock & b::Send, {Left}
 Capslock & f::Send, {Right}
 Capslock & a::Send, {Home}
 Capslock & e::Send, {End}
-Capslock & w::Send, ^{BS}
 
+Capslock & h::send {BS}
+Capslock & w::Send, ^{BS} 
+
+Capslock & k::send +{End}{Del}
+Capslock & d::send {Del}
+
+Capslock & q::send ^{q}
+Capslock & r::send ^{r}
+Capslock & t::send ^{t}
+Capslock & y::send ^{y}
+Capslock & u::send ^{u}
+Capslock & s::send ^{s}
+Capslock & g::send ^{g}
+Capslock & z::send ^{z}
+Capslock & x::send ^{x}
+Capslock & c::send ^{c}
+Capslock & v::send ^{v}
+Capslock & .::send ^{.}
+
+SC07B & d::send ^{Del}
+SC07B & f::send ^{Right}
+SC07B & b::send ^{Left}
