@@ -1,4 +1,6 @@
 - google ime
+- key swap
+  - auotHotKeyではcapslockを完全に消せないので
 - [scoop](https://scoop.sh)
   - vscode
     - 7zip
