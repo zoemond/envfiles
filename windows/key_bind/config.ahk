@@ -1,6 +1,5 @@
 #+r::Reload 
-muhenkan := vk1Dsc07B 
-Capslock::Ctrl
+muhenkan := vk1Dsc07B
 Alt::Ctrl
 Ctrl::Alt 
 
@@ -20,32 +19,31 @@ Return
 SC07D::Send, {SC029}
 +SC07D::Send, +{SC029}
 
+RCtrl & p::Send, {Up}
+RCtrl & n::Send, {Down}
+RCtrl & b::Send, {Left}
+RCtrl & f::Send, {Right}
+RCtrl & a::Send, {Home}
+RCtrl & e::Send, {End}
 
-Capslock & p::Send, {Up}
-Capslock & n::Send, {Down}
-Capslock & b::Send, {Left}
-Capslock & f::Send, {Right}
-Capslock & a::Send, {Home}
-Capslock & e::Send, {End}
+RCtrl & h::send {BS}
+RCtrl & w::Send, ^{BS} 
 
-Capslock & h::send {BS}
-Capslock & w::Send, ^{BS} 
+RCtrl & k::send +{End}{Del}
+RCtrl & d::send {Del}
 
-Capslock & k::send +{End}{Del}
-Capslock & d::send {Del}
-
-Capslock & q::send ^{q}
-Capslock & r::send ^{r}
-Capslock & t::send ^{t}
-Capslock & y::send ^{y}
-Capslock & u::send ^{u}
-Capslock & s::send ^{s}
-Capslock & g::send ^{g}
-Capslock & z::send ^{z}
-Capslock & x::send ^{x}
-Capslock & c::send ^{c}
-Capslock & v::send ^{v}
-Capslock & .::send ^{.}
+RCtrl & q::send ^{q}
+RCtrl & r::send ^{r}
+RCtrl & t::send ^{t}
+RCtrl & y::send ^{y}
+RCtrl & u::send ^{u}
+RCtrl & s::send ^{s}
+RCtrl & g::send ^{g}
+RCtrl & z::send ^{z}
+RCtrl & x::send ^{x}
+RCtrl & c::send ^{c}
+RCtrl & v::send ^{v}
+RCtrl & .::send ^{.}
 
 SC07B & d::send ^{Del}
 SC07B & f::send ^{Right}
