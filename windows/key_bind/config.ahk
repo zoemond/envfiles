@@ -49,3 +49,8 @@ RCtrl & .::send ^{.}
 SC07B & d::send ^{Del}
 SC07B & f::send ^{Right}
 SC07B & b::send ^{Left}
+
+; application hot keys
+#+Enter::
+  WinActivate, ahk_exe ubuntu1804.exe
+return
