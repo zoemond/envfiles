@@ -54,3 +54,7 @@ SC07B & b::send ^{Left}
 #+Enter::
   WinActivate, ahk_exe ubuntu1804.exe
 return
+
+#+w::
+  Run, bugn.exe
+return
