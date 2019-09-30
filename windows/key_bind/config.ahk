@@ -3,6 +3,7 @@ muhenkan := vk1Dsc07B
 Alt::Ctrl
 Ctrl::Alt 
 
+
 ;https://umada.net/autohotkey_keyconfig
 ;https://www.autohotkey.com/docs/KeyList.htm#SpecialKeys
 SC079::
@@ -48,3 +49,12 @@ RCtrl & .::send ^{.}
 SC07B & d::send ^{Del}
 SC07B & f::send ^{Right}
 SC07B & b::send ^{Left}
+
+; application hot keys
+#+Enter::
+  WinActivate, ahk_exe ubuntu1804.exe
+return
+
+#+w::
+  Run, bugn.exe
+return
