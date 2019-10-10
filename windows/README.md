@@ -16,3 +16,5 @@
 - packageManagement
   - google chrome
 
+- wsl ubuntu
+  - trash-cli
