@@ -51,10 +51,11 @@ SC07B & f::send ^{Right}
 SC07B & b::send ^{Left}
 
 ; application hot keys
-#+Enter::
+#+k::
   WinActivate, ahk_exe ubuntu1804.exe
 return
 
 #+w::
   Run, bugn.exe
 return
+
