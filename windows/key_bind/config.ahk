@@ -33,19 +33,6 @@ RCtrl & w::Send, ^{BS}
 RCtrl & k::send +{End}{Del}
 RCtrl & d::send {Del}
 
-RCtrl & q::send ^{q}
-RCtrl & r::send ^{r}
-RCtrl & t::send ^{t}
-RCtrl & y::send ^{y}
-RCtrl & u::send ^{u}
-RCtrl & s::send ^{s}
-RCtrl & g::send ^{g}
-RCtrl & z::send ^{z}
-RCtrl & x::send ^{x}
-RCtrl & c::send ^{c}
-RCtrl & v::send ^{v}
-RCtrl & .::send ^{.}
-
 SC07B & d::send ^{Del}
 SC07B & f::send ^{Right}
 SC07B & b::send ^{Left}
