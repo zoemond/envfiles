@@ -1,3 +1,4 @@
+;改行コードはCRLFでないとコメント直下の行が無効になる
 SetKeyDelay, 0
 
 #+r::Reload 
@@ -23,16 +24,25 @@ Return
 SC07D::Send, {SC029}
 +SC07D::Send, +{SC029}
 
-;移動 よくわかないけどここのコメントの何かがおかしくて下のコマンドが効かなくなったりする
-RCtrl & p::Send, {Up}
-RCtrl & n::Send, {Down}
-RCtrl & b::Send, {Left}
-RCtrl & f::Send, {Right}
-RCtrl & a::Send, {Home}
-RCtrl & e::Send, {End}
+;移動, 選択
+RCtrl & p::WithShift("{Up}")
+RCtrl & n::WithShift("{Down}")
+RCtrl & b::WithShift("{Left}")
+RCtrl & f::WithShift("{Right}")
+RCtrl & a::WithShift("{Home}")
+RCtrl & e::WithShift("{End}")
 
-SC07B & f::send ^{Right}
-SC07B & b::send ^{Left}
+SC07B & f::WithShift("^{Right}")
+SC07B & b::WithShift("^{Left}")
+
+;3つ以上のキー同時押しは'&'では実現できません
+WithShift(rctrlKey){
+    If GetKeyState("Shift", "P")
+        Send, +%rctrlKey%
+    Else
+        Send, %rctrlKey%
+    Return
+}
 
 ;削除
 RCtrl & h::send {BS}
