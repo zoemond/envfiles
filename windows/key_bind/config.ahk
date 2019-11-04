@@ -45,18 +45,25 @@ WithShift(rctrlKey){
 }
 
 ;削除
-RCtrl & h::send {BS}
+RCtrl & h::Send, {BS}
 RCtrl & w::Send, ^{BS} 
 
-RCtrl & k::send +{End}{Del}
-RCtrl & d::send {Del}
+RCtrl & k::Send, +{End}{Del}
+RCtrl & d::Send, {Del}
 
-SC07B & d::send ^{Del}
+SC07B & d::Send, ^{Del}
 
 
 ; application hot keys
 #+k::
   WinActivate, ahk_exe ubuntu1804.exe
+return
+
+#+a::
+  if WinActive("ahk_exe Hyper.exe")
+     WinMinimize, ahk_exe Hyper.exe
+  else
+     WinActivate, ahk_exe Hyper.exe
 return
 
 #+w::
