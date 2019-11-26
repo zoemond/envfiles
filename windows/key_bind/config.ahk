@@ -70,3 +70,7 @@ return
   Run, bugn.exe
 return
 
+#v::
+  Run, copyq toggle,,hide
+return
+
