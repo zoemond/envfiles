@@ -25,14 +25,14 @@ SC07D::Send, {SC029}
 +SC07D::Send, +{SC029}
 
 ;移動, 選択
-RCtrl & p::WithShift("{Up}")
-RCtrl & n::WithShift("{Down}")
-RCtrl & b::WithShift("{Left}")
-RCtrl & f::WithShift("{Right}")
-RCtrl & a::WithShift("{Home}")
-RCtrl & e::WithShift("{End}")
+SC07B & k::Send, {Blind}{Up}
+SC07B & j::Send, {Blind}{Down}
+SC07B & h::Send, {Blind}{Left}
+SC07B & l::Send, {Blind}{Right}
+SC07B & i::Send, {Blind}{Home}
+SC07B & a::Send, {Blind}{End}
 
-SC07B & f::WithShift("^{Right}")
+SC07B & w::WithShift("^{Right}")
 SC07B & b::WithShift("^{Left}")
 
 ;3つ以上のキー同時押しは'&'では実現できません
@@ -45,14 +45,12 @@ WithShift(rctrlKey){
 }
 
 ;削除
-RCtrl & h::Send, {BS}
 RCtrl & w::Send, ^{BS} 
+SC07B & x::Send, {Blind}{BS}
+SC07B & d::Send, {Blind}{Del}
 
-RCtrl & k::Send, +{End}{Del}
-RCtrl & d::Send, {Del}
-
-SC07B & d::Send, ^{Del}
-
+        ;Send, +{Home}{Del}
+        ;Send, +{End}{Del}
 
 ; application hot keys
 #+k::
