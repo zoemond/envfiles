@@ -6,18 +6,23 @@ muhenkan := vk1Dsc07B
 LAlt::LCtrl
 LCtrl::LAlt 
 
-;Windowsの言語設定から英字キーボードを選択するとgoogle imeが変換/無変換キーを認識しないため
-;切り替え時のラグが若干きになる
-;https://umada.net/autohotkey_keyconfig
-;https://www.autohotkey.com/docs/KeyList.htm#SpecialKeys
+;Google IME切り替えの神関数
+#Include NeosAutoHotKey-IME.ahk
+
 SC079::
-  ;日本語への切替
-  PostMessage 0x50, 0, 0x4110411,, A  ;WM_INPUTLANGCHANGEREQUEST
+  ThreadID:=DllCall("GetWindowThreadProcessId", "UInt", 0)
+  InputLocaleID:=DllCall("GetKeyboardLayout", "UInt", ThreadID, "UInt")
+  ENG:=67699721
+  GOOGLE:=68224017
+  if (InputLocaleID <> %GOOGLE%)
+  { ;IMEがGoogleでないときはGoogleに切り替えます。
+    PostMessage 0x50, 0, 0x4110411,, A  ;WM_INPUTLANGCHANGEREQUEST
+  }
+  IME_SET(1)
 Return
 
 SC07B::
-  ;Englishへの切替
-  PostMessage 0x50, 0, 0x4090409,, A  ;WM_INPUTLANGCHANGEREQUEST
+  IME_SET(0)
 Return
 
 ;backspaceの隣のキー → 半角・全角キー
