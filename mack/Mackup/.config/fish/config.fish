@@ -3,7 +3,7 @@ set -x LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 set -x EDITOR nvim
 
 abbr vi "nvim"
-abbr rm "rmtrash"
+abbr rm "trash-put"
 abbr ls "ls -aG"
 abbr ll "ls -l"
 
