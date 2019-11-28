@@ -27,7 +27,7 @@ function ranger
     if test -f "$tempfile" 
        and test "$current_ranger_path" != $PWD 
        and test "$current_ranger_path" != '' 
-         cd $current_ranger_path || return
+         cd $current_ranger_path
     end 
     command rm -f -- "$tmpfile"
 end 
