@@ -5,7 +5,9 @@ SC07B & j::Send, {Blind}{Down}
 SC07B & h::Send, {Blind}{Left}
 SC07B & l::Send, {Blind}{Right}
 SC07B & i::Send, {Blind}{Home}
+SC07B & 0::Send, {Blind}{Home}
 SC07B & a::Send, {Blind}{End}
+SC07B & 4::Send, {Blind}{End}
 
 SC07B & w::WithShift("^{Right}")
 SC07B & b::WithShift("^{Left}")
