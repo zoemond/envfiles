@@ -22,8 +22,24 @@ WithShift(rctrlKey){
 }
 
 ;削除
-RCtrl & w::Send, ^{BS} 
-SC07B & x::Send, {Blind}{BS}
+RCtrl & w::
+    if WinActive("ahk_exe Hyper.exe")
+        Send, ^{w} 
+    else
+        Send, ^{BS} 
+    return
+
+SC07B & x::
+    if GetKeyState("RCtrl", "P") {
+        if WinActive("ahk_exe Hyper.exe")
+           Send, ^{w}
+        else
+           Send, ^{BS}
+    } else {
+        Send, {BS}
+    }
+    return
+
 SC07B & d::Send, {Blind}{Del}
 
         ;Send, +{Home}{Del}
