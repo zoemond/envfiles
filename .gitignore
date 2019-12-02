@@ -2,10 +2,10 @@
 **/*.pyo
 **/*.pyc
 **/*.pyd
-mackup/Mackup/.config/copyq/copyq_geometry.ini
+common/.config/copyq/copyq_geometry.ini
+common/.config/copyq/*.dat
 mackup/Mackup/.chunkwm_plugins
 mackup/Mackup/.config/karabiner/automatic_backups
-mackup/Mackup/.config/copyq/*.dat
 mackup/Mackup/Library/Preferences/IntelliJIdea2019.1
 mackup/Mackup/Library/Application Support/IdeaIC2019.1/
 mackup/Mackup/Library/Application Support/IntelliJIdea2019.1/
