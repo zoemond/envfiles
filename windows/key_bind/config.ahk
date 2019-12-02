@@ -31,6 +31,30 @@ SC07B::
   IME_SET(0)
 Return
 
+F1::
+    SetTitleMatchMode,RegEx
+    if WinActive(".*Google Chrome")
+        Send, {Shift}{F6}
+    else
+        Send, {F1}
+    return
+
+#Include PasteMode.ahk
+ToPasteModeNormalLabel:
+  ToPasteModeNormal()
+return
+#c::
+  ToPasteModeActive()
+  SetTimer, ToPasteModeNormalLabel, 400
+return
+#p::
+  if (IsPasteModeActive()) {
+    Run, "cat | copyq eval -"
+    ToPasteModeNormal()
+  }
+  return
+
+
 #Include CursorPointer.ahk
 #Include Caret.ahk
 #+r::Reload 
