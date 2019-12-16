@@ -52,10 +52,10 @@ cu	ちゅ
 cw	ちぇい
 cz	ちゃん
 da	だ
-dci	でぃ
-dcj	どぅん
-dck	でぃん
-dcu	どぅ
+dgi	でぃ
+dgj	どぅん
+dgk	でぃん
+dgu	どぅ
 dd	でん
 de	で
 df	で
