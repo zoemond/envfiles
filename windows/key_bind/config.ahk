@@ -45,15 +45,33 @@ ToPasteModeNormalLabel:
 return
 #c::
   ToPasteModeActive()
-  SetTimer, ToPasteModeNormalLabel, 400
+  SetTimer, ToPasteModeNormalLabel, 500
 return
-#p::
+#a::
   if (IsPasteModeActive()) {
-    Run, "cat | copyq eval -"
+    Run, cmd.exe /c To-CamelCase.bat,,hide
+    ToPasteModeNormal()
+  }
+  return
+#k::
+  if (IsPasteModeActive()) {
+    Run, cmd.exe /c To-KebabCase.bat,,hide
+    ToPasteModeNormal()
+  }
+  return
+#s::
+  if (IsPasteModeActive()) {
+    Run, cmd.exe /c To-SnakeCase.bat,,hide
     ToPasteModeNormal()
   }
   return
 
+#m::
+  if (IsPasteModeActive()) {
+    Run, cmd.exe /c To-MarkdownIfLink.bat,,hide
+    ToPasteModeNormal()
+  }
+  return
 
 #Include CursorPointer.ahk
 #Include Caret.ahk

@@ -1,4 +1,4 @@
--
-    function isUpperCase(character) {
-        return character === character.toUpperCase();
-    }
+
+function isUpperCase(character) {
+    return character === character.toUpperCase();
+}
