@@ -53,11 +53,11 @@ return
     ToPasteModeNormal()
   }
   return
-#k::
-  if (IsPasteModeActive()) {
-    Run, cmd.exe /c To-KebabCase.bat,,hide
-    ToPasteModeNormal()
-  }
+;#k::
+;  if (IsPasteModeActive()) {
+;    Run, cmd.exe /c To-KebabCase.bat,,hide
+;    ToPasteModeNormal()
+;  }
   return
 #s::
   if (IsPasteModeActive()) {
@@ -66,12 +66,12 @@ return
   }
   return
 
-#m::
-  if (IsPasteModeActive()) {
-    Run, cmd.exe /c To-MarkdownIfLink.bat,,hide
-    ToPasteModeNormal()
-  }
-  return
+;#m::
+;  if (IsPasteModeActive()) {
+;    Run, cmd.exe /c To-MarkdownIfLink.bat,,hide
+;    ToPasteModeNormal()
+;  }
+;  return
 
 #Include CursorPointer.ahk
 #Include Caret.ahk
