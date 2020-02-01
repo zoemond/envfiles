@@ -1,4 +1,3 @@
-set PATH /Users/shinichikoki/Library/Android/sdk/platform-tools $PATH 
 set -x LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 set -x EDITOR nvim
 
