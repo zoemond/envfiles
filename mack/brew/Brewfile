@@ -14,12 +14,14 @@ brew 'tree'
 brew 'rmtrash' 
 brew 'colordiff' 
 brew 'ranger' 
-brew 'tmux' 
 brew 'fzy' 
 brew 'autojump' 
 brew 'the_silver_searcher' 
 
+brew 'tmux' 
+brew 'reattach-to-user-namespace' 
+
 tap 'koekeishiya/formulae'
-brew 'chunkwm' 
+brew 'yabai' 
 
 cask 'docker' 
