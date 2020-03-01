@@ -17,11 +17,7 @@
 # %*    時間(hh:flag_mm:ss)
 # %T    時間(hh:mm)
 # %t    時間(hh:mm(am/pm))
-PROMPT="%K{white}%F{233}%T%{${reset_color}%}%f%k "
 
-# -----------------------------
-# RIGHT PROMPT
-# ----------------------------- 
 ## -----------------------------
 ## for git
 ## ----------------------------- 
@@ -122,6 +118,7 @@ function +vi-git-compare-local-remote() {
     fi 
 } 
 
+
 function _update_prompt_with_vcs_info() {
     local -a messages
     local prompt
@@ -143,7 +140,15 @@ function _update_prompt_with_vcs_info() {
         prompt="${(j: :)messages}"
     fi
 
-    RPROMPT="%K{245}%F{233}[%~]%f%k" 
-    RPROMPT+=$prompt
-} 
-add-zsh-hook precmd _update_prompt_with_vcs_info
+    echo "$prompt"
+}
+
+function _update_prompt(){
+    local vcs_info=`_update_prompt_with_vcs_info`
+    PROMPT="
+%K{white}%F{233}%T%{${reset_color}%}%f%k $vcs_info %K{245}%F{233}[%~]%f%k
+» "
+}
+
+add-zsh-hook precmd _update_prompt
+
