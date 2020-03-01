@@ -19,3 +19,6 @@ mack/brew/Downloading
 mack/brew/Installing
 mack/brew/Pouriave.bo==
 mack/brew/Pouring
+
+common/.config/karabiner
+mack/Mackup/.config/karabiner/automatic_backups/
