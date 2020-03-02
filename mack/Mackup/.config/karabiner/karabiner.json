@@ -582,13 +582,6 @@
                         "description": "Copyq: paste mode",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "name": "copyq_mode",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "c",
                                     "modifiers": {
@@ -601,28 +594,10 @@
                                     {
                                         "set_variable": {
                                             "name": "copyq_mode",
-                                            "value": 3
+                                            "value": 1
                                         }
                                     }
                                 ],
-                                "to_delayed_action": {
-                                    "to_if_canceled": [
-                                        {
-                                            "set_variable": {
-                                                "name": "copyq_mode",
-                                                "value": 0
-                                            }
-                                        }
-                                    ],
-                                    "to_if_invoked": [
-                                        {
-                                            "set_variable": {
-                                                "name": "copyq_mode",
-                                                "value": 0
-                                            }
-                                        }
-                                    ]
-                                },
                                 "type": "basic"
                             },
                             {
@@ -630,7 +605,7 @@
                                     {
                                         "name": "copyq_mode",
                                         "type": "variable_if",
-                                        "value": 3
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
@@ -638,7 +613,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "~/.config/copyq/shims/To-MarkdownIFLink.sh"
+                                        "key_code": "a"
                                     }
                                 ],
                                 "type": "basic"
@@ -648,7 +623,7 @@
                                     {
                                         "name": "copyq_mode",
                                         "type": "variable_if",
-                                        "value": 3
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
@@ -656,7 +631,15 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "cat ~/.config/copyq/scripts/toCamelCase.js | /usr/local/bin/copyq eval -"
+                                        "shell_command": "~/.config/copyq/shims/To-MarkdownIFLink.sh"
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "copyq_mode",
+                                            "value": 0
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -666,7 +649,7 @@
                                     {
                                         "name": "copyq_mode",
                                         "type": "variable_if",
-                                        "value": 3
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
@@ -674,7 +657,15 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "cat ~/.config/copyq/scripts/to-kebab-case.js | /usr/local/bin/copyq eval -"
+                                        "shell_command": "~/.config/copyq/shims/To-MarkdownIFLink.sh"
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "copyq_mode",
+                                            "value": 0
+                                        }
                                     }
                                 ],
                                 "type": "basic"
@@ -684,7 +675,7 @@
                                     {
                                         "name": "copyq_mode",
                                         "type": "variable_if",
-                                        "value": 3
+                                        "value": 1
                                     }
                                 ],
                                 "from": {
@@ -692,7 +683,15 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "cat ~/.config/copyq/scripts/to_snake_case.js | /usr/local/bin/copyq eval -"
+                                        "shell_command": "~/.config/copyq/shims/To-MarkdownIFLink.sh"
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "copyq_mode",
+                                            "value": 0
+                                        }
                                     }
                                 ],
                                 "type": "basic"
