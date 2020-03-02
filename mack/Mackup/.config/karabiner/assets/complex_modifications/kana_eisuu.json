@@ -1,0 +1,24 @@
+{
+  "title": "かな/英数をmodifierに",
+  "rules": [
+    {
+       "description": "simultainiusでlang1,lang2を設定する事が出来なかったので",
+       "manipulators": [
+         {
+            "type": "basic",
+            "from": { "key_code": "lang1", "modifiers": { "optional": [ "any" ] }},
+            "to": [ { "set_variable": { "name": "vk1", "value": 1 } } ],
+            "to_after_key_up": [ { "set_variable": { "name": "vk1", "value": 0 } } ],
+            "to_if_alone": [ { "key_code": "japanese_kana" } ]
+         },
+         {
+            "type": "basic",
+            "from": { "key_code": "lang2", "modifiers": { "optional": [ "any" ] }},
+            "to": [ { "set_variable": { "name": "vk2", "value": 2 } } ],
+            "to_after_key_up": [ { "set_variable": { "name": "vk2", "value": 0 } } ],
+            "to_if_alone": [ { "key_code": "japanese_eisuu" } ]
+         }
+       ]
+    }
+  ]
+}
