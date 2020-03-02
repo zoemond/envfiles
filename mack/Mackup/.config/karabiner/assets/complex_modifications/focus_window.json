@@ -1,9 +1,9 @@
 {
-  "title": "chunkwm focus window",
+  "title": "YABAI focus window",
   "rules": [
     {
 
-      "description": "FOCUS WINDOW: fn + {h,j,k,l}",
+      "description": "YABAI FOCUS WINDOW[ fn + {h,j,k,l} ]",
       "manipulators": [
         {
           "type": "basic",
@@ -12,7 +12,7 @@
               "modifiers": { "mandatory": [ "fn" ] }
             },
             "to": [
-              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus west" }
+              { "shell_command": "/usr/local/bin/yabai -m window --focus west" }
             ] 
         }, 
         {
@@ -22,7 +22,7 @@
               "modifiers": { "mandatory": [ "fn" ] }
             },
             "to": [
-              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus south" }
+              { "shell_command": "/usr/local/bin/yabai -m window --focus south" }
             ] 
         },
         {
@@ -32,7 +32,7 @@
               "modifiers": { "mandatory": [ "fn" ] }
             },
             "to": [
-              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus north" }
+              { "shell_command": "/usr/local/bin/yabai -m window --focus north" }
             ] 
         },
         {
@@ -42,14 +42,14 @@
               "modifiers": { "mandatory": [ "fn" ] }
             },
             "to": [
-              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus east" }
+              { "shell_command": "/usr/local/bin/yabai -m window --focus east" }
             ] 
         }
       ]
     },
     {
 
-      "description": "fn + {n,p,tab}",
+      "description": "YABAI FOCUS WINDOW [ fn + {n,p,tab} ]",
       "manipulators": [
         {
           "type": "basic",
@@ -58,7 +58,7 @@
               "modifiers": { "mandatory": [ "fn" ] }
             },
             "to": [
-              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus next" }
+              { "shell_command": "/usr/local/bin/yabai -m window --focus next" }
             ] 
         }, 
         {
@@ -68,7 +68,7 @@
               "modifiers": { "mandatory": [ "fn" ] }
             },
             "to": [
-              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus prev" }
+              { "shell_command": "/usr/local/bin/yabai -m window --focus prev" }
             ] 
         },
         {
@@ -78,7 +78,7 @@
               "modifiers": { "mandatory": [ "fn" ] }
             },
             "to": [
-              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus next" }
+              { "shell_command": "/usr/local/bin/yabai -m window --focus next" }
             ] 
         },
         {
@@ -88,7 +88,7 @@
               "modifiers": { "mandatory": [ "fn", "shift" ] }
             },
             "to": [
-              { "shell_command": "/usr/local/bin/chunkc tiling::window --focus prev" }
+              { "shell_command": "/usr/local/bin/yabai -m window --focus prev" }
             ] 
         }
       ]
