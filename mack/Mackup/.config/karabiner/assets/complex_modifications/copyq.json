@@ -6,13 +6,9 @@
       "manipulators": [ 
         {
           "type": "basic",
-          "from": {
-		  "key_code": "v",
-		  "modifiers": { "mandatory": [ "fn" ] }
-	  }, 
-          "to": [
-	      { "shell_command":"/usr/local/bin/copyq toggle" }
-          ]
+	  "conditions": [ { "type": "variable_if", "name": "vk2", "value": 2 } ],
+          "from": { "key_code": "v" }, 
+          "to": [ { "shell_command":"/usr/local/bin/copyq toggle" } ]
         }
       ]
     },
@@ -21,7 +17,8 @@
       "manipulators": [ 
 	{
             "type": "basic",
-            "from": { "key_code": "c", "modifiers": { "mandatory": [ "fn" ] }},
+	    "conditions": [ { "type": "variable_if", "name": "vk2", "value": 2 } ],
+            "from": { "key_code": "c" },
             "to": [ { "set_variable": { "name": "copyq_mode", "value": 1 } } ]
         },
         {
