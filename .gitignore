@@ -4,6 +4,9 @@
 **/*.pyd
 common/.config/copyq/copyq_geometry.ini
 common/.config/copyq/*.dat
+common/.config/copyq/copyq-commands.ini
+common/.config/copyq/copyq-commands.ini.bak
+common/.config/copyq/copyq-commands.ini.new.bak
 mackup/Mackup/.chunkwm_plugins
 mackup/Mackup/.config/karabiner/automatic_backups
 mackup/Mackup/Library/Preferences/IntelliJIdea2019.1
