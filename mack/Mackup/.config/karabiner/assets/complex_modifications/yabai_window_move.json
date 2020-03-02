@@ -1,8 +1,8 @@
 {
-  "title": "chunkwm move",
+  "title": "WINDOW MOVE",
   "rules": [
     {
-      "description": "SWAP: fn + option + {h,j,k,l}",
+      "description": "WINDOW: SWAP [ fn + option + {h,j,k,l} ]",
       "manipulators": [
         {
           "type": "basic",
@@ -12,7 +12,7 @@
           }, 
           "to": [
 	      {
-                 "shell_command":"/usr/local/bin/chunkc tiling::window --swap west" 
+                 "shell_command":"/usr/local/bin/yabai -m window --swap west" 
 	      }
           ]
         },
@@ -24,7 +24,7 @@
           },
           "to": [
 	      {
-                 "shell_command":"/usr/local/bin/chunkc tiling::window --swap south" 
+                 "shell_command":"/usr/local/bin/yabai -m window --swap south" 
 
 	      }
           ]
@@ -37,7 +37,7 @@
           }, 
           "to": [
 	      {
-                 "shell_command":"/usr/local/bin/chunkc tiling::window --swap north" 
+                 "shell_command":"/usr/local/bin/yabai -m window --swap north" 
 	      }
           ]
         },
@@ -49,14 +49,14 @@
           }, 
           "to": [
 	      {
-                 "shell_command":"/usr/local/bin/chunkc tiling::window --swap east" 
+                 "shell_command":"/usr/local/bin/yabai -m window --swap east" 
 	      }
           ]
         }
       ]
     },
     {
-      "description": "WARP: fn + command + {h,j,k,l}",
+      "description": "WINDOW: WARP [ fn + command + {h,j,k,l}]",
       "manipulators": [
         {
           "type": "basic",
@@ -66,7 +66,7 @@
           }, 
           "to": [
 	      {
-                 "shell_command":"/usr/local/bin/chunkc tiling::window --warp west" 
+                 "shell_command":"/usr/local/bin/yabai -m window --warp west" 
 	      }
           ]
         },
@@ -78,7 +78,7 @@
           },
           "to": [
 	      {
-                 "shell_command":"/usr/local/bin/chunkc tiling::window --warp south" 
+                 "shell_command":"/usr/local/bin/yabai -m window --warp south" 
 
 	      }
           ]
@@ -91,7 +91,7 @@
           }, 
           "to": [
 	      {
-                 "shell_command":"/usr/local/bin/chunkc tiling::window --warp north" 
+                 "shell_command":"/usr/local/bin/yabai -m window --warp north" 
 	      }
           ]
         },
@@ -103,7 +103,7 @@
           }, 
           "to": [
 	      {
-                 "shell_command":"/usr/local/bin/chunkc tiling::window --warp east" 
+                 "shell_command":"/usr/local/bin/yabai -m window --warp east" 
 	      }
           ]
         }
