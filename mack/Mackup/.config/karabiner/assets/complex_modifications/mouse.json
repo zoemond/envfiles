@@ -1,0 +1,51 @@
+{
+  "title": "POINTER",
+  "rules": [
+    {
+       "description": "POINTER:CLICK",
+       "manipulators": [
+	  {
+              "type": "basic",
+              "conditions": [ { "type": "variable_if", "name": "vk2", "value": 2 } ],
+              "from": { "key_code": "return_or_enter", "modifiers": { "optional": [ "any" ] } },
+              "to": [ { "pointing_button": "button1" } ]
+          },
+	  {
+              "type": "basic",
+              "conditions": [ { "type": "variable_if", "name": "vk1", "value": 1 } ],
+              "from": { "key_code": "return_or_enter", "modifiers": { "optional": [ "any" ] } },
+              "to": [ { "pointing_button": "button2" } ]
+          }
+       ]
+    },
+    {
+       "description": "POINTER:MOVE",
+       "manipulators": [
+	  {
+              "type": "basic",
+              "conditions": [ { "type": "variable_if", "name": "vk1", "value": 1 } ],
+              "from": { "key_code": "h", "modifiers": { "optional": [ "any" ] } },
+              "to": [ { "mouse_key": { "x": -1536 } } ]
+          },
+	  {
+              "type": "basic",
+              "conditions": [ { "type": "variable_if", "name": "vk1", "value": 1 } ],
+              "from": { "key_code": "j", "modifiers": { "optional": [ "any" ] } },
+              "to": [ { "mouse_key": { "y": 1536 } } ]
+          },
+	  {
+              "type": "basic",
+              "conditions": [ { "type": "variable_if", "name": "vk1", "value": 1 } ],
+              "from": { "key_code": "k", "modifiers": { "optional": [ "any" ] } },
+              "to": [ { "mouse_key": { "y": -1536 } } ]
+          },
+	  {
+              "type": "basic",
+              "conditions": [ { "type": "variable_if", "name": "vk1", "value": 1 } ],
+              "from": { "key_code": "l", "modifiers": { "optional": [ "any" ] } },
+              "to": [ { "mouse_key": { "x": 1536 } } ]
+          }
+       ]
+    }
+  ]
+}
