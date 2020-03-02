@@ -28,7 +28,7 @@
             "type": "basic",
             "from": { "key_code": "m" }, 
             "to": [
-		  { "shell_command":"~/.config/copyq/shims/To-MarkdownIFLink.sh" }
+		  { "shell_command":"~/.config/copyq/shims/To-MarkdownIFLink.sh | /usr/local/bin/copyq eval -" }
             ],
 	   "conditions": [
 	           { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
@@ -38,7 +38,7 @@
           "type": "basic",
           "from": { "key_code": "c" }, 
           "to": [
-		  { "shell_command":"~/.config/copyq/shims/To-MarkdownIFLink.sh" }
+		  { "shell_command":"~/.config/copyq/shims/To-CamelCase.sh | /usr/local/bin/copyq eval -" }
           ],
 	 "conditions": [ { "type": "variable_if", "name": "copyq_mode", "value": 1 } ],
 	 "to_after_key_up": [ { "set_variable": { "name": "copyq_mode", "value": 0 } } ]
@@ -47,7 +47,7 @@
           "type": "basic",
           "from": { "key_code": "k" }, 
           "to": [
-		  { "shell_command":"~/.config/copyq/shims/To-MarkdownIFLink.sh" }
+		  { "shell_command":"~/.config/copyq/shims/To-KebabCase.sh | /usr/local/bin/copyq eval -" }
           ],
 	 "conditions": [ { "type": "variable_if", "name": "copyq_mode", "value": 1 } ],
 	 "to_after_key_up": [ { "set_variable": { "name": "copyq_mode", "value": 0 } } ]
@@ -56,7 +56,7 @@
           "type": "basic",
           "from": { "key_code": "s" }, 
           "to": [
-		  { "shell_command":"~/.config/copyq/shims/To-MarkdownIFLink.sh" }
+		  { "shell_command":"~/.config/copyq/shims/To-SnakeCase.sh | /usr/local/bin/copyq eval -" }
           ],
 	 "conditions": [ { "type": "variable_if", "name": "copyq_mode", "value": 1 } ],
 	 "to_after_key_up": [ { "set_variable": { "name": "copyq_mode", "value": 0 } } ]

@@ -613,7 +613,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "a"
+                                        "shell_command": "~/.config/copyq/shims/To-MarkdownIFLink.sh | /usr/local/bin/copyq eval -"
                                     }
                                 ],
                                 "type": "basic"
