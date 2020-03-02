@@ -2,7 +2,7 @@
   "title": "CopyQ",
   "rules": [
     {
-      "description": "fn + c",
+      "description": "Copyq: toggle",
       "manipulators": [ 
         {
           "type": "basic",
@@ -13,47 +13,12 @@
           "to": [
 	      { "shell_command":"/usr/local/bin/copyq toggle" }
           ]
-        },
-        {
-          "type": "basic",
-          "from": { "key_code": "m" }, 
-          "to": [
-		  { "shell_command":"cat ~/.config/copyq/link_to_markdown.js | /usr/local/bin/copyq eval -" }
-          ],
-	 "conditions": [
-		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
-	 ]
-        },
-	{
-          "type": "basic",
-          "from": { "key_code": "c" }, 
-          "to": [
-	      { "shell_command":"cat ~/.config/copyq/toCamelCase.js | /usr/local/bin/copyq eval -" }
-          ],
-	 "conditions": [
-		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
-	 ]
-        },
-	{
-          "type": "basic",
-          "from": { "key_code": "k" }, 
-          "to": [
-	      { "shell_command":"cat ~/.config/copyq/to-kebab-case.js | /usr/local/bin/copyq eval -" }
-          ],
-	 "conditions": [
-		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
-	 ]
-        },
-	{
-          "type": "basic",
-          "from": { "key_code": "s" }, 
-          "to": [
-	      { "shell_command":"cat ~/.config/copyq/to_snake_case.js | /usr/local/bin/copyq eval -" }
-          ],
-	 "conditions": [
-		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
-	 ]
-        },
+        }
+      ]
+    },
+    {
+      "description": "Copyq: paste mode",
+      "manipulators": [ 
 	{
           "type": "basic",
           "from": {
@@ -74,6 +39,46 @@
 			  { "set_variable": { "name": "copyq_mode", "value": 0 } }
 		  ]
 	  }
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "m" }, 
+          "to": [
+		  { "shell_command":"~/.config/copyq/shims/To-MarkdownIFLink.sh" }
+          ],
+	 "conditions": [
+		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
+	 ]
+        },
+	{
+          "type": "basic",
+          "from": { "key_code": "c" }, 
+          "to": [
+	      { "shell_command":"cat ~/.config/copyq/scripts/toCamelCase.js | /usr/local/bin/copyq eval -" }
+          ],
+	 "conditions": [
+		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
+	 ]
+        },
+	{
+          "type": "basic",
+          "from": { "key_code": "k" }, 
+          "to": [
+	      { "shell_command":"cat ~/.config/copyq/scripts/to-kebab-case.js | /usr/local/bin/copyq eval -" }
+          ],
+	 "conditions": [
+		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
+	 ]
+        },
+	{
+          "type": "basic",
+          "from": { "key_code": "s" }, 
+          "to": [
+	      { "shell_command":"cat ~/.config/copyq/scripts/to_snake_case.js | /usr/local/bin/copyq eval -" }
+          ],
+	 "conditions": [
+		 { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
+	 ]
         }
       ]
     }
