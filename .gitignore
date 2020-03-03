@@ -3,6 +3,8 @@
 **/*.pyc
 **/*.pyd
 common/.config/copyq/copyq_geometry.ini
+common/.config/copyq/copyq_geometry.ini
+common/.config/copyq/copyq_tabs.ini
 common/.config/copyq/*.dat
 common/.config/copyq/copyq-commands.ini
 common/.config/copyq/copyq-commands.ini.bak
