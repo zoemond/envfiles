@@ -1,12 +1,14 @@
 {
-  "title": "ARROW",
+  "title": "CARET",
   "rules": [
     {
        "description": "ARROW {h,i,j,k}",
        "manipulators": [
 	        {
               "type": "basic",
-              "conditions": [ { "type": "variable_if", "name": "vk2", "value": 2 } ],
+              "conditions": [
+		      { "type": "variable_if", "name": "vk2", "value": 2 }
+	      ],
               "from": { "key_code": "h", "modifiers": { "optional": [ "any" ] } },
               "to": [ { "key_code": "left_arrow" } ]
           },
@@ -31,7 +33,7 @@
       ]
     },
     {
-       "description": "WORD ARROW {w,b}",
+       "description": "WORD JUMP {w,b}",
        "manipulators": [
 	        {
              "type": "basic",
@@ -76,7 +78,10 @@
           },
 	  {
               "type": "basic",
-              "conditions": [ { "type": "variable_if", "name": "vk2", "value": 2 } ],
+              "conditions": [
+                 { "type": "variable_if", "name": "vk2", "value": 2 },
+                 { "type": "frontmost_application_unless", "bundle_identifiers": [ "^com\\.googlecode\\.iterm2" ] }
+              ],
               "from": { "key_code": "d" },
               "to": { "key_code": "delete_or_backspace", "modifiers": "fn" }
           },
@@ -88,7 +93,10 @@
           },
 	  {
               "type": "basic",
-              "conditions": [ { "type": "variable_if", "name": "vk2", "value": 2 } ],
+              "conditions": [
+                 { "type": "variable_if", "name": "vk2", "value": 2 },
+                 { "type": "frontmost_application_unless", "bundle_identifiers": [ "^com\\.googlecode\\.iterm2" ] }
+                ],
               "from": { "key_code": "d", "modifiers": { "mandatory": "left_control" } },
               "to": { "key_code": "delete_or_backspace", "modifiers": ["left_option", "fn" ] }
           }
