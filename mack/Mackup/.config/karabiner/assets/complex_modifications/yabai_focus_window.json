@@ -58,7 +58,7 @@
               "modifiers": { "mandatory": [ "fn" ] }
             },
             "to": [
-              { "shell_command": "/usr/local/bin/yabai -m window --focus next" }
+              { "shell_command": "/usr/local/bin/yabai -m query --windows --space | /usr/local/bin/jq '.[-1].id' | xargs -I{} /usr/local/bin/yabai -m window --focus {}" }
             ] 
         }, 
         {
@@ -68,7 +68,7 @@
               "modifiers": { "mandatory": [ "fn" ] }
             },
             "to": [
-              { "shell_command": "/usr/local/bin/yabai -m window --focus prev" }
+              { "shell_command": "/usr/local/bin/yabai -m query --windows --space | /usr/local/bin/jq '.[1].id' | xargs -I{} /usr/local/bin/yabai -m window --focus {}" }
             ] 
         },
         {
