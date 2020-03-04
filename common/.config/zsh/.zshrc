@@ -29,4 +29,3 @@ do
     source $zshfile_path
 done 
 
-google-ime-skk &
