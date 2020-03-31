@@ -1,3 +1,7 @@
+" 
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 " nvimのでpythonを使ったpluginを入れるようにする
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 
@@ -24,3 +28,4 @@ syntax enable
 
 set mouse=a
 colorscheme desert 
+
