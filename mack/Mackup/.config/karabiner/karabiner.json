@@ -1224,6 +1224,12 @@
                                         "name": "vk2",
                                         "type": "variable_if",
                                         "value": 2
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2"
+                                        ],
+                                        "type": "frontmost_application_unless"
                                     }
                                 ],
                                 "from": {
@@ -1241,6 +1247,12 @@
                                         "name": "vk2",
                                         "type": "variable_if",
                                         "value": 2
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2"
+                                        ],
+                                        "type": "frontmost_application_unless"
                                     }
                                 ],
                                 "from": {
@@ -1249,6 +1261,57 @@
                                 "to": {
                                     "key_code": "left_arrow",
                                     "modifiers": "left_command"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "LINE START/END",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "vk2",
+                                        "type": "variable_if",
+                                        "value": 2
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a"
+                                },
+                                "to": {
+                                    "key_code": "e",
+                                    "modifiers": "left_control"
+                                },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "vk2",
+                                        "type": "variable_if",
+                                        "value": 2
+                                    },
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.googlecode\\.iterm2"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i"
+                                },
+                                "to": {
+                                    "key_code": "a",
+                                    "modifiers": "left_control"
                                 },
                                 "type": "basic"
                             }
