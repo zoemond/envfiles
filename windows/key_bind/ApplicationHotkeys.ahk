@@ -11,7 +11,7 @@ return
   Run, bugn.exe
 return
 
-#v::
+SC07B & v::
   Run, copyq toggle,,hide
 return
 
