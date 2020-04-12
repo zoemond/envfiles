@@ -27,9 +27,8 @@
             "to": [
 		  { "shell_command":"~/.config/copyq/shims/To-MarkdownIFLink.sh | /usr/local/bin/copyq eval -" }
             ],
-	   "conditions": [
-	           { "type": "variable_if", "name": "copyq_mode", "value": 1 } 
-	   ]  
+	   "conditions": [ { "type": "variable_if", "name": "copyq_mode", "value": 1 } ],
+	   "to_after_key_up": [ { "set_variable": { "name": "copyq_mode", "value": 0 } } ]
         },
 	{
           "type": "basic",
