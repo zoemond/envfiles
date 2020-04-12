@@ -3,8 +3,6 @@ abbrev-alias -g F='| fzf'
 
 abbrev-alias vi="nvim"
 abbrev-alias rm="rmtrash"
-abbrev-alias ls="ls -aG"
-abbrev-alias ll="ls -lh"
 
 # C で標準出力をクリップボードにコピーする
 # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1
