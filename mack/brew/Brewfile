@@ -17,6 +17,7 @@ brew 'ranger'
 brew 'fzy' 
 brew 'autojump' 
 brew 'the_silver_searcher' 
+brew 'gnu-sed'
 
 brew 'tmux' 
 brew 'reattach-to-user-namespace' 
