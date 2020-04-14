@@ -16,7 +16,7 @@ brew 'colordiff'
 brew 'ranger' 
 brew 'fzy' 
 brew 'autojump' 
-brew 'the_silver_searcher' 
+brew 'ripgrep' 
 brew 'gnu-sed'
 brew 'fd'
 
