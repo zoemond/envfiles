@@ -18,6 +18,7 @@ brew 'fzy'
 brew 'autojump' 
 brew 'the_silver_searcher' 
 brew 'gnu-sed'
+brew 'fd'
 
 brew 'tmux' 
 brew 'reattach-to-user-namespace' 
