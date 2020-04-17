@@ -1,6 +1,3 @@
-# brew で入れたautojumpを有効に
-source /usr/local/share/autojump/autojump.zsh
- 
 # -----------------------------
 # ZPLUG
 # -----------------------------
