@@ -104,14 +104,14 @@ function +vi-git-compare-local-remote() {
     modified_number=$(echo $gitstatus | command grep -e '^ M' -e '^MM' -e '^ D' 2>/dev/null | command grep -c '')
     untracked_number=$(echo $gitstatus | command grep '^??' 2>/dev/null | command grep -c '') 
 
-    if [ "$added_number" != '' ] ; then 
+    if [ "$added_number" != 0 ] ; then 
         hook_com[misc]+=$( to_green_bg '+'$added_number )
     fi 
-    if [ "$modified_number" != '' ] ; then 
+    if [ "$modified_number" != 0 ] ; then 
         hook_com[misc]+=$( to_red_bg '+'$modified_number )
     fi 
 
-    if [ "$untracked_number" != '' ] ; then 
+    if [ "$untracked_number" != 0 ] ; then 
         hook_com[misc]+=$( to_yellow_bg '?'$untracked_number )
     else
         hook_com[misc]+=''
