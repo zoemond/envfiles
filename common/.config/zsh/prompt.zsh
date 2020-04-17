@@ -82,12 +82,12 @@ function +vi-git-compare-local-remote() {
 
     # for git prior to 1.7
     # ahead=$(git rev-list origin/${hook_com[branch]}..HEAD | wc -l)
-    ahead=$(git rev-list ${hook_com[branch]}@{upstream}..HEAD 2>/dev/null | grep -c '')
+    ahead=$(git rev-list ${hook_com[branch]}@{upstream}..HEAD 2>/dev/null | command grep -c '')
     (( $ahead )) && pushed_status+=( "↑${ahead}" )
 
     # for git prior to 1.7
     # behind=$(git rev-list HEAD..origin/${hook_com[branch]} | wc -l)
-    behind=$(git rev-list HEAD..${hook_com[branch]}@{upstream} 2>/dev/null | grep -c '')
+    behind=$(git rev-list HEAD..${hook_com[branch]}@{upstream} 2>/dev/null | command grep -c '')
     (( $behind )) && pushed_status+=( "↓${behind}" )
 
     hook_com[misc]+=$(reset_color ${(j:/:)pushed_status})
@@ -100,9 +100,9 @@ function +vi-git-compare-local-remote() {
     local gitstatus untracked_number modified_number added_number
     gitstatus=$(git status --porcelain 2>/dev/null) 
 
-    added_number=$(echo $gitstatus | grep -e '^A' -e '^M ' -e '^D ' 2>/dev/null | grep -c '')
-    modified_number=$(echo $gitstatus | grep -e '^ M' -e '^MM' -e '^ D' 2>/dev/null | grep -c '')
-    untracked_number=$(echo $gitstatus | grep '^??' 2>/dev/null | grep -c '') 
+    added_number=$(echo $gitstatus | command grep -e '^A' -e '^M ' -e '^D ' 2>/dev/null | command grep -c '')
+    modified_number=$(echo $gitstatus | command grep -e '^ M' -e '^MM' -e '^ D' 2>/dev/null | command grep -c '')
+    untracked_number=$(echo $gitstatus | command grep '^??' 2>/dev/null | command grep -c '') 
 
     if [ "$added_number" != '' ] ; then 
         hook_com[misc]+=$( to_green_bg '+'$added_number )
