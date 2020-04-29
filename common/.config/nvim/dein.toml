@@ -27,3 +27,8 @@ repo = 'Shougo/neoyank.vim'
 [[plugins]] 
 repo = 'Shougo/defx.nvim' 
 hook_add = 'source ~/.config/nvim/keymap/plugin/defx.vim'
+
+[[plugins]] 
+repo = 'osyo-manga/vim-over'
+
+
