@@ -31,6 +31,8 @@ zplug "b4b4r07/enhancd", use:init.sh
 
 zplug "momo-lab/zsh-abbrev-alias" 
 
+zplug romkatv/powerlevel10k, as:theme, depth:1
+
 # -----------------------------
 # インストールしていないプラグインをインストール 
 # -----------------------------
