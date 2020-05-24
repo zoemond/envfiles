@@ -15,6 +15,9 @@ select-word-style default
 zstyle ':zle:*' word-chars ' /=;@:{}[]()<>,|.'
 zstyle ':zle:*' word-style unspecified 
 
+bindkey "^z" undo
+bindkey "^y" redo
+
 # 別ファイルの設定をsource
 dir=$(cd $(dirname $0); pwd)
 source $dir/plugin/install.zsh
