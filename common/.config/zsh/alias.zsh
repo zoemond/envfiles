@@ -2,7 +2,7 @@ abbrev-alias -g G='| grep'
 abbrev-alias -g F='| fzf'
 
 abbrev-alias vi="nvim"
-abbrev-alias rm="rmtrash"
+abbrev-alias rm="gomi"
 
 # C で標準出力をクリップボードにコピーする
 # mollifier delta blog : http://mollifier.hatenablog.com/entry/20100317/p1

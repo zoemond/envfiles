@@ -33,6 +33,9 @@ zplug "momo-lab/zsh-abbrev-alias"
 
 zplug romkatv/powerlevel10k, as:theme, depth:1
 
+# Install zsh-gomi(If fzf is already installed)
+zplug "b4b4r07/zsh-gomi", if:"which fzf"
+
 # -----------------------------
 # インストールしていないプラグインをインストール 
 # -----------------------------
