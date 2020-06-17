@@ -1,0 +1,18 @@
+# デフォルトの bind generic G !git gc を無効化する
+bind generic G none
+
+
+bind generic g move-first-line
+bind generic G move-last-line
+
+# もともとはG
+bind generic E      view-grep
+
+# I で rebase -i
+bind main    I      ?git rebase -i %(commit)
+bind diff    I      ?git rebase -i %(commit)
+
+# R で rebase
+bind main    R      ?git rebase %(commit)
+bind diff    R      ?git rebase %(commit)
+
