@@ -7,9 +7,6 @@
 #Include %A_ScriptDir%
 SetKeyDelay, 0
 
-LAlt::LCtrl
-LCtrl::LAlt 
-
 ;backspaceの隣のキー → 半角・全角キー
 SC07D::Send, {SC029}
 +SC07D::Send, +{SC029}
