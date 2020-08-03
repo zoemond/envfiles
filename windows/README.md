@@ -22,9 +22,15 @@ scoopは
   - [... executable or script when running bug.n, or in the Windows user directory (e.g. C:\Users\joten\AppData\Roaming\bug.n).](https://github.com/fuhsjr00/bug.n/blob/master/doc/Customization.md)
 3. 環境変数追加
 4. 設定ファイルへのシンボリックリンク作成
-- `mklink C:\Users\me\AppData\Roaming\bug.n\Config.ini  envfiles\windows\key_bind\bug.n\Config.ini`
+- 実行権限cmd: `mklink C:\Users\me\AppData\Roaming\bug.n\Config.ini  C:\Users\me\envfiles\windows\key_bind\bug.n\Config.ini`
 
+## フォント
+- alacrittyで表示するのに調子の良かった[Ricty](https://github.com/edihbrandon/RictyDiminished)を入れる
+  - Noto Sans, Noto Serif, 源ノ角ゴシック は英語表示がずれた
 
+## alacritty
+  - install: https://github.com/alacritty/alacritty
+  - 実行権限cmd: `mklink C:\Users\me\AppData\Roaming\alacritty\alacritty.yml  C:\Users\me\envfiles\windows\alacritty\alacritty.yml`
 ---
 その他
 - vscode
@@ -50,6 +56,7 @@ Host github github.com
 - `sudo apt install ranger`
 - `sudo apt install zsh`
   - install: https://github.com/zplug/zplug
+    - `chmod -R 755 ~/.zplug` : wslで(?).zshrc時に`Ignore insecure directories and continue [y] or abort compinit [n]?`という警告が出ないように
   - ~/.zshenv <
     ```sh
     if [[ -z "$XDG_CONFIG_HOME" ]]

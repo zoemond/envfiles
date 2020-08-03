@@ -1,10 +1,10 @@
 #+a::
-  if !WinExist("ahk_exe Hyper.exe")
-     Run, Hyper.exe
-  else if WinActive("ahk_exe Hyper.exe")
-     WinMinimize, ahk_exe Hyper.exe
+  if !WinExist("ahk_exe alacritty.exe")
+     Run, alacritty.exe
+  else if WinActive("ahk_exe alacritty.exe")
+     WinMinimize, ahk_exe alacritty.exe
   else
-     WinActivate, ahk_exe Hyper.exe
+     WinActivate, ahk_exe alacritty.exe
 return
 
 #+w::

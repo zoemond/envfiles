@@ -17,6 +17,9 @@ zstyle ':zle:*' word-style unspecified
 
 bindkey "^z" undo
 bindkey "^y" redo
+# alacrittyで単語単位のcaret移動ができるように
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # 別ファイルの設定をsource
 dir=$(cd $(dirname $0); pwd)

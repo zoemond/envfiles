@@ -23,7 +23,7 @@ WithShift(rctrlKey){
 
 ;削除
 RCtrl & w::
-    if WinActive("ahk_exe Hyper.exe")
+    if WinActive("ahk_exe alacritty.exe")
         Send, ^{w} 
     else
         Send, ^{BS} 
@@ -31,7 +31,7 @@ RCtrl & w::
 
 SC07B & x::
     if GetKeyState("RCtrl", "P") {
-        if WinActive("ahk_exe Hyper.exe")
+        if WinActive("ahk_exe alacritty.exe")
            Send, ^{w}
         else
            Send, ^{BS}
