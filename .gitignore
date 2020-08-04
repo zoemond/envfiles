@@ -28,4 +28,6 @@ mack/brew/Pouring
 common/.config/karabiner
 mack/Mackup/.config/karabiner/automatic_backups/
 
+common/.config/anyenv/
+
 common/.config/zsh/rc.zsh
