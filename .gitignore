@@ -28,6 +28,7 @@ common/.config/karabiner
 mack/Mackup/.config/karabiner/automatic_backups/
 
 common/.config/zsh/.zcompdump
+common/.config/pulse/
 
 common/.config/anyenv/
 
