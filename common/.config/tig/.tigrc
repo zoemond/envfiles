@@ -9,8 +9,8 @@ bind generic G move-last-line
 bind generic E      view-grep
 
 # I で rebase -i
-bind main    I      ?git rebase -i %(commit)
-bind diff    I      ?git rebase -i %(commit)
+bind main    I      !git rebase -i %(commit)
+bind diff    I      !git rebase -i %(commit)
 
 # R で rebase
 bind main    R      ?git rebase %(commit)
