@@ -21,19 +21,19 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-zinit load "zsh-users/zsh-autosuggestions"
+zinit light "zsh-users/zsh-autosuggestions"
 
-zinit ice wait'!0'; zinit load zsh-users/zsh-syntax-highlighting
+zinit ice wait'!0'; zinit light zsh-users/zsh-syntax-highlighting
 
-zinit load "zsh-users/zsh-history-substring-search"
+zinit light "zsh-users/zsh-history-substring-search"
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
-zinit ice load "b4b4r07/enhancd" src "init.sh"
+zinit ice light "b4b4r07/enhancd" src "init.sh"
 
-zinit load "momo-lab/zsh-abbrev-alias"
+zinit light "momo-lab/zsh-abbrev-alias"
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Install zsh-gomi(fzf required)
-zinit ice wait'!0'; zinit load b4b4r07/zsh-gomi
+zinit ice wait'!0'; zinit light b4b4r07/zsh-gomi
