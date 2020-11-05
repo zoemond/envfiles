@@ -1,51 +1,39 @@
-# -----------------------------
-# ZPLUG
-# -----------------------------
-
-## defer: 読み込み順序を設定する
-# 例: "zsh-syntax-highlighting" は compinit の後に読み込まれる必要がある
-# zplug "zsh-users/zsh-syntax-highlighting", defer:2
-# （2 以上は compinit 後に読み込まれるようになる）
-#####
-
-# zplugが無ければインストール
-if [[ ! -d ~/.zplug ]];then
-  echo 'zplug is not installed. install'
-  curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
 
-# zplugを有効化する
-source ~/.zplug/init.zsh
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-zplug "zsh-users/zsh-autosuggestions"
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-rust \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
 
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+### End of Zinit's installer chunk
 
-zplug "zsh-users/zsh-history-substring-search"
-if zplug check "zsh-users/zsh-history-substring-search"; then
-    bindkey '^P' history-substring-search-up
-    bindkey '^N' history-substring-search-down
-fi
+zinit load "zsh-users/zsh-autosuggestions"
 
-zplug "b4b4r07/enhancd", use:init.sh
+zinit ice wait'!0'; zinit load zsh-users/zsh-syntax-highlighting
 
-zplug "momo-lab/zsh-abbrev-alias"
+zinit load "zsh-users/zsh-history-substring-search"
+bindkey '^P' history-substring-search-up
+bindkey '^N' history-substring-search-down
 
-zplug romkatv/powerlevel10k, as:theme, depth:1
+zinit ice load "b4b4r07/enhancd" src "init.sh"
 
-# Install zsh-gomi(If fzf is already installed)
-zplug "b4b4r07/zsh-gomi", if:"which fzf"
+zinit load "momo-lab/zsh-abbrev-alias"
 
-# -----------------------------
-# インストールしていないプラグインをインストール
-# -----------------------------
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-      echo; zplug install
-  fi
-fi
+zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-# コマンドをリンクして、PATH に追加し、プラグインは読み込む
-zplug load --verbose
-
+# Install zsh-gomi(fzf required)
+zinit ice wait'!0'; zinit load b4b4r07/zsh-gomi
