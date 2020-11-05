@@ -21,9 +21,12 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
-zinit light "zsh-users/zsh-autosuggestions"
-
-zinit ice wait'!0'; zinit light zsh-users/zsh-syntax-highlighting
+# https://github.com/zdharma/fast-syntax-highlighting#zinit
+zinit wait lucid for \
+ atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+   zdharma/fast-syntax-highlighting \
+ atload"!_zsh_autosuggest_start" \
+   zsh-users/zsh-autosuggestions
 
 zinit light "zsh-users/zsh-history-substring-search"
 bindkey '^P' history-substring-search-up
