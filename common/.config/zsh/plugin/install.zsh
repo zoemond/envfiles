@@ -32,7 +32,8 @@ zinit light "zsh-users/zsh-history-substring-search"
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
-zinit ice light "b4b4r07/enhancd" src "init.sh"
+zinit ice proto'git' pick'init.sh'
+zinit light "b4b4r07/enhancd"
 
 zinit light "momo-lab/zsh-abbrev-alias"
 
