@@ -20,3 +20,18 @@ bind diff    R      ?git rebase %(commit)
 bind generic <Ctrl-F>      move-page-down
 bind generic <Ctrl-B>      move-page-up
 
+# Ctrl-j / p で単位ごとの移動
+bind diff    <Ctrl-k>      :/^@@
+bind diff    <Ctrl-j>      :?^@@
+bind diff    <Esc>k :/^diff --(git|cc)
+bind diff    <Esc>j :?^diff --(git|cc)
+bind stage   <Ctrl-k>      :/^@@
+bind stage   <Ctrl-j>      :?^@@
+bind stage   <Esc>k :/^diff --(git|cc)
+bind stage   <Esc>j :?^diff --(git|cc)
+bind pager   <Ctrl-k>      :/^@@
+bind pager   <Ctrl-j>      :?^@@
+bind pager   <Esc>k :/^diff --(git|cc)
+bind pager   <Esc>j :?^diff --(git|cc)
+bind log     <Ctrl-k>      :/^commit
+bind log     <Ctrl-j>      :?^commit
