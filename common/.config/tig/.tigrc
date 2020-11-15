@@ -16,3 +16,7 @@ bind diff    I      !git rebase -i %(commit)
 bind main    R      ?git rebase %(commit)
 bind diff    R      ?git rebase %(commit)
 
+
+bind generic <Ctrl-F>      move-page-down
+bind generic <Ctrl-B>      move-page-up
+
