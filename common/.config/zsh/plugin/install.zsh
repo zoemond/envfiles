@@ -28,6 +28,8 @@ zinit wait lucid for \
  atload"!_zsh_autosuggest_start" \
    zsh-users/zsh-autosuggestions
 
+zinit load zdharma/history-search-multi-word
+
 zinit light "zsh-users/zsh-history-substring-search"
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
