@@ -99,6 +99,8 @@ define_keymap(None, {
     K("RSuper-Shift-b"): [K("Ctrl-Shift-Left")],
     K("RSuper-Shift-w"): [K("Ctrl-Shift-Right")],
 
+    K("RSuper-x"): [K("Backspace")],
+    K("RSuper-d"): [K("Delete")],
     K("RSuper-Ctrl-x"): [K("Ctrl-Backspace")],
     K("RSuper-Ctrl-d"): [K("Ctrl-Delete")],
 })
