@@ -69,3 +69,8 @@ sudo cp input.rules uinput.rules /etc/udev/rules.d/
 echo uinput > /etc/modules-load.d/uinput.conf
 
 ```
+# default browser
+```
+$ xdg-mime default google-chrome.desktop x-scheme-handler/http
+$ xdg-mime default google-chrome.desktop x-scheme-handler/https
+```
