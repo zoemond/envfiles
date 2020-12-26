@@ -1,0 +1,12 @@
+[Unit]
+Description=fcitx
+
+[Service]
+KillMode=process
+ExecStart=/usr/bin/fcitx-autostart
+Type=forking
+Restart=always
+EnvironmentFile=/home/koki/envfiles/linux/fcitx/xenv.conf
+
+[Install]
+WantedBy=default.target
