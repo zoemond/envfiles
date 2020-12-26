@@ -1,5 +1,12 @@
-export PATH=/usr/local/bin/:$PATH
-export PATH=~/.local/bin:$PATH
+if [ "$(expr substr $(uname -s) 1 5)" != 'Linux' ]; then
+  # Linuxじゃないとき通ってないパス
+  export PATH=/usr/local/bin/:$PATH
+  export PATH=~/.local/bin:$PATH
+else
+  # Linuxのとき
+  export BROWSER="google-chrome-stable"
+fi
+
 
 export EDITOR='nvim'
 
