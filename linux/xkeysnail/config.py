@@ -4,6 +4,19 @@ from xkeysnail.transform import *
 import subprocess
 import traceback
 
+import time
+from Xlib import X
+from Xlib.display import Display
+from Xlib.ext.xtest import fake_input
+
+# FIXME: youtubeの再生中動画にはクリックが効かない
+def click():
+    d = Display()
+    fake_input(d, X.ButtonPress, 1)
+    d.sync()
+    time.sleep(0.001);
+    fake_input(d, X.ButtonRelease, 1)
+    d.sync()
 
 # IMEの状態取得
 # 半角文字はUS配列・全角に文字はJIS配列(かな文字)で行いたいので、IMEの状>態によってkeymapを変更する
@@ -103,5 +116,7 @@ define_keymap(None, {
     K("RSuper-d"): [K("Delete")],
     K("RSuper-Ctrl-x"): [K("Ctrl-Backspace")],
     K("RSuper-Ctrl-d"): [K("Ctrl-Delete")],
+
+    K("RSuper-Enter"): click,
 })
 
