@@ -91,7 +91,7 @@ define_multipurpose_modmap({
    Key.MUHENKAN: [Key.MUHENKAN, Key.RIGHT_META]
 })
 
-# Vim-like
+# Vim-like Coursor
 define_keymap(None, {
     K("RSuper-h"): K("Left"),
     K("RSuper-j"): K("Down"),
@@ -120,3 +120,8 @@ define_keymap(None, {
     K("RSuper-Enter"): click,
 })
 
+# application hot key
+copyqCommand = 'sudo -u koki copyq toggle'
+define_keymap(None, {
+    K("RSuper-v"): launch(copyqCommand.split()),
+})
