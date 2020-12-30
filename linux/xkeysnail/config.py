@@ -118,6 +118,14 @@ define_keymap(None, {
     K("RSuper-Ctrl-d"): [K("Ctrl-Delete")],
 
     K("RSuper-Enter"): click,
+
+    # tmux keys
+    K("WAKEUP"): {
+        K("h"): [K("Ctrl-Space"), K("h")],
+        K("j"): [K("Ctrl-Space"), K("j")],
+        K("k"): [K("Ctrl-Space"), K("k")],
+        K("l"): [K("Ctrl-Space"), K("l")],
+    },
 })
 
 # application hot key
