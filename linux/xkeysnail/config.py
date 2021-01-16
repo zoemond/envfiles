@@ -10,6 +10,8 @@ from Xlib.display import Display
 from Xlib.ext.xtest import fake_input
 
 # FIXME: youtubeの再生中動画にはクリックが効かない
+# xautomationコマンドを実行しても同じ結果だった
+#    - `clickCommand = ['xte', r"mouseclick 1"]`
 def click():
     d = Display()
     fake_input(d, X.ButtonPress, 1)
