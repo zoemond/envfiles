@@ -35,3 +35,13 @@ bind pager   <Esc>k :/^diff --(git|cc)
 bind pager   <Esc>j :?^diff --(git|cc)
 bind log     <Ctrl-k>      :/^commit
 bind log     <Ctrl-j>      :?^commit
+
+# ` で commit ID をクリップボードにコピー 
+bind generic `      ?bash -c "echo -n '%(commit)' | xsel --clipboard --input"
+
+# ` でファイルパスをクリップボードにコピー 
+bind stage   `      ?bash -c "echo -n '%(file)' | xsel --clipboard --input"
+bind status  `      ?bash -c "echo -n '%(file)' | xsel --clipboard --input"
+bind tree    `      ?bash -c "echo -n '%(file)' | xsel --clipboard --input"
+bind blob    `      ?bash -c "echo -n '%(file)' | xsel --clipboard --input"
+
