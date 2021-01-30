@@ -31,4 +31,7 @@ hook_add = 'source ~/.config/nvim/keymap/plugin/defx.vim'
 [[plugins]] 
 repo = 'osyo-manga/vim-over'
 
+[[plugins]] 
+repo = 'hotwatermorning/auto-git-diff'
+
 
