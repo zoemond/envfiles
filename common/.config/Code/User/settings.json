@@ -1,0 +1,41 @@
+{
+    "vim.easymotion": true,
+    "editor.minimap.enabled": false,
+    "vim.leader": "Space",
+    "editor.detectIndentation": false,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["Space", "w"], // 検索するためのキーをfから変えたい場合は､ここを変更する
+            "after": ["leader", "leader", "w"]
+        },
+        {
+            "before": ["Space", "b"],
+            "after": ["leader", "leader", "b"]
+        },
+        {
+            "before": ["Space", "e"],
+            "after": ["leader", "leader", "e"]
+        },
+        {
+            "before": ["Space", "g", "e"],
+            "after": ["leader", "leader", "g", "e"]
+        }
+    ],
+    "[json]": {
+        "editor.formatOnSave": false
+    },
+    "[graphql]": {
+        "editor.formatOnSave": false
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 120,
+    "prettier.proseWrap": "never",
+    "prettier.jsxBracketSameLine": true,
+    "cSpell.userWords": ["Intelli", "Qiita", "redmine"],
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "trailing-spaces.trimOnSave": true,
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": true
+a}
