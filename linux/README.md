@@ -94,3 +94,10 @@ echo uinput > /etc/modules-load.d/uinput.conf
 $ xdg-mime default google-chrome.desktop x-scheme-handler/http
 $ xdg-mime default google-chrome.desktop x-scheme-handler/https
 ```
+
+# keychain
+```
+sudo pacman -S keychain
+
+echo '$(keychain --eval --agents ssh -Q --quiet 作成したkey名(パスではない))' >> .zshrc
+```
