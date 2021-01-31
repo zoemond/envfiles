@@ -79,7 +79,7 @@ cat /etc/group | grep in
 # uinputグループ作成
 sudo groupadd uinput
 # Always use the -a (append) option when adding a user to a new group. If you omit the -a option, the user will be removed from any groups not listed after the -G option. 
-sudo usermod -a -G input,uinput,<your_username>
+sudo usermod -a -G input,uinput <your_username>
 # 所属グループ確認
 gropus <your_username>
 
