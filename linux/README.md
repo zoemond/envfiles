@@ -5,6 +5,15 @@
 # ntpサーバとの同期を有効にする.
 timedatectl set-ntp true
 ```
+# natural scroll
+```sh
+sudo nvim /etc/X11/xorg.conf.d/30-touchpad.conf
+```
+- add
+```
+    Option "Natural Scrolling" "true"
+```
+
 # Install Apps
 
 ```sh
