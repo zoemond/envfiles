@@ -5,6 +5,16 @@
 # ntpサーバとの同期を有効にする.
 timedatectl set-ntp true
 ```
+# Install Apps
+
+```sh
+sudo pacman -S neovim
+sudo pacman -S tmux
+sudo pacman -S copyq
+sudo pacman -S tig
+
+```
+
 # 日本語表示
 - qtアプリでは日本語が表示されなかった。
 - フォントをインストールすることで見えるようになった
@@ -38,7 +48,8 @@ sudo pacman -S pulseaudio
 
 # key bind
 ```sh
-sudo pacman -S xkeysnail
+sudo pacman -S pip3
+sudo pip3 install xkeysnail
 ```
 ### systemdとして起動します
 xkeysnailの性質的にshellでの実行よりsystemdのほうがあってそうなので
