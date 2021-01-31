@@ -20,40 +20,6 @@ def click():
     fake_input(d, X.ButtonRelease, 1)
     d.sync()
 
-# IMEの状態取得
-# 半角文字はUS配列・全角に文字はJIS配列(かな文字)で行いたいので、IMEの状>態によってkeymapを変更する
-def isNotImeActive(wm_class):
-    """
-    fcitx-remoteコマンドでfcitxの状態を取得できるが、ユーザ権限で実行する必要がある。
-    理由は以下
-      - 実行者の違うfcitx対しては`fcitx-remote`が実行できない
-      - xkeysnailはsudo権限を必要とするのでuser権限で実行しているfcitxに対してfictx-remoteがエラーになる
-      - 実行者を同じにするため、sudo 権限でfcitxを起動することはできる
-      (fcitxをsudoで起動するには~/.xprofileで設定してある環境変数が必要)
-      - が、mozcはsudoで起動できない(mozcのポリシーによるものらしい)
-
-    ユーザ権限で実行する(sudo -u username)とパスワード入力を求められるので、入力の必要がないように設定
-    - `sudo visudo`から以下のように追記
-     ```
-     root ALL=(koki) NOPASSWD: /usr/bin/fcitx-remote
-     ```
-     ユーザ名ベタ書きがびみょいけどポータブルにする必要が出てからでいいかと思ったので放置
-    """
-    cmd = ['sudo -u koki fcitx-remote']
-    try:
-        res = subprocess.check_output(
-                cmd,
-                stderr=subprocess.STDOUT,
-                shell=True)
-        return res.decode() != '2\n'
-    except subprocess.CalledProcessError as e:
-        print('code', e.returncode)
-        print('cmd', e.cmd)
-        print('output', e.output)
-        print(traceback.format_exc())
-    
-    return False
-
 
 define_modmap({
     Key.CAPSLOCK: Key.LEFT_CTRL,
@@ -61,30 +27,12 @@ define_modmap({
     Key.LEFT_ALT: Key.LEFT_CTRL
 })
 
-## 日本語キーボード上で英語配列を使う設定
-define_keymap(isNotImeActive, {
-    K("Shift-KEY_2"): K("LEFT_BRACE"),
-    K("Shift-KEY_6"): K("EQUAL"),
-    K("Shift-KEY_7"): K("Shift-KEY_6"),
-    K("Shift-KEY_8"): K("Shift-APOSTROPHE"),
-    K("Shift-KEY_9"): K("Shift-KEY_8"),
-    K("Shift-KEY_0"): K("Shift-KEY_9"),
-    ## [Minus]は共通
-    K("Shift-MINUS"):       K("Shift-RO"),
-    K(      "EQUAL"):       K("Shift-MINUS"),
-    K("Shift-EQUAL"):       K("Shift-SEMICOLON"),
-    K(        "YEN"):       K("Shift-LEFT_BRACE"),
-    K(  "Shift-YEN"):       K("Shift-EQUAL"),
-    K(      "LEFT_BRACE"):  K("RIGHT_BRACE"),
-    K("Shift-LEFT_BRACE"):  K("Shift-RIGHT_BRACE"),
-    K(      "RIGHT_BRACE"): K("BACKSLASH"),
-    K("Shift-RIGHT_BRACE"): K("Shift-BACKSLASH"),
-    ## [Semicolon]は共通
-    K("Shift-SEMICOLON"):   K("APOSTROPHE"),
-    K(      "APOSTROPHE"):  K("Shift-KEY_7"),
-    K("Shift-APOSTROPHE"):  K("Shift-KEY_2"),
-    K(      "BACKSLASH"):   K("YEN"),
-    K("Shift-BACKSLASH"):   K("Shift-YEN"),
+# fcitxで最初に「英語-US)」、2番目に「Mozc」を設定したとき、
+# 特に設定しなくてもUS配列を使える
+# backspaceの横のキーのみ変換
+define_keymap(lambda wm_class: True, {
+    K(        "YEN"):       K("GRAVE"), # -> `
+    K(  "Shift-YEN"):       K("Shift-GRAVE") # -> ~
 })
 
 
