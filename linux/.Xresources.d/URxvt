@@ -10,6 +10,10 @@ URxvt.keysym.M-Delete: perl:matcher:list
 !URxvt.depth: 32
 !URxvt.background:                 [90]#222D31
 
+! power10kのunicodeモードを表示する
+!URxvt.font:      9x15,xft:TerminessTTFNerdFontMono,xft:DejaVu Sans Mono:autohint=true:size=12
+URxvt.font:                       xft:Deja Vu Sans Mono:size=10
+
 !! Color Scheme. デフォルトはgit diffのgreen(\033[32m)が灰色で表示されたので変更
 ! special
 *.foreground: #93a1a1
