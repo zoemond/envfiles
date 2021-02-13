@@ -38,7 +38,7 @@
         "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
-        "key": "cmd+b",
+        "key": "ctrl+j",
         "command": "editor.action.revealDefinition",
         "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     },
@@ -89,10 +89,29 @@
         "key": "cmd+]",
         "command": "workbench.action.nextPanelView",
         "when": "panelFocus"
-        },
-        {
-            "key": "cmd+[",
-            "command": "workbench.action.previousPanelView",
-            "when": "panelFocus"
-        }
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.previousPanelView",
+        "when": "panelFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-extension.vim_ctrl+j",
+        "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "editor.action.peekDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+shift+f10",
+        "command": "-editor.action.peekDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    }
 ]
