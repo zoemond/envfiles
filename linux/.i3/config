@@ -432,5 +432,5 @@ mode "$mode_gaps_outer" {
 ## autostart
 exec copyq
 exec fcitx
-
+exec redshift
 
