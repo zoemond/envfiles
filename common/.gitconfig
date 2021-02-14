@@ -1,0 +1,7 @@
+[push]
+	default = current
+[pull]
+	ff = only
+
+[diff]
+	colormoved = default
