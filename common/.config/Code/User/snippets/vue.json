@@ -23,9 +23,12 @@
             "    $1: {",
             "      type: Boolean",
             "    }",
-            "  }",
+            "  },",
+            "  setup(props) {",
+            "    return {}",
+            "  },",
             "})",
-            "<script/>",
+            "</script>",
 		],
 		"description": "typescript vue component base"
 	}
