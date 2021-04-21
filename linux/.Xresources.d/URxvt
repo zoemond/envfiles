@@ -1,5 +1,5 @@
-! URLを開けるように
-URxvt.perl-ext-common: default,matcher
+! URLを開けるように, resizeできるように
+URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline Bold fg5
@@ -12,8 +12,7 @@ URxvt.keysym.M-Delete: perl:matcher:list
 
 ! power10kのunicodeモードを表示する
 ! rangerのアイコンも表示する
-URxvt.font:      9x15,xft:TerminessTTFNerdFontMono,xft:DejaVu Sans Mono:autohint=true:size=12
-!URxvt.font:                       xft:Deja Vu Sans Mono:size=10
+URxvt.font: xft: MesloLGS NF:size=11
 
 !! Color Scheme. デフォルトはgit diffのgreen(\033[32m)が灰色で表示されたので変更
 ! special
