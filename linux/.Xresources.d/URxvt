@@ -12,7 +12,7 @@ URxvt.keysym.M-Delete: perl:matcher:list
 
 ! power10kのunicodeモードを表示する
 ! rangerのアイコンも表示する
-URxvt.font: xft: MesloLGS NF:size=11
+URxvt.font: xft: HackGen35Nerd Console:size=11
 
 !! Color Scheme. デフォルトはgit diffのgreen(\033[32m)が灰色で表示されたので変更
 ! special
