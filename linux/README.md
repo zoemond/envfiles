@@ -5,13 +5,9 @@
 # ntpサーバとの同期を有効にする.
 timedatectl set-ntp true
 ```
-# natural scroll
+# [natural scroll](https://wiki.archlinux.org/index.php/Libinput)
 ```sh
-sudo nvim /etc/X11/xorg.conf.d/30-touchpad.conf
-```
-- add
-```
-    Option "Natural Scrolling" "true"
+sudo mv linux/x11/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 ```
 
 # Install Apps
@@ -57,7 +53,7 @@ sudo pacman -S pulseaudio
 
 # key bind
 ```sh
-sudo pacman -S pip3
+sudo pacman -S python-pip
 sudo pip3 install xkeysnail
 ```
 ### systemdとして起動します
