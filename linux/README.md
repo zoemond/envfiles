@@ -65,21 +65,6 @@ sudo pacman -S python-pip
 sudo pip3 install xkeysnail
 ```
 
-### systemd として起動します
-
-xkeysnail の性質的に shell での実行より systemd のほうがあってそうなので
-
--   systemd
-
-```sh
-cp xkeysnail.service ~/.config/systemd/user/
-systemctl --user enable xkeysnail
-systemctl --user start xkeysnail
-systemctl --user status xkeysnail
-# エラーの場合詳細を見る
-journalctl --user -u xkeysnail -b
-```
-
 -   権限設定
 
 ```sh

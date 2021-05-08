@@ -432,5 +432,6 @@ mode "$mode_gaps_outer" {
 ## autostart
 exec copyq
 exec fcitx
+exec /usr/bin/xkeysnail ~/envfiles/linux/xkeysnail/config.py
 exec redshift
 
