@@ -59,8 +59,10 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 ################################################################################################
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec light -A 2; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec light -U 2; notify-send 'brightness down'"
+
+
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'

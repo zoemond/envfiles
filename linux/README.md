@@ -20,6 +20,10 @@ sudo pacman -S neovim
 sudo pacman -S tmux
 sudo pacman -S copyq
 sudo pacman -S tig
+# xbacklightは"No outputs have backlight property."となった(lenovo E495, AMD)
+# lightはエラーステータスが返ってきた.
+# light-gitなら効いたので
+sudo pacman -S light-git
 
 ```
 
