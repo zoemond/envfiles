@@ -111,5 +111,5 @@ $ xdg-mime default google-chrome.desktop x-scheme-handler/https
 ```
 sudo pacman -S keychain
 
-echo '$(keychain --eval --agents ssh -Q --quiet 作成したkey名(パスではない))' >> .zshrc
+echo 'eval `keychain --eval --agents ssh -Q --quiet 作成したkeyファイル名(パスではない)`' >> ~/.zshrc
 ```
