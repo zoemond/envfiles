@@ -17,6 +17,7 @@ sudo mv linux/x11/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 
 ```sh
 sudo pacman -S yay
+yay -S i3exit
 yay -S neovim
 yay -S tmux
 yay -S copyq
