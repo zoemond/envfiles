@@ -16,15 +16,16 @@ sudo mv linux/x11/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 # Install Apps
 
 ```sh
-sudo pacman -S neovim
-sudo pacman -S tmux
-sudo pacman -S copyq
-sudo pacman -S tig
-sudo pacman -S fzf
+sudo pacman -S yay
+yay -S neovim
+yay -S tmux
+yay -S copyq
+yay -S tig
+yay -S fzf
 # xbacklightは"No outputs have backlight property."となった(lenovo E495, AMD)
 # lightはエラーステータスが返ってきた.
 # light-gitなら効いたので
-sudo pacman -S light-git
+yay -S light-git
 
 ```
 
