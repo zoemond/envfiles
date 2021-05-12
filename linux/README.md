@@ -52,18 +52,39 @@ sudo pacman -S fcitx
 
 ```sh
 sudo pacman -S pulseaudio
-# メモ:
-# chrome上のdiscordで音声通信ができなかった.
-# 現象↓
-# - chromeでマイクを使用して録音・再生はできる
-# - discordのマイクチェックでも音量ゲージが動く
-# - discordのvoice chatに入ると喋っても自分のアイコンが光らない
-# - pacmd load-module loopback-moduleするとdiscordで会話できるようになる(自分の声がloopbackで聞こえるのがうざい)
-#
-# snapcraftでデスクトップアプリをインストールしたら解決したので原因未確認だけど
-# pulseaudioのせいではなくてalsaのカードがすべてMMだったからな気がする
-
 ```
+
+## Trouble Shoot
+
+### Headphone を挿しても youtube の音が Speaker が流れる
+
+#### 現象 ↓
+
+pavucontrol で出力が Speaker しか選択できず、headphone を認識していない)
+
+#### 治った方法
+
+alsamixer を起動していっぱいメニューがあるサウンドカード(HD-Audio Generic)を選択して眺めたあと`shutdown -r now`したら認識するようになった
+
+### chrome 上の discord で音声通信ができなかった.
+
+#### 現象 ↓
+
+-   chrome でマイクを使用して録音・再生はできる
+-   discord のマイクチェックでも音量ゲージが動く
+-   discord の voice chat に入ると喋っても自分のアイコンが光らない
+
+#### 治った方法
+
+-   pavcontrol を開いて眺めたりする
+-   sudo alsactl store してみる
+
+#### 試した方法
+
+-   pacmd load-module loopback-module すると discord で会話できるようになる(自分の声が loopback で聞こえるのがうざい)
+-   `yay -S discord-ptb`で通話できるようになった
+    -   `yay -S discord`ではできず...
+    -   pc を再起動したら通話できなくなってしまったので
 
 # key bind
 
