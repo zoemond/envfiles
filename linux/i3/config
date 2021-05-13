@@ -435,5 +435,10 @@ mode "$mode_gaps_outer" {
 exec copyq
 exec fcitx
 exec /usr/bin/xkeysnail ~/envfiles/linux/xkeysnail/config.py
+### amdのbacklight@.serviceはPC起動時に失敗します。起動後に直接startすることはできるのでstartします
+### 参考: https://bbs.archlinux.org/viewtopic.php?id=257810
+### (カーネルパラメータにfbcon=nodefeを渡すというやつは試してない)
+exec systemctl start systemd-backlight@backlight:amdgpu_bl0
 exec redshift
+
 
