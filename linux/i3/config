@@ -439,6 +439,5 @@ exec /usr/bin/xkeysnail ~/envfiles/linux/xkeysnail/config.py
 ### 参考: https://bbs.archlinux.org/viewtopic.php?id=257810
 ### (カーネルパラメータにfbcon=nodefeを渡すというやつは試してない)
 exec systemctl start systemd-backlight@backlight:amdgpu_bl0
-exec redshift
 
 
