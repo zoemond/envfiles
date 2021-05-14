@@ -107,7 +107,7 @@ gropus <your_username>
 
 sudo cp input.rules uinput.rules /etc/udev/rules.d/
 # systemdが起動時に追加のカーネルモジュールを読み込む設定 (これがないと/etc/udevの権限が反映されなかった)
-# 本来待てばudevがロードしてくれるものらしい。(= xkeysnailのsystemd実行時にはrulesがロードされてない?)
+# 本来待てばudevがロードしてくれるものらしい。
 echo uinput > /etc/modules-load.d/uinput.conf
 
 ```
