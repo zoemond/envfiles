@@ -60,55 +60,32 @@ sudo pacman -S pulseaudio
 
 #### 現象 ↓
 
-pavucontrol で出力が Speaker しか選択できず、headphone を認識していない)
+pavucontrol で出力が Speaker しか選択できず、headphone を認識していない (windows を起動したあと linux に戻った際も同様の現象が起こった )
+
+-   (参考)
+    -   音がなる状態のときは list-sinks すると一つの sink に output の port が 2 つあることが確認できる
+    ```
+    ❯ pacmd list-sinks
+    1 sink(s) available.
+      * index: 1
+             name: <alsa_output.pci-0000_05_00.6.analog-stereo>
+            driver: <module-alsa-card.c>
+            ...
+              ports:
+                    analog-output-speaker: Speakers (priority 10000, latency offset 0 usec, available: no)
+                            properties:
+                                    device.icon_name = "audio-speakers"
+                    analog-output-headphones: Headphones (priority 9900, latency offset 0 usec, available: yes)
+                            properties:
+                                    device.icon_name = "audio-headphones"
+            active port: <analog-output-headphones>
+    ```
 
 #### 治った方法
 
--   alsamixer を起動していっぱいメニューがあるサウンドカード(HD-Audio Generic)を選択して眺めたあと`shutdown -r now`したら認識するようになった
+-   シャットダウン(再起動ではない)すると治った
 
--   windows を起動したあと linux に戻った際も同様の現象が起こった が、これで治った ↓(治ったあと diff を戻して再起動しても治ったままだった。謎)
-
-https://wiki.archlinux.org/title/Talk:PulseAudio/Examples#Having_both_speakers_and_headphones_plugged_in_and_switching_in_software_on-the-fly
-
-```diff
-
-∅ /usr/share/pulseaudio/alsa-mixer/paths
-❯ diff -u analog-output-headphones.conf analog-output-headphones.conf.backup
---- analog-output-headphones.conf       2021-05-27 16:46:17.702804134 +0900
-+++ analog-output-headphones.conf.backup        2021-05-27 16:41:06.266937435 +0900
-@@ -128,8 +128,8 @@
-
- ; On some machines Front is actually a part of the Headphone path
- [Element Front]
--switch = off
--volume = off
-+switch = mute
-+volume = zero
-
- [Element Rear]
- switch = off
-
-```
-
-このとき
-
--   pavucontrol(GUI)の出力先には Headphones(plugged in)と Speakers が見れてる
--   `pacmd list-sinks` は一つしか出力されていない
-
-```
-❯ pacmd list-sinks
-1 sink(s) available.
-  * index: 1
-  ...
-          ports:
-                analog-output-speaker: Speakers (priority 10000, latency offset 0 usec, available: no)
-                        properties:
-                                device.icon_name = "audio-speakers"
-                analog-output-headphones: Headphones (priority 9900, latency offset 0 usec, available: yes)
-                        properties:
-                                device.icon_name = "audio-headphones"
-        active port: <analog-output-headphones>
-```
+    > https://forum.manjaro.org/t/sound-from-speakers-no-sound-from-3-5mm-jack-audio-amd-thinkpad-e595/13717/5 . Manjaro cannot initialise audio device correctly from hybrid hibernation state, but rebooting Manjaro will power down the device and reload it correctly
 
 ### chrome 上の discord で音声通信ができなかった.
 
@@ -128,7 +105,7 @@ https://wiki.archlinux.org/title/Talk:PulseAudio/Examples#Having_both_speakers_a
 -   pacmd load-module loopback-module すると discord で会話できるようになる(自分の声が loopback で聞こえるのがうざい)
 -   `yay -S discord-ptb`で通話できるようになった
     -   `yay -S discord`ではできず...
-    -   pc を再起動したら通話できなくなってしまったので
+    -   pc を再起動したら通話できなくなってしまったのでこの方法も違いそう
 
 # key bind
 
