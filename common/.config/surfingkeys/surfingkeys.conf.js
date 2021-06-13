@@ -9,6 +9,13 @@ mapkey("o1", "#8Open Search with alias 1", function () {
     Front.openOmnibar({ type: "SearchEngine", extra: "1" });
 });
 
+mapkey("<Ctrl-y>", "Copy Open Graph Image Url to Clipboard", function () {
+    Front.showBanner("copied: ? ");
+    const url = document.querySelector('head meta[property="og:image"]').getAttribute("content");
+    navigator.clipboard.writeText(url);
+    Front.showBanner("copied: " + url);
+});
+
 // set theme
 settings.theme = `
 .sk_theme {
