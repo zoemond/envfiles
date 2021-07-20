@@ -80,6 +80,8 @@ define_keymap(None, {
 
 # application hot key
 copyqCommand = 'sudo -u koki copyq toggle'
+screenshotCommand = 'flameshot gui'
 define_keymap(None, {
     K("RSuper-v"): launch(copyqCommand.split()),
+    K("RSuper-s"): launch(screenshotCommand.split()),
 })
