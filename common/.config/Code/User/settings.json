@@ -27,6 +27,10 @@
     "[graphql]": {
         "editor.formatOnSave": false
     },
+    "[go]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.tabWidth": 4,
     "prettier.printWidth": 120,
