@@ -47,6 +47,7 @@
   "vscode-neovim.useCtrlKeysForNormalMode": true,
   "vscode-neovim.useCtrlKeysForInsertMode": true,
   "vscode-neovim.textDecorationsAtTop": true,
+  "auto-rename-tag.activationOnLanguage": ["*"],
   "go.toolsManagement.autoUpdate": true,
   "editor.scrollBeyondLastLine": false
 }
