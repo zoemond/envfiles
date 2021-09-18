@@ -44,6 +44,7 @@
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/koki/.config/nvim/init.vim",
   "vscode-neovim.useCtrlKeysForNormalMode": true,
   "vscode-neovim.useCtrlKeysForInsertMode": true,
   "vscode-neovim.textDecorationsAtTop": true,
