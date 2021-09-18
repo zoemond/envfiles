@@ -1,6 +1,6 @@
 # 日本時間にする
 
--   abema tv とか見れない
+- abema tv とか見れない
 
 ```sh
 # ntpサーバとの同期を有効にする.
@@ -32,8 +32,8 @@ yay -S light-git
 
 # 日本語表示
 
--   qt アプリでは日本語が表示されなかった。
--   フォントをインストールすることで見えるようになった
+- qt アプリでは日本語が表示されなかった。
+- フォントをインストールすることで見えるようになった
 
 ```sh
 sudo pacman -S otf-ipafont
@@ -47,8 +47,8 @@ sudo pacman -S fcitx
 
 # 音出力・入力
 
--   alsa のみでは chrome で youtube を再生する方法がわからなかった
--   新しくて default なのは pulseaudio の方らしいのでどのみち入れる
+- alsa のみでは chrome で youtube を再生する方法がわからなかった
+- 新しくて default なのは pulseaudio の方らしいのでどのみち入れる
 
 ```sh
 sudo pacman -S pulseaudio
@@ -62,50 +62,50 @@ sudo pacman -S pulseaudio
 
 pavucontrol で出力が Speaker しか選択できず、headphone を認識していない (windows を起動したあと linux に戻った際も同様の現象が起こった )
 
--   (参考)
-    -   音がなる状態のときは list-sinks すると一つの sink に output の port が 2 つあることが確認できる
-    ```
-    ❯ pacmd list-sinks
-    1 sink(s) available.
-      * index: 1
-             name: <alsa_output.pci-0000_05_00.6.analog-stereo>
-            driver: <module-alsa-card.c>
-            ...
-              ports:
-                    analog-output-speaker: Speakers (priority 10000, latency offset 0 usec, available: no)
-                            properties:
-                                    device.icon_name = "audio-speakers"
-                    analog-output-headphones: Headphones (priority 9900, latency offset 0 usec, available: yes)
-                            properties:
-                                    device.icon_name = "audio-headphones"
-            active port: <analog-output-headphones>
-    ```
+- (参考)
+  - 音がなる状態のときは list-sinks すると一つの sink に output の port が 2 つあることが確認できる
+  ```
+  ❯ pacmd list-sinks
+  1 sink(s) available.
+    * index: 1
+           name: <alsa_output.pci-0000_05_00.6.analog-stereo>
+          driver: <module-alsa-card.c>
+          ...
+            ports:
+                  analog-output-speaker: Speakers (priority 10000, latency offset 0 usec, available: no)
+                          properties:
+                                  device.icon_name = "audio-speakers"
+                  analog-output-headphones: Headphones (priority 9900, latency offset 0 usec, available: yes)
+                          properties:
+                                  device.icon_name = "audio-headphones"
+          active port: <analog-output-headphones>
+  ```
 
 #### 治った方法
 
--   シャットダウン(再起動ではない)すると治った
+- シャットダウン(再起動ではない)すると治った
 
-    > https://forum.manjaro.org/t/sound-from-speakers-no-sound-from-3-5mm-jack-audio-amd-thinkpad-e595/13717/5 . Manjaro cannot initialise audio device correctly from hybrid hibernation state, but rebooting Manjaro will power down the device and reload it correctly
+  > https://forum.manjaro.org/t/sound-from-speakers-no-sound-from-3-5mm-jack-audio-amd-thinkpad-e595/13717/5 . Manjaro cannot initialise audio device correctly from hybrid hibernation state, but rebooting Manjaro will power down the device and reload it correctly
 
 ### chrome 上の discord で音声通信ができなかった.
 
 #### 現象 ↓
 
--   chrome でマイクを使用して録音・再生はできる
--   discord のマイクチェックでも音量ゲージが動く
--   discord の voice chat に入ると喋っても自分のアイコンが光らない
+- chrome でマイクを使用して録音・再生はできる
+- discord のマイクチェックでも音量ゲージが動く
+- discord の voice chat に入ると喋っても自分のアイコンが光らない
 
 #### 治った方法
 
--   pavcontrol を開いて眺めたりする
--   sudo alsactl store してみる
+- pavcontrol を開いて眺めたりする
+- sudo alsactl store してみる
 
 #### 試した方法
 
--   pacmd load-module loopback-module すると discord で会話できるようになる(自分の声が loopback で聞こえるのがうざい)
--   `yay -S discord-ptb`で通話できるようになった
-    -   `yay -S discord`ではできず...
-    -   pc を再起動したら通話できなくなってしまったのでこの方法も違いそう
+- pacmd load-module loopback-module すると discord で会話できるようになる(自分の声が loopback で聞こえるのがうざい)
+- `yay -S discord-ptb`で通話できるようになった
+  - `yay -S discord`ではできず...
+  - pc を再起動したら通話できなくなってしまったのでこの方法も違いそう
 
 # key bind
 
@@ -114,7 +114,7 @@ sudo pacman -S python-pip
 sudo pip3 install xkeysnail
 ```
 
--   権限設定
+- 権限設定
 
 ```sh
 # input groupは存在するけどuinput groupは存在しない
