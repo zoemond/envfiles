@@ -49,5 +49,6 @@
   "vscode-neovim.textDecorationsAtTop": true,
   "auto-rename-tag.activationOnLanguage": ["*"],
   "go.toolsManagement.autoUpdate": true,
-  "editor.scrollBeyondLastLine": false
+  "editor.scrollBeyondLastLine": false,
+  "editor.bracketPairColorization.enabled": true
 }
