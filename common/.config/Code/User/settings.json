@@ -37,12 +37,16 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "cSpell.userWords": ["Intelli", "Qiita", "redmine"],
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "trailing-spaces.trimOnSave": true,
   "files.insertFinalNewline": true,
   "editor.formatOnSave": true,
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.useCtrlKeysForNormalMode": true,
+  "vscode-neovim.useCtrlKeysForInsertMode": true,
+  "vscode-neovim.textDecorationsAtTop": true,
   "go.toolsManagement.autoUpdate": true,
+  "editor.scrollBeyondLastLine": false
 }
