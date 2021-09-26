@@ -37,8 +37,6 @@ bindkey '^N' history-substring-search-down
 zinit ice proto'git' pick'init.sh'
 zinit light "b4b4r07/enhancd"
 
-zinit light "momo-lab/zsh-abbrev-alias"
-
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Install zsh-gomi(fzf required)

@@ -1,0 +1,102 @@
+snippets:
+  # ls
+  - name: ls
+    keyword: ls
+    snippet: ls -aG
+  - name: ll
+    keyword: ls
+    snippet: ls -lh
+  # vim
+  - name: neo vim
+    keyword: vi
+    snippet: nvim
+  # git
+  - name: git status
+    keyword: gst
+    snippet: git status --short --branch
+  - name: git stash
+    keyword: gss
+    snippet: git stash
+  - name: git log
+    keyword: glo
+    snippet: git log --graph --color=always --format="%C(magenta)%an% C(auto)%h%d %s %C(black)%C(bold)%cr"
+  - name: git add
+    keyword: ga
+    snippet: git add
+  - name: git add all
+    keyword: ga
+    snippet: git add -A
+  - name: git branch
+    keyword: gbr
+    snippet: git branch
+  - name: git fetch
+    keyword: gf
+    snippet: git fetch
+  - name: git diff
+    keyword: gdf
+    snippet: git diff
+  - name: git diff name only
+    keyword: gdf
+    snippet: git diff --name-only
+  - name: git commit all message
+    keyword: gca
+    snippet: git commit -a -m '{{commit_message}}'
+  - name: git commit message
+    keyword: gcm
+    snippet: git commit -m '{{commit_message}}'
+  - name: git cherry-pick
+    keyword: gpk
+    snippet: git cherry-pick
+  - name: git cherry-pick continue
+    keyword: gpc
+    snippet: git cherry-pick --continue
+  - name: git cherry-pick abort
+    keyword: gpa
+    snippet: git cherry-pick --abort
+  - name: git cherry-pick abort
+    keyword: gpa
+    snippet: git cherry-pick --abort
+  - name: git rebase
+    keyword: grb
+    snippet: git rebase
+  - name: git rebase interactive
+    keyword: gri
+    snippet: git rebase -i
+  - name: git rebase continue
+    keyword: grc
+    snippet: git rebase --continue
+  - name: git rebase abort
+    keyword: gra
+    snippet: git rebase --abort
+  - name: git push origin
+    keyword: gpo
+    snippet: git push origin
+  - name: git pull
+    keyword: gpl
+    snippet: git pull
+  - name: git commit --amend
+    keyword: gam
+    snippet: git commit --amend
+  - name: git checkout
+    keyword: gch
+    snippet: git checkout
+  # amplify
+  - name: amplify status
+    keyword: as
+    snippet: amplify status
+  - name: amplify env checkout
+    keyword: ach
+    snippet: amplify env checkout
+  - name: amplify pull
+    keyword: apl
+    snippet: amplify pull
+
+completions:
+  - name: kill
+    patterns: 
+      - "^kill( -9)? $"
+    sourceCommand: "ps -ef | sed 1d"
+    options:
+      --multi: true
+      --prompt: "'Kill Process> '"
+    callback: "awk '{print $2}'"
