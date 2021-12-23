@@ -50,5 +50,6 @@
   "auto-rename-tag.activationOnLanguage": ["*"],
   "go.toolsManagement.autoUpdate": true,
   "editor.scrollBeyondLastLine": false,
-  "editor.bracketPairColorization.enabled": true
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true
 }
