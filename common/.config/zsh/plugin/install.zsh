@@ -41,3 +41,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 # Install zsh-gomi(fzf required)
 zinit ice wait'!0'; zinit light b4b4r07/zsh-gomi
+
+zinit ice lucid depth"1" blockf
+zinit light yuki-yano/zeno.zsh
+
