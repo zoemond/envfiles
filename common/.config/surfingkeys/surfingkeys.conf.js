@@ -1,19 +1,19 @@
-map("h", "S");
-map("l", "D");
+api.map("h", "S");
+api.map("l", "D");
 
 settings.prevLinkRegex = /((<<|prev(ious)?)|<|‹|«|←|前へ|前のページ+)/i;
 settings.nextLinkRegex = /((>>|next)|>|›|»|→|次へ|次のページ+)/i;
 // Google jp 1年以内
-addSearchAliasX("1", "Google jp 1年以内", "https://www.google.co.jp/search?q={0}&tbs=qdr:y,lr:lang_1ja&lr=lang_ja");
-mapkey("o1", "#8Open Search with alias 1", function () {
+api.addSearchAlias("1", "Google jp 1年以内", "https://www.google.co.jp/search?q={0}&tbs=qdr:y,lr:lang_1ja&lr=lang_ja");
+api.mapkey("o1", "#8Open Search with alias 1", function () {
     Front.openOmnibar({ type: "SearchEngine", extra: "1" });
 });
 
-mapkey("<Ctrl-y>", "Copy Open Graph Image Url to Clipboard", function () {
-    Front.showBanner("copied: ? ");
+api.mapkey("<Ctrl-y>", "Copy Open Graph Image Url to Clipboard", function () {
+    api.Front.showBanner("copied: ? ");
     const url = document.querySelector('head meta[property="og:image"]').getAttribute("content");
     navigator.clipboard.writeText(url);
-    Front.showBanner("copied: " + url);
+    api.Front.showBanner("copied: " + url);
 });
 
 // set theme
