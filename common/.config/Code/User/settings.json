@@ -51,5 +51,8 @@
   "go.toolsManagement.autoUpdate": true,
   "editor.scrollBeyondLastLine": false,
   "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true
+  "editor.guides.bracketPairs": true,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": true
+  }
 }
