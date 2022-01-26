@@ -29,3 +29,11 @@ syntax enable
 set mouse=a
 colorscheme desert 
 
+" for coc vim
+" 左に出る>>に色を付ける
+highlight CocErrorSign ctermfg=15 ctermbg=196
+highlight CocWarningSign ctermfg=0 ctermbg=172
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+set statusline^=%{coc#status()}

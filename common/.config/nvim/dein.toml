@@ -34,4 +34,9 @@ repo = 'osyo-manga/vim-over'
 [[plugins]] 
 repo = 'hotwatermorning/auto-git-diff'
 
+[[plugins]] 
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+
+
 
