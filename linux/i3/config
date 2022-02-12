@@ -441,5 +441,6 @@ exec picom -b --config ~/.config/picom/picom.conf
 ### 参考: https://bbs.archlinux.org/viewtopic.php?id=257810
 ### (カーネルパラメータにfbcon=nodefeを渡すというやつは試してない)
 exec systemctl start systemd-backlight@backlight:amdgpu_bl0
+exec picom -b --config ~/.config/picom/picom.conf
 
 
