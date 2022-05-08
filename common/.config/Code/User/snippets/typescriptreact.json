@@ -7,9 +7,7 @@
   "react compoenent comp": {
     "prefix": "rcomp",
     "body": [
-      "import React from 'react'",
-      "",
-      "export const $1: React.VFC = props => {",
+      "export const $1 = (props: Props): React.ReactElement => {",
       "  return <div>$2</div>",
       "}"
     ],
@@ -17,20 +15,12 @@
   },
   "react props type": {
     "prefix": "rprop",
-    "body": [
-      "type Props = {",
-      "  $1: $2",
-      "}"
-    ],
+    "body": ["type Props = {", "  $1: $2", "}"],
     "description": "react props type"
   },
   "styled compoenent": {
     "prefix": "scomp",
-    "body": [
-      "const $1 = styled.div`",
-      "  $2;",
-      "`"
-    ],
+    "body": ["const $1 = styled.div`", "  $2;", "`"],
     "description": "Styled Component"
   }
 }
