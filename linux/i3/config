@@ -437,7 +437,7 @@ mode "$mode_gaps_outer" {
 ## autostart
 exec copyq
 exec fcitx
-exec /usr/bin/xkeysnail ~/envfiles/linux/xkeysnail/config.py
+exec /usr/bin/xkeysnail ~/ghq/github.com/zoemond/envfiles/linux/xkeysnail/config.py
 ## ターミナルを透明にするため
 exec picom -b --config ~/.config/picom/picom.conf
 ### amdのbacklight@.serviceはPC起動時に失敗します。起動後に直接startすることはできるのでstartします
