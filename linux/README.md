@@ -113,8 +113,7 @@ pavucontrol で出力が Speaker しか選択できず、headphone を認識し�
 # key bind
 
 ```sh
-sudo pacman -S python-pip
-sudo pip3 install xkeysnail
+sudo paru -S xkeysnail
 ```
 
 - 権限設定
