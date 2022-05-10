@@ -34,7 +34,7 @@ zinit light "zsh-users/zsh-history-substring-search"
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
-zinit ice proto'git' pick'init.sh'
+zinit ice as"program" src'init.sh'
 zinit light "b4b4r07/enhancd"
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
