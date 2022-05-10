@@ -10,7 +10,7 @@ timedatectl set-ntp true
 # [natural scroll](https://wiki.archlinux.org/index.php/Libinput)
 
 ```sh
-sudo mv linux/x11/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
+sudo cp linux/x11/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
 ```
 
 # Install Apps
