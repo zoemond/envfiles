@@ -42,8 +42,11 @@ sudo pacman -S otf-ipafont
 # 日本語入力
 
 ```sh
-sudo pacman -S fcitx
+paru -S fcitx5-mozc fcitx5-im fcitx-configure
 ```
+
+- fcitx-configure -> 日本語を追加
+- fcitx-configure ->Global Options から Activate Input Method と Deactivate Input Method にキーを割り当て
 
 # 音出力・入力
 
