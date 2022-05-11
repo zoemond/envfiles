@@ -1,33 +1,37 @@
-" 
+"
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 " nvimのでpythonを使ったpluginを入れるようにする
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 
-"dein Scripts----------------------------- 
+"dein Scripts-----------------------------
 if &compatible
-  set nocompatible
+  set nocompatible               " Be iMproved
 endif
+
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('~/.cache/dein') 
-  call dein#begin('~/.cache/dein')
+" Required:
+call dein#begin('~/.cache/dein')
 
-  "Original
-  call dein#load_toml(expand('<sfile>:h') . "/dein.toml")
+" Let dein manage dein
+" Required:
+call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-  call dein#end()
-  call dein#save_state()
-endif
+call dein#load_toml(expand('<sfile>:h') . "/dein.toml")
 
+call dein#end()
+
+" Required:
 filetype plugin indent on
 syntax enable
-"End dein Scripts------------------------- 
+
+"End dein Scripts-------------------------
 
 set mouse=a
-colorscheme desert 
+colorscheme desert
 
 " for coc vim
 " 左に出る>>に色を付ける
