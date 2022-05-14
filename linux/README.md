@@ -149,3 +149,10 @@ sudo pacman -S keychain
 
 echo 'eval `keychain --eval --agents ssh -Q --quiet 作成したkeyファイル名(パスではない)`' >> ~/.zshrc
 ```
+
+# font
+
+```
+paru -S ttf-hackgen-nerd
+ln -s path/to/fonctonfig ~/.config/fontconfig # copyqが使うフォントがシステムのデフォルト。日本語が表示できるフォントにします
+```
