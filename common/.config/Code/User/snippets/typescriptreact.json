@@ -22,5 +22,10 @@
     "prefix": "scomp",
     "body": ["const $1 = styled.div`", "  $2;", "`"],
     "description": "Styled Component"
+  },
+  "react props with children": {
+    "prefix": "rpct",
+    "body": ["React.PropsWithChildren<$1>"],
+    "description": "react type of props with children"
   }
 }
