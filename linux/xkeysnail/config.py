@@ -52,10 +52,17 @@ define_keymap(None, {
     K("RSuper-Shift-k"): K("Shift-Up"),
     K("RSuper-Shift-l"): K("Shift-Right"),
 
+    K("RSuper-Ctrl-h"): [K("Ctrl-Left")],
+    K("RSuper-Ctrl-l"): [K("Ctrl-Right")],
     K("RSuper-i"): K("HOME"),
     K("RSuper-a"): K("END"),
     K("RSuper-Shift-i"): K("Shift-HOME"),
     K("RSuper-Shift-a"): K("Shift-END"),
+
+    K("RSuper-f"): [K("Page_down")],
+    K("RSuper-g"): [K("Page_up")],
+    K("RSuper-Shift-f"): [K("Shift-Page_Down")],
+    K("RSuper-Shift-g"): [K("Shift-Page_Up")],
 
     K("RSuper-b"): K("Ctrl-Left"),
     K("RSuper-w"): K("Ctrl-Right"),
