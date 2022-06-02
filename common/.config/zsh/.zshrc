@@ -56,7 +56,7 @@ bindkey '^[[1;5C' forward-word                                  #
 dir=$(cd $(dirname $0); pwd)
 source $dir/plugin/install.zsh
 # findコマンドが"/"付きで実行されないので'/'をつける
-for zshfile_path in $(find $dir'/' -type f -name '*.zsh' -not -name 'plugin/install.zsh')
+for zshfile_path in $(find $dir'/' -type f -name '*.zsh' -not -name 'install.zsh')
 # でもecho $zshfile_pathすると'/'は二重になる.why
 do
     source $zshfile_path
