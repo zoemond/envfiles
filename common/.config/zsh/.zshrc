@@ -11,16 +11,16 @@ fi
 export EDITOR='nvim'
 
 # Ctrl+Dでログアウトしてしまうことを防ぐ
-setopt IGNOREEOF 
+setopt IGNOREEOF
 
 # ビープ音を鳴らさないようにする
 setopt no_beep
 
 # 区切り文字を指定
 autoload -Uz select-word-style
-select-word-style default 
+select-word-style default
 zstyle ':zle:*' word-chars ' /=;@:{}[]()<>,|.'
-zstyle ':zle:*' word-style unspecified 
+zstyle ':zle:*' word-style unspecified
 
 ## Keybindings section
 bindkey -e
@@ -60,5 +60,5 @@ for zshfile_path in $(find $dir'/' -type f -name '*.zsh' -not -name 'plugin/inst
 # でもecho $zshfile_pathすると'/'は二重になる.why
 do
     source $zshfile_path
-done 
+done
 
