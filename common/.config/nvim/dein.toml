@@ -42,3 +42,5 @@ rev = 'release'
 repo = 'sainnhe/gruvbox-material'
 
 
+[[plugins]] 
+repo = 'nvim-treesitter/nvim-treesitter'
