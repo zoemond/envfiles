@@ -106,3 +106,8 @@ require('nvim-treesitter.configs').setup {
 }
 EOF
 
+" ------
+" fzfpreview
+" ------
+nnoremap <silent> <C-p>  :<C-u>CocCommand fzf-preview.FromResources buffer project_mru project<CR>
+
