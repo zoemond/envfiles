@@ -111,3 +111,9 @@ EOF
 " ------
 nnoremap <silent> <C-p>  :<C-u>CocCommand fzf-preview.FromResources buffer project_mru project<CR>
 
+" ------
+" git blame
+" ------
+let g:blamer_enabled = 1
+let g:blamer_delay = 500
+

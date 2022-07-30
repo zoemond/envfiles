@@ -44,3 +44,7 @@ repo = 'sainnhe/gruvbox-material'
 
 [[plugins]] 
 repo = 'nvim-treesitter/nvim-treesitter'
+
+[[plugins]] 
+repo = 'APZelos/blamer.nvim'
+
