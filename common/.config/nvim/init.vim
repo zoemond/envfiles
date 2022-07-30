@@ -5,6 +5,10 @@ set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 " nvimのでpythonを使ったpluginを入れるようにする
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 
+"" Undo
+set undofile
+set undodir=~/.cache/nvim/undo/
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
