@@ -80,6 +80,9 @@ snippets:
   - name: git checkout
     keyword: gch
     snippet: git checkout
+  - name: tmux popup tig
+    keyword: tt
+    snippet: tmux popup -d "#{pane_current_path}" -w100% -h100% "tig"
   # amplify
   - name: amplify status
     keyword: as
@@ -93,7 +96,7 @@ snippets:
 
 completions:
   - name: kill
-    patterns: 
+    patterns:
       - "^kill( -9)? $"
     sourceCommand: "ps -ef | sed 1d"
     options:
