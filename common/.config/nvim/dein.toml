@@ -38,5 +38,7 @@ repo = 'hotwatermorning/auto-git-diff'
 repo = 'neoclide/coc.nvim'
 rev = 'release'
 
+[[plugins]] 
+repo = 'sainnhe/gruvbox-material'
 
 
