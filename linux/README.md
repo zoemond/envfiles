@@ -23,6 +23,8 @@ paru -S tmux
 paru -S copyq
 paru -S tig
 paru -S fzf
+# coc-ts-serverがfileをrenameするのに必要
+paru -S watchman
 # xbacklightは"No outputs have backlight property."となった(lenovo E495, AMD)
 # lightはエラーステータスが返ってきた.
 # light-gitなら効いたので
