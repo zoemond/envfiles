@@ -42,6 +42,11 @@ nnoremap [dev]    <Nop>
 xnoremap [dev]    <Nop>
 nmap     m        [dev]
 xmap     m        [dev]
+nnoremap [ff]     <Nop>
+xnoremap [ff]     <Nop>
+nmap     z        [ff]
+xmap     z        [ff]
+
 
 " ------
 " color
@@ -80,6 +85,8 @@ nmap     <silent> [dev]a  <Plug>(coc-codeaction-selected)iw
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+nnoremap <silent> [ff]rf :<C-u>CocCommand fzf-preview.CocReferences<CR>
+
 function! s:coc_typescript_settings() abort
   nnoremap <silent> <buffer> [dev]f :<C-u>CocCommand eslint.executeAutofix<CR>:CocCommand prettier.formatFile<CR>
 endfunction
@@ -114,7 +121,7 @@ require('nvim-treesitter.configs').setup {
 EOF
 
 " ------
-" fzfpreview
+" fzf preview
 " ------
 nnoremap <silent> <C-p>  :<C-u>CocCommand fzf-preview.FromResources buffer project_mru project<CR>
 
