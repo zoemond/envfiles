@@ -56,22 +56,29 @@ set background=dark
 highlight Visual ctermfg=NONE ctermbg=23   guifg=NONE    guibg=Black
 
 
-" for coc vim
+" ---------
+" coc.nvim
+" ---------
 " 左に出る>>に色を付ける
 highlight CocErrorSign ctermfg=15 ctermbg=196
 highlight CocWarningSign ctermfg=0 ctermbg=172
+
+let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint8', 'coc-prettier', 'coc-git', 'coc-fzf-preview', 'coc-lists']
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 set statusline^=%{coc#status()}
 
-" coc.nvim
-let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint8', 'coc-prettier', 'coc-git', 'coc-fzf-preview', 'coc-lists']
 
 inoremap <silent> <expr> <C-Space> coc#refresh()
 nnoremap <silent> K       :<C-u>call <SID>show_documentation()<CR>
 nmap     <silent> [dev]rn <Plug>(coc-rename)
 nmap     <silent> [dev]a  <Plug>(coc-codeaction-selected)iw
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 function! s:coc_typescript_settings() abort
   nnoremap <silent> <buffer> [dev]f :<C-u>CocCommand eslint.executeAutofix<CR>:CocCommand prettier.formatFile<CR>
@@ -116,4 +123,6 @@ nnoremap <silent> <C-p>  :<C-u>CocCommand fzf-preview.FromResources buffer proje
 " ------
 let g:blamer_enabled = 1
 let g:blamer_delay = 500
+
+
 
