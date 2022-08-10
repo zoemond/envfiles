@@ -48,3 +48,8 @@ repo = 'nvim-treesitter/nvim-treesitter'
 [[plugins]] 
 repo = 'APZelos/blamer.nvim'
 
+[[plugins]]
+repo = 'junegunn/fzf'
+dir = '~/.fzf_bin'
+do = './install --all'
+
