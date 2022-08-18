@@ -53,7 +53,6 @@ repo = 'junegunn/fzf'
 dir = '~/.fzf_bin'
 do = './install --all'
 
-
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
  hook_add = '''
@@ -82,3 +81,9 @@ hook_add = '''
     autocmd FileType nerdtree,startify call glyph_palette#apply()
   augroup END
 '''
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
