@@ -137,6 +137,7 @@ EOF
 " ------
 " fzf preview
 " ------
+nnoremap <silent> [ff]q  :<C-u>CocCommand fzf-preview.CocCurrentDiagnostics<CR>
 nnoremap <silent> <C-p>  :<C-u>CocCommand fzf-preview.FromResources buffer project_mru project<CR>
 nnoremap <silent> [ff]s  :<C-u>CocCommand fzf-preview.GitStatus<CR>
 nnoremap <silent> [ff]gg :<C-u>CocCommand fzf-preview.GitActions<CR>
