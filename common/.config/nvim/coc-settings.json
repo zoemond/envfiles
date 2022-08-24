@@ -9,5 +9,9 @@
     "javascript",
     "json",
     "graphql"
-  ]
+  ],
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": ""
 }
