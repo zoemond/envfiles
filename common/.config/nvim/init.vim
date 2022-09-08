@@ -143,6 +143,7 @@ nnoremap <silent> [ff]s  :<C-u>CocCommand fzf-preview.GitStatus<CR>
 nnoremap <silent> [ff]gg :<C-u>CocCommand fzf-preview.GitActions<CR>
 nnoremap <silent> [ff]b  :<C-u>CocCommand fzf-preview.Buffers<CR>
 nnoremap          [ff]f  :<C-u>CocCommand fzf-preview.ProjectGrep --add-fzf-arg=--exact --add-fzf-arg=--no-sort<Space>
+nnoremap <silent> [ff]o  :<C-u>CocCommand fzf-preview.CocOutline --add-fzf-arg=--exact --add-fzf-arg=--no-sort<CR>
 xnoremap          [ff]f  "sy:CocCommand fzf-preview.ProjectGrep --add-fzf-arg=--exact --add-fzf-arg=--no-sort<Space>-F<Space>"<C-r>=substitute(substitute(@s, '\n', '', 'g'), '/', '\\/', 'g')<CR>"
 
 " ------
