@@ -20,5 +20,7 @@ font:
 window_opacity: 0.95
 
 key_bindings:
-- { key: Tab, mods: Control, chars: "\x1b[27;5;9~" }
+  - { key: Tab, mods: Control,       chars: "\x1b[27;5;9~" }
+  - { key: E,   mods: Control|Shift, chars: "\x1b[69;5u"   }
+
 
