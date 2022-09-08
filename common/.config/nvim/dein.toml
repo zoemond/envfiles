@@ -87,3 +87,7 @@ repo = 'vim-denops/denops.vim'
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
+
+[[plugins]]
+repo = 'skanehira/getpr.vim'
+
