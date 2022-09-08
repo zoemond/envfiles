@@ -91,3 +91,6 @@ repo = 'lambdalisue/gina.vim'
 [[plugins]]
 repo = 'skanehira/getpr.vim'
 
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
