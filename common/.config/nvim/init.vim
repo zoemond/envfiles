@@ -145,6 +145,11 @@ nnoremap <silent> [ff]b  :<C-u>CocCommand fzf-preview.Buffers<CR>
 nnoremap          [ff]f  :<C-u>CocCommand fzf-preview.ProjectGrep --add-fzf-arg=--exact --add-fzf-arg=--no-sort<Space>
 xnoremap          [ff]f  "sy:CocCommand fzf-preview.ProjectGrep --add-fzf-arg=--exact --add-fzf-arg=--no-sort<Space>-F<Space>"<C-r>=substitute(substitute(@s, '\n', '', 'g'), '/', '\\/', 'g')<CR>"
 
+" ------
+" fern
+" ------
+nnoremap <silent> <C-E> :<C-u>Fern . -drawer -reveal=%<CR>
+
 
 " ------
 " git blame
