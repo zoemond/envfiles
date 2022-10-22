@@ -104,7 +104,6 @@ function! s:show_documentation() abort
   endif
 endfunction
 
-
 " ------
 "" treesitter
 " ------
@@ -131,6 +130,9 @@ require('nvim-treesitter.configs').setup {
   highlight = {
     enable = true,
   },
+  context_commentstring = {
+    enable = true
+  }
 }
 EOF
 
