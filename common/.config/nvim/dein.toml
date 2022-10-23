@@ -53,3 +53,13 @@ repo = 'junegunn/fzf'
 dir = '~/.fzf_bin'
 do = './install --all'
 
+
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+ hook_add = '''
+ " show hidden files by default
+ let g:fern#default_hidden=1
+ '''
+
+[[plugins]]
+repo = 'lambdalisue/fern-git-status.vim'
