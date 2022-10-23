@@ -154,7 +154,10 @@ echo 'eval `keychain --eval --agents ssh -Q --quiet 作成したkeyファイル�
 
 # font
 
+- https://github.com/yuru7/HackGen/releases
+  - 2.7 以上のバージョンでないと fontconfig の Font Name が合いません
+  - 2.5 系だと nerd fonts が含まれておらず、豆腐になるアイコンがあります
+
 ```
-paru -S ttf-hackgen-nerd
-ln -s path/to/fonctonfig ~/.config/fontconfig # copyqが使うフォントがシステムのデフォルト。日本語が表示できるフォントにします
+ln -s path/to/fonctonfig ~/.config/fontconfig # copyq, chromeなどが使うフォントがシステムのデフォルト。日本語が表示できるフォントにします
 ```
