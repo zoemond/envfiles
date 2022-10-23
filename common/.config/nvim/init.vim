@@ -82,10 +82,11 @@ nmap     <silent> [dev]a  <Plug>(coc-codeaction-selected)iw
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
+ 				\: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+ 
 nnoremap <silent> [ff]rf :<C-u>CocCommand fzf-preview.CocReferences<CR>
+
 
 function! s:coc_typescript_settings() abort
   nnoremap <silent> <buffer> [dev]f :<C-u>CocCommand eslint.executeAutofix<CR>:CocCommand prettier.formatFile<CR>

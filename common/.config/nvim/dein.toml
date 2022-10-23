@@ -92,8 +92,8 @@ repo = 'lambdalisue/gina.vim'
 repo = 'skanehira/getpr.vim'
 
 
-[[plugins]]
-repo = 'cohama/lexima.vim'
+# [[plugins]]
+# repo = 'cohama/lexima.vim'
 
 [[plugins]]
 repo = 'JoosepAlviste/nvim-ts-context-commentstring'
