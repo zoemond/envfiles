@@ -1,6 +1,8 @@
 api.map("h", "S");
 api.map("l", "D");
 
+settings.hintShiftNonActive = true;
+
 settings.prevLinkRegex = /((<<|prev(ious)?)|<|‹|«|←|前へ|前のページ+)/i;
 settings.nextLinkRegex = /((>>|next)|>|›|»|→|次へ|次のページ+)/i;
 // Google jp 1年以内
