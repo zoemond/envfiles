@@ -24,3 +24,9 @@
         diff = /usr/share/git/diff-highlight/diff-highlight | less
 [core]
 	quotepath = false
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
