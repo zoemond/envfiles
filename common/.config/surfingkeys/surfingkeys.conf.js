@@ -1,3 +1,6 @@
+// google ドキュメント、スプレッドシート が無理になるので
+settings.blacklistPattern = /.*docs.google.com.*/i;
+
 api.map("h", "S");
 api.map("l", "D");
 
