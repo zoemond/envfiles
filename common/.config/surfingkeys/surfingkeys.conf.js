@@ -1,5 +1,8 @@
 // google ドキュメント、スプレッドシート が無理になるので
 settings.blacklistPattern = /.*docs.google.com.*/i;
+settings.blocklist = {
+  "https://docs.google.com": 1,
+};
 
 api.map("h", "S");
 api.map("l", "D");
