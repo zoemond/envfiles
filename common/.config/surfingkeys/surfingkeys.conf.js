@@ -3,6 +3,7 @@ settings.blacklistPattern = /.*docs.google.com.*/i;
 settings.blocklist = {
   "https://docs.google.com": 1,
 };
+api.unmapAllExcept([], /docs.google.com|twitter.com/);
 
 api.map("h", "S");
 api.map("l", "D");
