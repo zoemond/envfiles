@@ -1,0 +1,59 @@
+modmap:
+  - name: GENERAL
+    remap:
+      CAPSLOCK: CTRL_L
+      CTRL_L: ALT_L
+      ALT_L: CTRL_L
+      HENKAN: 
+        held: [CapsLock]
+        alone: [HENKAN]
+      MUHENKAN: 
+        held: [CapsLock]
+        alone: [MUHENKAN]
+virtual_modifiers:
+  - CapsLock
+keymap:
+  # fcitxで最初に「英語-US)」、2番目に「Mozc」を設定したとき、
+  # 特に設定しなくてもUS配列を使える
+  # backspaceの横のキーのみ変換
+  -  name: KANA
+     remap:
+      YEN: GRAVE
+      SHIFT-YEN: SHIFT-GRAVE
+  -  name: GENERAL
+     remap:
+      CapsLock-ENTER: BTN_LEFT
+
+      CapsLock-h: left
+      CapsLock-j: down
+      CapsLock-k: up
+      CapsLock-l: right
+      CapsLock-SHIFT-h: SHIFT-left
+      CapsLock-SHIFT-j: SHIFT-down
+      CapsLock-SHIFT-k: SHIFT-up
+      CapsLock-SHIFT-l: SHIFT-right
+
+      CapsLock-SHIFT-h: SHIFT-left
+      CapsLock-SHIFT-l: SHIFT-right
+      CapsLock-i: HOME
+      CapsLock-a: END
+      CapsLock-SHIFT-i: SHIFT-HOME
+      CapsLock-SHIFT-a: SHIFT-END
+
+      CapsLock-b: CTRL-left
+      CapsLock-w: CTRL-right
+      CapsLock-e: CTRL-right
+      CapsLock-SHIFT-b: CTRL-SHIFT-LEFT
+      CapsLock-SHIFT-w: CTRL-SHIFT-RIGHT
+      CapsLock-SHIFT-e: CTRL-SHIFT-RIGHT
+
+      CapsLock-x: BACKSPACE
+      CapsLock-d: DELETE
+
+      CapsLock-ctrl-x: CTRL-BACKSPACE
+      CapsLock-CTRL-d: CTRL-DELETE
+
+      CapsLock-v:
+        launch: ["bash", "-c", "sudo -u koki copyq toggle"]
+      CapsLock-s:
+        launch: ["bash", "-c", "flameshot gui"]
