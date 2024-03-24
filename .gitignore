@@ -2,6 +2,7 @@
 **/*.pyo
 **/*.pyc
 **/*.pyd
+common/.config/coc
 common/.config/copyq/copyq_geometry.ini
 common/.config/copyq/copyq_geometry.ini
 common/.config/copyq/copyq_tabs.ini
