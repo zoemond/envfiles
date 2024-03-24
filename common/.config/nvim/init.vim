@@ -10,32 +10,71 @@ set undodir=~/.cache/nvim/undo/
 
 " nvimでpythonを使ったpluginを入れるようにする
 let g:python3_host_prog = expand('/usr/local/bin/python3')
+" 
+" "dein Scripts-----------------------------
+" if &compatible
+"   set nocompatible               " Be iMproved
+" endif
+" 
+" " Add the dein installation directory into runtimepath
+" set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+" 
+" " Required:
+" call dein#begin('~/.cache/dein')
+" 
+" " Let dein manage dein
+" " Required:
+" call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+" 
+" call dein#load_toml(expand('<sfile>:h') . "/dein.toml")
+" 
+" call dein#end()
+" 
+" " Required:
+" filetype plugin indent on
+" syntax enable
+" 
+" "End dein Scripts-------------------------
 
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+call plug#begin()
+Plug 'osyo-manga/vim-over'
+Plug 'hotwatermorning/auto-git-diff'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'skanehira/getpr.vim'
+ " show hidden files by default
 
-" Add the dein installation directory into runtimepath
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
-" Required:
-call dein#begin('~/.cache/dein')
+ function! FernSetting(info)
+	" info is a dictionary with 3 fields
+	" - name: name of the plugin
+	" - status: 'installed', 'updated', or 'unchanged'
+	" - force: set on PlugInstall! or PlugUpdate!
+	if a:info.status == 'installed' || a:info.force
+          let g:fern#default_hidden=1
+	endif
+endfunction
 
-" Let dein manage dein
-" Required:
-call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-call dein#load_toml(expand('<sfile>:h') . "/dein.toml")
 
-call dein#end()
+Plug 'lambdalisue/fern.vim' , {'do': function('FernSetting') }
+Plug 'junegunn/fzf' , { 'do': { -> fzf#install() } }
+Plug 'lambdalisue/fern-git-status.vim'
 
-" Required:
-filetype plugin indent on
-syntax enable
+ function! FernNerdFontSetting(info)
+	" info is a dictionary with 3 fields
+	" - name: name of the plugin
+	" - status: 'installed', 'updated', or 'unchanged'
+	" - force: set on PlugInstall! or PlugUpdate!
+	if a:info.status == 'installed' || a:info.force
+           let g:fern#renderer='nerdfont' 
+	endif
+endfunction
+Plug 'lambdalisue/fern-renderer-nerdfont.vim', { 'do': function('FernNerdFontSetting') }
+Plug 'lambdalisue/nerdfont.vim'
 
-"End dein Scripts-------------------------
 
+call plug#end()
 
 " map prefix
 nnoremap [dev]    <Nop>
@@ -56,7 +95,7 @@ if has('termguicolors')
   set termguicolors
 endif
 
-colorscheme gruvbox-material
+" colorscheme gruvbox-material
 set background=dark
 highlight Visual ctermfg=NONE ctermbg=23   guifg=NONE    guibg=Black
 
