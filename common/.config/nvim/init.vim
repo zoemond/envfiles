@@ -9,7 +9,7 @@ set undofile
 set undodir=~/.cache/nvim/undo/
 
 " nvimでpythonを使ったpluginを入れるようにする
-let g:python3_host_prog = expand('/usr/local/bin/python3')
+let g:python3_host_prog = expand('/usr/bin/python3')
 " 
 " "dein Scripts-----------------------------
 " if &compatible
@@ -42,6 +42,7 @@ Plug 'hotwatermorning/auto-git-diff'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'skanehira/getpr.vim'
+Plug 'APZelos/blamer.nvim'
  " show hidden files by default
 
 
