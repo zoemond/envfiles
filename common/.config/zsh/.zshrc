@@ -27,6 +27,9 @@ bindkey -e
 bindkey "^z" undo
 bindkey "^y" redo
 
+# Ctrl+Backspaceで単語削除ができるようにします。Ctrl+Hでも削除するようになります
+bindkey '^H' backward-kill-word
+
 # alacrittyで単語単位のcaret移動ができるように
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
