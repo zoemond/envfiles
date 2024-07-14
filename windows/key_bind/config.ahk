@@ -5,7 +5,7 @@
 ;どのディレクトリからの実行でもファイルのIncludeができるように
 ;ベースとなるディレクトリを変更
 #Include %A_ScriptDir%
-SetKeyDelay, 0
+SetKeyDelay 0
 
 ;backspaceの隣のキー → 半角・全角キー
 SC07D:: Send "{SC029}"
