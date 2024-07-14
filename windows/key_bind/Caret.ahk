@@ -41,6 +41,5 @@ SC07B & x:: {
 }
 SC07B & d:: Send "{Blind}{Del}"
 
-
-        ;Send, +{Home}{Del}
-        ;Send, +{End}{Del}
+;Send, +{Home}{Del}
+;Send, +{End}{Del}

@@ -86,5 +86,5 @@ return
 
 #Include CursorPointer.ahk
 #Include Caret.ahk
-#+r::Reload 
+#+r:: Reload
 #Include ApplicationHotKeys.ahk
