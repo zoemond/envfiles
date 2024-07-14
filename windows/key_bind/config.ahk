@@ -22,47 +22,61 @@ SC079::
   { ;IMEがGoogleでないときはGoogleに切り替えます。
     PostMessage 0x50, 0, 0x4110411,, A  ;WM_INPUTLANGCHANGEREQUEST
   }
-  IME_SET(1)
-Return
-SC07B::
-  IME_SET(0)
-Return
+{
+    IME_SET(1)
+    Return
+}
 
+SC07B::
+{
+    IME_SET(0)
+    Return
+}
 F1::
+{
     SetTitleMatchMode "RegEx"
     if WinActive(".*Google Chrome")
         Send "{Shift}{F6}"
     else
         Send "{F1}"
     return
+}
 
 #Include PasteMode.ahk
-ToPasteModeNormalLabel:
-  ToPasteModeNormal()
-return
-#c::
-  ToPasteModeActive()
-  SetTimer, ToPasteModeNormalLabel, 500
-return
-#a::
-  if (IsPasteModeActive()) {
-    Run, cmd.exe /c To-CamelCase.bat,,hide
+ToPasteModeNormalLabel()
+{
     ToPasteModeNormal()
-  }
-  return
+    return
+}
+
+#c::
+{
+    ToPasteModeActive()
+    SetTimer ToPasteModeNormalLabel, 500
+    return
+}
+#a::
+    Run, cmd.exe /c To-CamelCase.bat,,hide
+{
+    if (IsPasteModeActive()) {
+        ToPasteModeNormal()
+    }
+    return
+}
 ;#k::
 ;  if (IsPasteModeActive()) {
 ;    Run, cmd.exe /c To-KebabCase.bat,,hide
 ;    ToPasteModeNormal()
 ;  }
-  return
+return
 #s::
-  if (IsPasteModeActive()) {
     Run, cmd.exe /c To-SnakeCase.bat,,hide
-    ToPasteModeNormal()
-  }
-  return
-
+{
+    if (IsPasteModeActive()) {
+        ToPasteModeNormal()
+    }
+    return
+}
 ;#m::
 ;  if (IsPasteModeActive()) {
 ;    Run, cmd.exe /c To-MarkdownIfLink.bat,,hide

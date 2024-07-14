@@ -21,14 +21,14 @@ WithShift(rctrlKey) {
 }
 
 ;削除
-RCtrl & w::
+RCtrl & w:: {
     if WinActive("ahk_exe alacritty.exe")
         Send "^{w}"
     else
         Send "^{BS}"
     return
-
-SC07B & x::
+}
+SC07B & x:: {
     if GetKeyState("RCtrl", "P") {
         if WinActive("ahk_exe alacritty.exe")
             Send "^{w}"
@@ -38,6 +38,7 @@ SC07B & x::
         Send "{BS}"
     }
     return
+}
 SC07B & d:: Send "{Blind}{Del}"
 
 
