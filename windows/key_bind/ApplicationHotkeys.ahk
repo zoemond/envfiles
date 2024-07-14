@@ -1,5 +1,5 @@
 SC07B & v::
-  Run, copyq toggle,,hide
 {
+    Run "copyq toggle", , "hide"
     return
 }

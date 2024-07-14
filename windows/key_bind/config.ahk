@@ -56,9 +56,9 @@ ToPasteModeNormalLabel()
     return
 }
 #a::
-    Run, cmd.exe /c To-CamelCase.bat,,hide
 {
     if (IsPasteModeActive()) {
+        Run "cmd.exe / c To - CamelCase.bat", , "hide"
         ToPasteModeNormal()
     }
     return
@@ -70,9 +70,9 @@ ToPasteModeNormalLabel()
 ;  }
 return
 #s::
-    Run, cmd.exe /c To-SnakeCase.bat,,hide
 {
     if (IsPasteModeActive()) {
+        Run "cmd.exe / c To - SnakeCase.bat", , "hide"
         ToPasteModeNormal()
     }
     return
