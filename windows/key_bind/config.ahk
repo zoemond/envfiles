@@ -12,17 +12,17 @@ SC07D:: Send "{SC029}"
 +SC07D:: Send "+{SC029}"
 
 ;Google IME切り替えの神関数
-#Include NeosAutoHotKey-IME.ahk
+#Include kdr-s_IME.ahk
 SC079::
-  ThreadID:=DllCall("GetWindowThreadProcessId", "UInt", 0)
-  InputLocaleID:=DllCall("GetKeyboardLayout", "UInt", ThreadID, "UInt")
-  ENG:=67699721
-  GOOGLE:=68224017
-  if (InputLocaleID <> %GOOGLE%)
-  { ;IMEがGoogleでないときはGoogleに切り替えます。
-    PostMessage 0x50, 0, 0x4110411,, A  ;WM_INPUTLANGCHANGEREQUEST
-  }
 {
+    ; ThreadID := DllCall("GetWindowThreadProcessId", "UInt", 0)
+    ; InputLocaleID := DllCall("GetKeyboardLayout", "UInt", ThreadID, "UInt")
+    ; ENG := 67699721
+    ; GOOGLE := 68224017
+    ; if (InputLocaleID != %GOOGLE%)
+    ; { ;IMEがGoogleでないときはGoogleに切り替えます。
+    ;     PostMessage 0x50, 0, 0x4110411, , "A"  ;WM_INPUTLANGCHANGEREQUEST
+    ; }
     IME_SET(1)
     Return
 }
