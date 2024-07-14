@@ -8,8 +8,8 @@
 SetKeyDelay, 0
 
 ;backspaceの隣のキー → 半角・全角キー
-SC07D::Send, {SC029}
-+SC07D::Send, +{SC029}
+SC07D:: Send "{SC029}"
++SC07D:: Send "+{SC029}"
 
 ;Google IME切り替えの神関数
 #Include NeosAutoHotKey-IME.ahk
@@ -29,11 +29,11 @@ SC07B::
 Return
 
 F1::
-    SetTitleMatchMode,RegEx
+    SetTitleMatchMode "RegEx"
     if WinActive(".*Google Chrome")
-        Send, {Shift}{F6}
+        Send "{Shift}{F6}"
     else
-        Send, {F1}
+        Send "{F1}"
     return
 
 #Include PasteMode.ahk
