@@ -1,3 +1,5 @@
+#Requires AutoHotkey v2.0.2
+
 ;移動, 選択
 SC07B & k:: Send "{Blind}{Up}"
 SC07B & j:: Send "{Blind}{Down}"
