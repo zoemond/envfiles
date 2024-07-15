@@ -1,5 +1,15 @@
 #Requires AutoHotkey v2.0.2
 
+; Windowsキー+Lで画面ロックするのを避けるために レジストリで Lと「ー\ろ」キーを変換し、AutoHotkey上でLに戻したかった。
+; しかしレジストリを変更しても Windowsキー+L は有効のまま
+;SC073:: {
+;    If GetKeyState("LWin", "P")
+;        Send "{SC07B}"
+;    ELSE
+;        Send "{l}"
+;    Return
+;}
+
 ;移動, 選択
 SC07B & k:: Send "{Blind}{Up}"
 SC07B & j:: Send "{Blind}{Down}"
