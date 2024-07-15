@@ -3,10 +3,10 @@
   "app_specific_configuration_path": "$Env:KOMOREBI_CONFIG_HOME/applications.yaml",
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
-  "default_workspace_padding": 20,
-  "default_container_padding": 20,
+  "default_workspace_padding": 0,
+  "default_container_padding": 0,
   "border": true,
-  "border_width": 8,
+  "border_width": 3,
   "border_offset": -1,
   "border_colours": {
     "single": "#42a5f5",
@@ -15,7 +15,7 @@
     "unfocused": "#808080"
   },
   "stackbar": {
-    "height": 40,
+    "height": 15,
     "mode": "OnStack",
     "tabs": {
       "width": 300,
@@ -29,11 +29,11 @@
       "workspaces": [
         {
           "name": "I",
-          "layout": "BSP"
+          "layout": "HorizontalStack"
         },
         {
           "name": "II",
-          "layout": "VerticalStack"
+          "layout": "HorizontalStack"
         },
         {
           "name": "III",
@@ -41,19 +41,83 @@
         },
         {
           "name": "IV",
-          "layout": "UltrawideVerticalStack"
+          "layout": "HorizontalStack"
         },
         {
           "name": "V",
-          "layout": "Rows"
+          "layout": "HorizontalStack"
         },
         {
           "name": "VI",
-          "layout": "Grid"
+          "layout": "HorizontalStack"
         },
         {
           "name": "VII",
-          "layout": "RightMainVerticalStack"
+          "layout": "HorizontalStack"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "II",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "III",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "IV",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "V",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "VI",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "VII",
+          "layout": "HorizontalStack"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "II",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "III",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "IV",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "V",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "VI",
+          "layout": "HorizontalStack"
+        },
+        {
+          "name": "VII",
+          "layout": "HorizontalStack"
         }
       ]
     }
