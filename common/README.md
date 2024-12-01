@@ -35,3 +35,8 @@ ln -s .gitconfig ~/
   - 参考: https://zenn.dev/kaityo256/articles/ssh_agent_on_wsl
 - xsel
   - tig, vim上でのクリップボード連携に使用する
+- nvim 
+  - ライブラリがあるバージョン以上を求めている場合、自力で新しいバージョンをダウンロードしてくる必要あり。Ubuntuではstableしか降ってこないため
+  - tree-sitterがcのコンパイラを求めてくる場合、それも必要。`sudo apt install build-essential` が楽そう。
+- node
+  - nvimでtree-sitterあたりを使うのに最低限必要

@@ -10,31 +10,6 @@ set undodir=~/.cache/nvim/undo/
 
 " nvimでpythonを使ったpluginを入れるようにする
 let g:python3_host_prog = expand('/usr/bin/python3')
-" 
-" "dein Scripts-----------------------------
-" if &compatible
-"   set nocompatible               " Be iMproved
-" endif
-" 
-" " Add the dein installation directory into runtimepath
-" set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
-" 
-" " Required:
-" call dein#begin('~/.cache/dein')
-" 
-" " Let dein manage dein
-" " Required:
-" call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-" 
-" call dein#load_toml(expand('<sfile>:h') . "/dein.toml")
-" 
-" call dein#end()
-" 
-" " Required:
-" filetype plugin indent on
-" syntax enable
-" 
-" "End dein Scripts-------------------------
 
 call plug#begin()
 Plug 'osyo-manga/vim-over'
