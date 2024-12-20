@@ -69,3 +69,9 @@ winget export は不要なものまで入ってくるのでべた書きで...
   - WSL2 で WSLg が入ったことによる(https://github.com/microsoft/wslg/issues/1245)
   - clip.exe を使用すれば良いけど...
 - トラックパッドのポインタ速度を最大まであげても遅い
+
+## FlameShot
+
+- FlameShot は windows には PrtSc キーのみの起動しか提供していない
+- 新たな PC では PrtSc キーが Windows によって占拠されていたので、以下の記事に従って Registry を変更した
+  - https://www.makeuseof.com/windows-11-disable-snipping-tool/#how-to-disable-the-snipping-tool-using-the-registry-editor
