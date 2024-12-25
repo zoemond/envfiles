@@ -50,6 +50,10 @@ winget export は不要なものまで入ってくるのでべた書きで...
 ## zsh
 
 - [メモ] zeno の fuzzy find が使えないが、p10z のせいかもしれない
+- ```sh
+  # これがない場合、npm startで syscall: 'spawn google-chrome-stable',などとでてブラウザが立ち上がらない
+  echo 'export BROWSER=/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe' >> ~/.zshrc
+  ```
 
 ## xsel
 
