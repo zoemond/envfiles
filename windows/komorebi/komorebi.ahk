@@ -71,8 +71,8 @@ SC070 & p:: Komorebic("toggle-pause")
 ;#+r:: Komorebic("retile")
 
 ; Layouts
-SC070 & x:: Komorebic("flip-layout horizontal")
-SC070 & y:: Komorebic("flip-layout vertical")
+SC070 & x:: Komorebic("cycle-layout previous")
+SC070 & y:: Komorebic("cycle-layout next")
 
 ; Workspaces ; Move windows across workspaces
 SC070 & 0:: KomorebicShift("focus-monitor-workspace 0 0", "move-to-monitor 0")
