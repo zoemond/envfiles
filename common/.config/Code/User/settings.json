@@ -57,7 +57,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": true
+    "source.addMissingImports": "explicit"
   },
   "html.autoClosingTags": false,
   "typescript.autoClosingTags": false,
