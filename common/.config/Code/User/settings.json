@@ -1,5 +1,8 @@
 {
   "vim.easymotion": true,
+  "vim.handleKeys": {
+    "<C-p>": false
+  },
   "editor.minimap.enabled": false,
   "vim.leader": "Space",
   "editor.detectIndentation": false,
