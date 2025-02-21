@@ -36,6 +36,7 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
+  "[prisma]": { "editor.defaultFormatter": "Prisma.prisma" },
 
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "cSpell.userWords": ["Intelli", "Qiita", "redmine"],
