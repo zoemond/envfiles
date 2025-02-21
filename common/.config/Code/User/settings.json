@@ -61,5 +61,6 @@
   "html.autoClosingTags": false,
   "typescript.autoClosingTags": false,
   "javascript.autoClosingTags": false,
-  "auto-close-tag.enableAutoCloseTag": false
+  "auto-close-tag.enableAutoCloseTag": false,
+  "editor.fontFamily": "HackGen Console NF, Consolas, 'Courier New', monospace"
 }
