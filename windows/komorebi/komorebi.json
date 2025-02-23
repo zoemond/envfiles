@@ -14,6 +14,10 @@
     "monocle": "#ff3399",
     "unfocused": "#808080"
   },
+  "display_index_preferences": {
+    "2": "LEN1152-4&300050ab&0&UID8261",
+    "1": "DELA1D1-4&300050ab&0&UID4145"
+  },
   "stackbar": {
     "height": 15,
     "mode": "OnStack",
