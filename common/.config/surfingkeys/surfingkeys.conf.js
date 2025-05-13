@@ -8,6 +8,9 @@ api.unmapAllExcept([], /docs.google.com|twitter.com/);
 api.map("h", "S");
 api.map("l", "D");
 
+// https://github.com/brookhong/Surfingkeys/issues/2290
+api.iunmap("<Ctrl-a>");
+
 settings.hintShiftNonActive = true;
 
 settings.prevLinkRegex = /((<<|prev(ious)?)|<|‹|«|←|前へ|前のページ+)/i;
