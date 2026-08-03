@@ -12,11 +12,16 @@ setopt share_history
 # すでにhistoryにあるコマンドは残さない
 setopt hist_ignore_all_dups
 
+# 時刻を追記する
+setopt extended_history
+
 # historyに日付を表示
 alias h='fc -lt '%F %T' 1'
 
 # ヒストリに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
+
+
 
 # 履歴をすぐに追加する
 setopt inc_append_history
