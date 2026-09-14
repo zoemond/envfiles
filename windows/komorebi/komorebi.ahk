@@ -51,9 +51,23 @@ SC070 & j:: KomorebicShift("focus down", "move down")
 SC070 & k:: KomorebicShift("focus up", "move up")
 SC070 & l:: KomorebicShift("focus right", "move right")
 
-SC070 & [:: KomorebicShift("cycle-stack previous", "cycle-focus previous")
-SC070 & ]:: KomorebicShift("cycle-stack next", "cycle-focus next")
 
+; Stack navigation / reorder
+; SC070 + [ / ]         : スタック内のフォーカス切り替え
+; SC070 + Shift + [ / ] : スタック内のタブ順を入れ替え
+; SC070 + Ctrl + [ / ]  : ワークスペース全体のフォーカス切り替え
+
+SC070 & [:: KomorebicShiftCtrl(
+    "cycle-stack previous",
+    "cycle-stack-index previous",
+    "cycle-focus previous"
+)
+
+SC070 & ]:: KomorebicShiftCtrl(
+    "cycle-stack next",
+    "cycle-stack-index next",
+    "cycle-focus next"
+)
 
 ; Stack windows
 SC070 & s:: KomorebicShift("stack-all", "unstack-all")
