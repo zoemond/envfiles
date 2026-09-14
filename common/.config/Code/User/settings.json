@@ -1,40 +1,45 @@
 {
   "vim.easymotion": true,
   "vim.handleKeys": {
-    "<C-p>": false
+    "<C-p>": false,
   },
+
+  // 改行を含むすべての制御文字を可視化
+  "editor.renderControlCharacters": true,
+  // 必要に応じてタブ・スペースも可視化
+  "editor.renderWhitespace": "all",
   "editor.minimap.enabled": false,
   "vim.leader": "Space",
   "editor.detectIndentation": false,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["Space", "w"], // 検索するためのキーをfから変えたい場合は､ここを変更する
-      "after": ["leader", "leader", "w"]
+      "after": ["leader", "leader", "w"],
     },
     {
       "before": ["Space", "b"],
-      "after": ["leader", "leader", "b"]
+      "after": ["leader", "leader", "b"],
     },
     {
       "before": ["Space", "e"],
-      "after": ["leader", "leader", "e"]
+      "after": ["leader", "leader", "e"],
     },
     {
       "before": ["Space", "g", "e"],
-      "after": ["leader", "leader", "g", "e"]
-    }
+      "after": ["leader", "leader", "g", "e"],
+    },
   ],
   "[json]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "[yaml]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "[graphql]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
   },
   "[go]": {
-    "editor.defaultFormatter": "golang.go"
+    "editor.defaultFormatter": "golang.go",
   },
   "[prisma]": { "editor.defaultFormatter": "Prisma.prisma" },
 
@@ -45,7 +50,7 @@
   "files.insertFinalNewline": true,
   "editor.formatOnSave": true,
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.ipynb": "jupyter.notebook.ipynb",
   },
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "vscode-neovim.useCtrlKeysForNormalMode": true,
@@ -57,11 +62,111 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": true,
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": "explicit"
+    "source.addMissingImports": "explicit",
   },
   "html.autoClosingTags": false,
   "typescript.autoClosingTags": false,
   "javascript.autoClosingTags": false,
   "auto-close-tag.enableAutoCloseTag": false,
-  "editor.fontFamily": "HackGen Console NF, Consolas, 'Courier New', monospace"
+  "editor.fontFamily": "HackGen Console NF, Consolas, 'Courier New', monospace",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "git.openRepositoryInParentFolders": "never",
+  "previewControlCharacters.newLineAfterCR": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "chat.viewSessions.orientation": "stacked",
+  "chat.tools.terminal.autoApprove": {
+    "/^npm run (lint|type-check|format:check|knip-client)$/": true,
+    "/^npm run test -- --run(?:\\s+[A-Za-z0-9_./-]+)*$/": true,
+    "jq": true,
+    "printf": true,
+    "/^npm run format(?:\\s|$)/": true,
+    "/^npm run openapi:reporting:generate(?:\\s|$)/": true,
+    "/^npm run (build|dev)$/": true,
+    "/^npm run audit(?::ci)?$/": true,
+    "/^npx prisma validate --schema app\\/prisma$/": true,
+    "/^npm run sandbox(?:-dev|:pull)?(?:\\s|$)/": false,
+    "/^(aws|awsume)\\b/": false,
+    "/^npm run env(?::local)?(?:\\s|$)/": false,
+    "/^npm run prisma(?::[^\\s]+)?(?:\\s|$)/": false,
+    "/^npm run ssm:(dev|prd)(?:\\s|$)/": false,
+    "/^npm run e2e:(cleanup|seed-users)(?:\\s|$)/": false,
+    "/^npx\\b/": false,
+    "/^npm\\s+(install|uninstall|update|publish|exec)\\b/": false,
+    "/^git(?:\\s+(-C\\s+\\S+|--no-pager))*\\s+(add|commit|push|pull|merge|rebase|reset|clean|checkout|switch|restore|rm|mv|tag)\\b/": false,
+    "npx -y tsc": true,
+    "/^gh\\s+repo\\s+(view|list|read-file|read-dir)\\b/": true,
+    "/^gh\\s+issue\\s+(list|view|status)\\b/": true,
+    "/^gh\\s+pr\\s+(list|view|status|checks|diff)\\b/": true,
+    "/^gh\\s+run\\s+(list|view|watch)\\b/": true,
+    "/^gh\\s+workflow\\s+(list|view)\\b/": true,
+    "/^gh\\s+(status|auth\\s+status)\\b/": true,
+    "/^gh\\s+config\\s+(get|list)\\b/": true,
+    "/^gh\\s+release\\s+(list|view)\\b/": true,
+    "/^gh\\s+ruleset\\s+(list|view|check)\\b/": true,
+    "/^git ls-tree -r --name-only origin/main \\| rg '\\^\\\\\\.github/dependabot\\\\\\.ya\\?ml\\$' \\|\\| true$/": {
+      "approve": true,
+      "matchCommandLine": true,
+    },
+    "/^git(\\s+(-C\\s+\\S+|--no-pager))*\\s+branch\\b/": null,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+(?:status|log|show|diff|ls-files|grep|rev-parse|rev-list|name-rev|describe|merge-base|show-ref|for-each-ref|ls-tree|cat-file|blame|shortlog|count-objects|check-ignore|check-attr|check-ref-format|diff-tree|diff-files|diff-index|ls-remote|verify-commit|verify-tag)\\b/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+(?:diff|diff-tree|diff-files|diff-index)\\b.*\\s--output(?:=|\\s)/": false,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+(?:diff|diff-tree|diff-files|diff-index)\\b.*\\s--ext-diff\\b/": false,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+branch$/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+branch\\s+(?:--show-current|--all|-a|--remotes|-r|-v|-vv)$/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+branch\\s+(?:--list|-l)(?:\\s+\\S+)*$/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+branch\\s+(?:--contains|--no-contains|--merged|--no-merged)(?:\\s+\\S+)?$/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+branch\\s+(?:--all|-a|--remotes|-r)\\s+(?:--list|-l)(?:\\s+\\S+)*$/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+remote(?:\\s+-v)?$/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+remote\\s+(?:show|get-url)\\b/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+config\\s+(?:get|list|--get|--get-all|--get-regexp|--get-urlmatch|--list)\\b/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+tag$/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+tag\\s+(?:--list|-l)(?:\\s+\\S+)*$/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+stash\\s+(?:list|show)\\b/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+worktree\\s+list\\b/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+reflog(?:\\s+show)?\\b/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+submodule\\s+(?:status|summary)\\b/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+notes\\s+(?:list|show)\\b/": true,
+    "/^true$/": true,
+    "/^git fetch(?:\\s+(?:--quiet|-q|--verbose|-v|--dry-run))*\\s+origin(?:\\s+(?:--quiet|-q|--verbose|-v|--dry-run|[A-Za-z0-9][A-Za-z0-9._\\/-]*))*$/": true,
+    "/^git(?:\\s+(?:-C\\s+\\S+|--no-pager))*\\s+(?:add|am|apply|checkout|cherry-pick|clean|clone|commit|gc|init|maintenance|merge|mv|prune|pull|push|rebase|repack|replace|reset|restore|revert|rm|switch|update-index)(?=\\s|$)/": false,
+    "/^gh\\s+api\\s+graphql(?=[\\s\\S]*\\s(?:-f|--raw-field)\\s+query=['\"]?query\\b)(?![\\s\\S]*\\b(?:mutation|subscription)\\b)(?![\\s\\S]*\\s(?:-X(?:\\s|=)|--(?:method|input|hostname)(?:\\s|=)))[\\s\\S]*$/": true,
+    "/^node -v && npm -v$/": {
+      "approve": true,
+      "matchCommandLine": true,
+    },
+    "/^cd data-creator && npm run type-check -- --pretty false$/": {
+      "approve": true,
+      "matchCommandLine": true,
+    },
+  },
+  "chat.tools.urls.autoApprove": {
+    "https://code.visualstudio.com": true,
+    "https://github.com/microsoft/vscode/wiki/*": true,
+    "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html": true,
+    "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide": true,
+    "https://docs.aws.amazon.com/AWSCloudFormation/latest": true,
+    "https://docs.aws.amazon.com/AWSCloudFormation": true,
+    "https://docs.aws.amazon.com": true,
+    "https://*.aws.amazon.com": true,
+    "https://*.amazon.com": true,
+    "https://docs.aws.amazon.com/sns/latest/dg/sns-dead-letter-queues.html": true,
+    "https://docs.aws.amazon.com/sns/latest/dg": true,
+    "https://docs.aws.amazon.com/sns/latest": true,
+    "https://docs.aws.amazon.com/sns": true,
+    "https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_sns.Subscription.html": true,
+    "https://docs.aws.amazon.com/cdk/api/v2/docs": true,
+    "https://docs.aws.amazon.com/cdk/api/v2": true,
+    "https://docs.aws.amazon.com/cdk/api": true,
+    "https://docs.aws.amazon.com/cdk": true,
+  },
+  "atlascode.rovodev.showEntitlementNotifications": false,
 }
